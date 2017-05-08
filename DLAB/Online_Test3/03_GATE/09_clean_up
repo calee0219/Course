@@ -1,0 +1,6 @@
+rm -rf INCA_libs
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf BRICK_SYN.sdf.X
+rm -rf n*
+rm -rf *~

@@ -1,0 +1,91 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml lab07_0416037.twx lab07_0416037.ncd -o lab07_0416037.twr
+lab07_0416037.pcf -ucf Lab07.ucf
+
+Design file:              lab07_0416037.ncd
+Physical constraint file: lab07_0416037.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+BTN_EAST    |    8.312(R)|   -0.504(R)|clk_BUFGP         |   0.000|
+BTN_NORTH   |    9.056(R)|   -1.454(R)|clk_BUFGP         |   0.000|
+BTN_WEST    |    8.159(R)|   -0.571(R)|clk_BUFGP         |   0.000|
+SW<0>       |    7.280(R)|   -1.128(R)|clk_BUFGP         |   0.000|
+SW<1>       |    6.799(R)|   -0.873(R)|clk_BUFGP         |   0.000|
+SW<2>       |    6.377(R)|   -0.305(R)|clk_BUFGP         |   0.000|
+SW<3>       |    7.567(R)|   -1.720(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LED<0>      |   10.551(R)|clk_BUFGP         |   0.000|
+LED<1>      |    9.261(R)|clk_BUFGP         |   0.000|
+LED<2>      |    9.350(R)|clk_BUFGP         |   0.000|
+LED<3>      |    9.486(R)|clk_BUFGP         |   0.000|
+LED<4>      |    9.860(R)|clk_BUFGP         |   0.000|
+LED<5>      |   10.062(R)|clk_BUFGP         |   0.000|
+LED<6>      |   10.907(R)|clk_BUFGP         |   0.000|
+LED<7>      |   11.125(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.721|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Dec 06 21:39:57 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 164 MB
+
+
+

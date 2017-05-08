@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+. _common
+fs="dd"
+ptlfs="../src/partclone.dd"
+dd_count=$((normal_size/2))
+echo -e "Ncurses test"
+echo -e "====================\n"
+echo -e "\ncreate raw file $raw\n"
+_ptlbreak
+[ -f $raw ] && rm $raw
+echo -e "    dd if=/dev/zero of=$raw bs=$dd_bs count=$dd_count\n"
+dd if=/dev/zero of=$raw bs=$dd_bs count=$dd_count
+
+echo -e "\nclone $raw to $img\n"
+[ -f $img ] && rm $img
+echo -e "    $ptlfs -d -N -s $raw -O $img -F -L $logfile\n"
+_ptlbreak
+$ptlfs -d -N -s $raw -O $img -F -L $logfile
+_check_return_code
+
+echo -e "\nncursesw test ok\n"
+echo -e "\nclear tmp files $img $raw $logfile $md5\n"
+_ptlbreak
+rm -f $img $raw $logfile $md5
+
+

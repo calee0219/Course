@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Dec 18 16:13:48 2016
+# Process ID: 3784
+# Log file: D:/Test04/planAhead_run_1/planAhead.log
+# Journal file: D:/Test04/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Test04/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin N17 [get_ports {min[1]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {min[0]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {min[1]}]]
+set_property iostandard LVTTL [get_ports [list {min[0]}]]
+startgroup
+set_property package_pin L14 [get_ports {sec[1]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {sec[0]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {sec[1]}]]
+set_property iostandard LVTTL [get_ports [list {sec[0]}]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+startgroup
+set_property package_pin D18 [get_ports dec]
+endgroup
+set_property package_pin "" [get_ports [list  rst]]
+startgroup
+set_property package_pin H13 [get_ports inc]
+endgroup
+startgroup
+set_property package_pin K17 [get_ports rst]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports sp]
+endgroup
+set_property iostandard LVTTL [get_ports [list dec]]
+set_property iostandard LVTTL [get_ports [list inc]]
+set_property iostandard LVTTL [get_ports [list rst]]
+set_property iostandard LVTTL [get_ports [list sp]]
+set_property pulltype PULLDOWN [get_ports [list dec]]
+set_property pulltype PULLDOWN [get_ports [list inc]]
+set_property pulltype PULLDOWN [get_ports [list rst]]
+set_property pulltype PULLDOWN [get_ports [list sp]]
+save_constraints
+set_property pulltype PULLDOWN [get_ports [list {sec[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {sec[1]}]]
+set_property pulltype PULLDOWN [get_ports [list {min[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {min[1]}]]
+save_constraints

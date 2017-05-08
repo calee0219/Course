@@ -1,0 +1,6 @@
+verilog work "planeA.v"
+verilog work "plane.v"
+verilog work "number.v"
+verilog work "ipcore_dir/div.v"
+verilog work "bullet.v"
+verilog work "Test.v"

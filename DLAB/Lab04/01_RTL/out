@@ -1,0 +1,404 @@
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33809
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+ Pass pattern   1 
+
+ Pass pattern   2 
+
+ Pass pattern   3 
+
+ Pass pattern   4 
+
+ Pass pattern   5 
+
+ Pass pattern   6 
+
+ Pass pattern   7 
+
+ Pass pattern   8 
+
+ Pass pattern   9 
+
+ Pass pattern  10 
+--------------------------------------------------------------------
+                         Congratulations !                          
+                  You have passed all patterns !                    
+                  Your total latency is    120 !                       
+--------------------------------------------------------------------
+Simulation complete via $finish(1) at time 3016 NS + 0
+./PATTERN.v:142 	$finish;
+ncsim> exit
+*******TEST1!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x339fca05>
+			streams:  39, words: 33705
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle2.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+========================================
+  'out' should be reset !!!!!           
+========================================
+
+Simulation complete via $finish(1) at time 24 NS + 0
+./PATTERN.v:169 		$finish;
+ncsim> exit
+*******TEST2!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33815
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle3.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+========================================
+  'out_valid' should be reset !!!!!     
+========================================
+
+Simulation complete via $finish(1) at time 24 NS + 0
+./PATTERN.v:155 		$finish;
+ncsim> exit
+*******TEST3!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33809
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle4.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+ Pass pattern   1 
+
+========================================
+  'out_valid' should be reset !!!!!     
+========================================
+
+Simulation complete via $finish(1) at time 336 NS + 0
+./PATTERN.v:155 		$finish;
+ncsim> exit
+*******TEST4!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33809
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle5.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+ Pass pattern   1 
+
+=================================================
+  Failed!!  PATTERN    2 is wrong!                
+  ans is          42      your ans is 38          
+=================================================
+
+Simulation complete via $finish(1) at time 680 NS + 0
+./PATTERN.v:120 				$finish;
+ncsim> exit
+*******TEST5!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33803
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle6.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+========================================
+  Latency too mord !!!!                 
+========================================
+
+Simulation complete via $finish(1) at time 984 NS + 0
+./PATTERN.v:186 			$finish;
+ncsim> exit
+*******TEST6!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x016e9e5d>
+			streams:  39, words: 33347
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle7.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+ Pass pattern   1 
+
+=================================================
+  Failed!!  PATTERN    2 is wrong!                
+  ans is           7      your ans is 42          
+=================================================
+
+Simulation complete via $finish(1) at time 624 NS + 0
+./PATTERN.v:120 				$finish;
+ncsim> exit
+*******TEST7!!!!!*******
+
+====================================================================================================
+====================================================================================================
+
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+file: TESTBED.v
+	module worklib.Circle:vp
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Circle:vp <0x222c655e>
+			streams:  39, words: 33769
+		worklib.TESTBED:v <0x66d67f62>
+			streams:   1, words:   439
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               51      51
+		Scalar wires:             4       -
+		Vectored wires:           4       -
+		Always blocks:            9       9
+		Initial blocks:           4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for Verilog-XL, Release 2008.01 (Linux) 01/30/2008
+Copyright (C) 1996 - 2007 by Novas Software, Inc.
+*Novas* Create FSDB file 'Circle8.fsdb'
+*Novas* Begin traversing the top scope(TESTBED), layer(0).
+*Novas* End of traversing the top scope(TESTBED)
+
+=================================================
+  Failed!!  PATTERN    1 is wrong!                
+  ans is          62      your ans is 30          
+=================================================
+
+Simulation complete via $finish(1) at time 328 NS + 0
+./PATTERN.v:120 				$finish;
+ncsim> exit
+*******TEST8!!!!!*******
+
+====================================================================================================
+====================================================================================================

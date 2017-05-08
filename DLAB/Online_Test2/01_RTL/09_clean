@@ -1,0 +1,7 @@
+rm -rf *.fsdb
+rm -rf INCA_libs
+rm -rf novas.rc
+rm -rf *.sdf.X
+rm -rf *.log
+rm -rf nWaveLogrmrm -r
+rm -rf verfiLog

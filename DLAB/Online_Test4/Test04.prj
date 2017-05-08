@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/div.v"
+verilog work "n2s.v"
+verilog work "LCD.v"
+verilog work "debounce.v"
+verilog work "Test04.v"

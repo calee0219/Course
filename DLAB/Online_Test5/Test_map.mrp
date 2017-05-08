@@ -1,0 +1,388 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+-c 100 -o Test_map.ncd Test.ngd Test.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sun Jan 08 21:06:18 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:         1,327 out of   9,312   14%
+  Number of 4 input LUTs:             4,315 out of   9,312   46%
+Logic Distribution:
+  Number of occupied Slices:          3,623 out of   4,656   77%
+    Number of Slices containing only related logic:   3,623 out of   3,623 100%
+    Number of Slices containing unrelated logic:          0 out of   3,623   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       6,088 out of   9,312   65%
+    Number used as logic:             4,315
+    Number used as a route-thru:      1,773
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                  9 out of     232    3%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                2.35
+
+Peak Memory Usage:  329 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   6 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@140.126.24.10'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:LIT:243 - Logical network divA/quotient<4> has no load.
+INFO:LIT:395 - The above info message is repeated 17 more times for the
+   following (max. 5 shown):
+   divA/fractional<4>,
+   divA/blk00000003/sig0000006e,
+   divA/blk00000003/sig00000087,
+   divA/blk00000003/sig000000a0,
+   divA/blk00000003/sig000000b9
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  66 block(s) removed
+  51 block(s) optimized away
+  62 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "divA/quotient<4>" is sourceless and has been removed.
+The signal "divA/fractional<4>" is sourceless and has been removed.
+The signal "divA/blk00000003/sig0000001e" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk00000009" (FF) removed.
+  The signal "divA/blk00000003/sig0000001f" is sourceless and has been removed.
+   Sourceless block "divA/blk00000003/blk000000e0" (BUF) removed.
+    The signal "divA/blk00000003/sig00000057" is sourceless and has been removed.
+     Sourceless block "divA/blk00000003/blk00000041" (FF) removed.
+The signal "divA/blk00000003/sig00000022" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk0000000c" (FF) removed.
+The signal "divA/blk00000003/sig00000028" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk00000010" (FF) removed.
+The signal "divA/blk00000003/sig00000051" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk000000ae" (AND) removed.
+  The signal "divA/blk00000003/sig000000d7" is sourceless and has been removed.
+   Sourceless block "divA/blk00000003/blk000000a2" (MUX) removed.
+    The signal "divA/blk00000003/sig000000d8" is sourceless and has been removed.
+     Sourceless block "divA/blk00000003/blk000000a9" (MUX) removed.
+      The signal "divA/blk00000003/sig000000e6" is sourceless and has been removed.
+       Sourceless block "divA/blk00000003/blk000000b9" (FF) removed.
+        The signal "divA/blk00000003/sig000000ec" is sourceless and has been removed.
+     Sourceless block "divA/blk00000003/blk000000aa" (XOR) removed.
+      The signal "divA/blk00000003/sig000000e7" is sourceless and has been removed.
+       Sourceless block "divA/blk00000003/blk000000b8" (FF) removed.
+        The signal "divA/blk00000003/sig000000eb" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk000000d8" (ROM) removed.
+  The signal "divA/blk00000003/sig000000d5" is sourceless and has been removed.
+   Sourceless block "divA/blk00000003/blk000000a1" (XOR) removed.
+    The signal "divA/blk00000003/sig000000d6" is sourceless and has been removed.
+     Sourceless block "divA/blk00000003/blk000000b7" (FF) removed.
+The signal "divA/blk00000003/sig00000066" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk00000054" (FF) removed.
+  The signal "divA/blk00000003/sig0000006e" is sourceless and has been removed.
+The signal "divA/blk00000003/sig0000007e" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk00000067" (FF) removed.
+  The signal "divA/blk00000003/sig00000087" is sourceless and has been removed.
+The signal "divA/blk00000003/sig00000097" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk0000007a" (FF) removed.
+  The signal "divA/blk00000003/sig000000a0" is sourceless and has been removed.
+The signal "divA/blk00000003/sig000000b0" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk0000008d" (FF) removed.
+  The signal "divA/blk00000003/sig000000b9" is sourceless and has been removed.
+The signal "divA/blk00000003/sig000000bf" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk0000009e" (FF) removed.
+  The signal "divA/blk00000003/sig000000d1" is sourceless and has been removed.
+The signal "divA/blk00000003/sig000000c9" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk000000a0" (FF) removed.
+  The signal "divA/blk00000003/sig000000d3" is sourceless and has been removed.
+The signal "divA/blk00000003/sig000000d4" is sourceless and has been removed.
+The signal "divA/blk00000003/sig000000dc" is sourceless and has been removed.
+ Sourceless block "divA/blk00000003/blk000000a4" (MUX) removed.
+The signal "divA/blk00000003/sig000000e5" is sourceless and has been removed.
+The signal "divB/quotient<4>" is sourceless and has been removed.
+The signal "divB/fractional<4>" is sourceless and has been removed.
+The signal "divB/blk00000003/sig0000001e" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk00000009" (FF) removed.
+  The signal "divB/blk00000003/sig0000001f" is sourceless and has been removed.
+   Sourceless block "divB/blk00000003/blk000000e0" (BUF) removed.
+    The signal "divB/blk00000003/sig00000057" is sourceless and has been removed.
+     Sourceless block "divB/blk00000003/blk00000041" (FF) removed.
+The signal "divB/blk00000003/sig00000022" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk0000000c" (FF) removed.
+The signal "divB/blk00000003/sig00000028" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk00000010" (FF) removed.
+The signal "divB/blk00000003/sig00000051" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk000000ae" (AND) removed.
+  The signal "divB/blk00000003/sig000000d7" is sourceless and has been removed.
+   Sourceless block "divB/blk00000003/blk000000a2" (MUX) removed.
+    The signal "divB/blk00000003/sig000000d8" is sourceless and has been removed.
+     Sourceless block "divB/blk00000003/blk000000a9" (MUX) removed.
+      The signal "divB/blk00000003/sig000000e6" is sourceless and has been removed.
+       Sourceless block "divB/blk00000003/blk000000b9" (FF) removed.
+        The signal "divB/blk00000003/sig000000ec" is sourceless and has been removed.
+     Sourceless block "divB/blk00000003/blk000000aa" (XOR) removed.
+      The signal "divB/blk00000003/sig000000e7" is sourceless and has been removed.
+       Sourceless block "divB/blk00000003/blk000000b8" (FF) removed.
+        The signal "divB/blk00000003/sig000000eb" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk000000d8" (ROM) removed.
+  The signal "divB/blk00000003/sig000000d5" is sourceless and has been removed.
+   Sourceless block "divB/blk00000003/blk000000a1" (XOR) removed.
+    The signal "divB/blk00000003/sig000000d6" is sourceless and has been removed.
+     Sourceless block "divB/blk00000003/blk000000b7" (FF) removed.
+The signal "divB/blk00000003/sig00000066" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk00000054" (FF) removed.
+  The signal "divB/blk00000003/sig0000006e" is sourceless and has been removed.
+The signal "divB/blk00000003/sig0000007e" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk00000067" (FF) removed.
+  The signal "divB/blk00000003/sig00000087" is sourceless and has been removed.
+The signal "divB/blk00000003/sig00000097" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk0000007a" (FF) removed.
+  The signal "divB/blk00000003/sig000000a0" is sourceless and has been removed.
+The signal "divB/blk00000003/sig000000b0" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk0000008d" (FF) removed.
+  The signal "divB/blk00000003/sig000000b9" is sourceless and has been removed.
+The signal "divB/blk00000003/sig000000bf" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk0000009e" (FF) removed.
+  The signal "divB/blk00000003/sig000000d1" is sourceless and has been removed.
+The signal "divB/blk00000003/sig000000c9" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk000000a0" (FF) removed.
+  The signal "divB/blk00000003/sig000000d3" is sourceless and has been removed.
+The signal "divB/blk00000003/sig000000d4" is sourceless and has been removed.
+The signal "divB/blk00000003/sig000000dc" is sourceless and has been removed.
+ Sourceless block "divB/blk00000003/blk000000a4" (MUX) removed.
+The signal "divB/blk00000003/sig000000e5" is sourceless and has been removed.
+Unused block "divA/blk00000001" (ONE) removed.
+Unused block "divA/blk00000002" (ZERO) removed.
+Unused block "divA/blk00000003/blk00000014" (FF) removed.
+Unused block "divA/blk00000003/blk00000037" (FF) removed.
+Unused block "divA/blk00000003/blk0000008f" (XOR) removed.
+Unused block "divA/blk00000003/blk000000ad" (AND) removed.
+Unused block "divA/blk00000003/blk000000af" (AND) removed.
+Unused block "divB/blk00000001" (ONE) removed.
+Unused block "divB/blk00000002" (ZERO) removed.
+Unused block "divB/blk00000003/blk00000014" (FF) removed.
+Unused block "divB/blk00000003/blk00000037" (FF) removed.
+Unused block "divB/blk00000003/blk0000008f" (XOR) removed.
+Unused block "divB/blk00000003/blk000000ad" (AND) removed.
+Unused block "divB/blk00000003/blk000000af" (AND) removed.
+Unused block "divA/blk00000003/blk0000004b" (MUX) removed.
+Unused block "divA/blk00000003/blk0000005e" (MUX) removed.
+Unused block "divA/blk00000003/blk00000071" (MUX) removed.
+Unused block "divA/blk00000003/blk00000084" (MUX) removed.
+Unused block "divA/blk00000003/blk00000097" (MUX) removed.
+Unused block "divB/blk00000003/blk0000004b" (MUX) removed.
+Unused block "divB/blk00000003/blk0000005e" (MUX) removed.
+Unused block "divB/blk00000003/blk00000071" (MUX) removed.
+Unused block "divB/blk00000003/blk00000084" (MUX) removed.
+Unused block "divB/blk00000003/blk00000097" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		divA/blk00000003/blk00000004
+VCC 		divA/blk00000003/blk00000005
+FD 		divA/blk00000003/blk0000001c
+   optimized to 0
+FD 		divA/blk00000003/blk0000001e
+   optimized to 0
+FD 		divA/blk00000003/blk00000021
+   optimized to 0
+FD 		divA/blk00000003/blk00000023
+   optimized to 0
+FD 		divA/blk00000003/blk00000026
+   optimized to 0
+FD 		divA/blk00000003/blk00000028
+   optimized to 0
+FD 		divA/blk00000003/blk0000002b
+   optimized to 0
+FD 		divA/blk00000003/blk0000002d
+   optimized to 0
+FD 		divA/blk00000003/blk00000030
+   optimized to 0
+FD 		divA/blk00000003/blk00000032
+   optimized to 0
+FD 		divA/blk00000003/blk00000035
+   optimized to 0
+INV 		divA/blk00000003/blk000000e2
+INV 		divA/blk00000003/blk000000e4
+GND 		divB/blk00000003/blk00000004
+VCC 		divB/blk00000003/blk00000005
+FD 		divB/blk00000003/blk0000001c
+   optimized to 0
+FD 		divB/blk00000003/blk0000001e
+   optimized to 0
+FD 		divB/blk00000003/blk00000021
+   optimized to 0
+FD 		divB/blk00000003/blk00000023
+   optimized to 0
+FD 		divB/blk00000003/blk00000026
+   optimized to 0
+FD 		divB/blk00000003/blk00000028
+   optimized to 0
+FD 		divB/blk00000003/blk0000002b
+   optimized to 0
+FD 		divB/blk00000003/blk0000002d
+   optimized to 0
+FD 		divB/blk00000003/blk00000030
+   optimized to 0
+FD 		divB/blk00000003/blk00000032
+   optimized to 0
+FD 		divB/blk00000003/blk00000035
+   optimized to 0
+INV 		divB/blk00000003/blk000000e2
+INV 		divB/blk00000003/blk000000e4
+MUXCY 		bA10_m/Maccum_nowX_cy<0>
+MUXCY 		bA12_m/Maccum_nowX_cy<0>
+MUXCY 		bA13_m/Maccum_nowX_cy<0>
+MUXCY 		bA14_m/Maccum_nowX_cy<0>
+MUXCY 		bA15_m/Maccum_nowX_cy<0>
+MUXCY 		bA16_m/Maccum_nowX_cy<0>
+MUXCY 		bA17_m/Maccum_nowX_cy<0>
+MUXCY 		bA18_m/Maccum_nowX_cy<0>
+MUXCY 		bA19_m/Maccum_nowX_cy<0>
+MUXCY 		bA1_m/Maccum_nowX_cy<0>
+MUXCY 		bA20_m/Maccum_nowX_cy<0>
+MUXCY 		bA2_m/Maccum_nowX_cy<0>
+MUXCY 		bA3_m/Maccum_nowX_cy<0>
+MUXCY 		bA4_m/Maccum_nowX_cy<0>
+MUXCY 		bA5_m/Maccum_nowX_cy<0>
+MUXCY 		bA6_m/Maccum_nowX_cy<0>
+MUXCY 		bA7_m/Maccum_nowX_cy<0>
+MUXCY 		bA8_m/Maccum_nowX_cy<0>
+MUXCY 		bA9_m/Maccum_nowX_cy<0>
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| PS2_CLK                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| PS2_DATA                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| blue                               | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| green                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| hsync                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| red                                | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| rst                                | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLDOWN | 0 / 0    |
+| vsync                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

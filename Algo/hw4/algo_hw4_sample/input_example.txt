@@ -1,0 +1,2 @@
+
+“®follower 1 1 1®follower 2 2 1®follower 4 1 4•«spell 1 1 0®follower 3 2 2®follower 4 3 3«spell 6 4 0®follower 7 5 7

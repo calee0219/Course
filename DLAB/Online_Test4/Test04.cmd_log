@@ -1,0 +1,138 @@
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 
+xst -intstyle ise -ifn "D:/Test04/Test04.xst" -ofn "D:/Test04/Test04.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p xc3s500e-fg320-4 Test04.ngc Test04.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test04_map.ncd Test04.ngd Test04.pcf 
+par -w -intstyle ise -ol high -t 1 Test04_map.ncd Test04.ncd Test04.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test04.twx Test04.ncd -o Test04.twr Test04.pcf -ucf Test04.ucf 
+bitgen -intstyle ise -f Test04.ut Test04.ncd 

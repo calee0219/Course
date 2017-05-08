@@ -1,0 +1,6 @@
+rm -rf Netlist/*
+rm -rf Report/*
+rm -rf syn.log
+rm -rf command.log
+rm -rf alib*
+rm -rf default*

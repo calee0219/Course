@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/div.v"
+verilog work "n2s.v"
+verilog work "LCD.v"
+verilog work "ipcore_dir/sqrt.v"
+verilog work "Lab08_0416037.v"

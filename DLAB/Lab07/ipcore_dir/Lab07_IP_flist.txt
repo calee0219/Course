@@ -1,0 +1,15 @@
+# Output products list for <Lab07_IP>
+Lab07_IP.asy
+Lab07_IP.gise
+Lab07_IP.ngc
+Lab07_IP.sym
+Lab07_IP.v
+Lab07_IP.veo
+Lab07_IP.xco
+Lab07_IP.xise
+Lab07_IP\doc\cordic_ds249.pdf
+Lab07_IP\doc\cordic_v4_0_vinfo.html
+Lab07_IP_flist.txt
+Lab07_IP_readme.txt
+Lab07_IP_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

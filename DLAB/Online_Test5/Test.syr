@@ -1,0 +1,820 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Test"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "planeA.v" in library work
+Compiling verilog file "plane.v" in library work
+Module <planeA> compiled
+Compiling verilog file "number.v" in library work
+Module <planeB> compiled
+Compiling verilog file "ipcore_dir/div.v" in library work
+Module <number> compiled
+Compiling verilog file "bullet.v" in library work
+Module <div> compiled
+Compiling verilog file "Test.v" in library work
+Module <bullet> compiled
+Module <Test> compiled
+No errors in compilation
+Analysis of file <"Test.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Test> in library <work> with parameters.
+	PERIOD = "00000001011111010111100001000000"
+	aX = "00000000000000000000000011001000"
+	aY = "00000000000000000000000100101100"
+	bX = "00000000000000000000001001011000"
+	bY = "00000000000000000000000100101100"
+	eX = "00000000000000000000000110010000"
+	eY = "00000000000000000000000100101100"
+
+Analyzing hierarchy for module <planeA> in library <work> with parameters.
+	pL = "00000000000000000000000000101000"
+	pW = "00000000000000000000000000001010"
+	wL = "00000000000000000000000000001111"
+	wP = "00000000000000000000000000001111"
+	wW = "00000000000000000000000000001111"
+
+Analyzing hierarchy for module <planeB> in library <work> with parameters.
+	pL = "00000000000000000000000000101000"
+	pW = "00000000000000000000000000001010"
+	wL = "00000000000000000000000000001111"
+	wP = "00000000000000000000000000001010"
+	wW = "00000000000000000000000000001111"
+
+Analyzing hierarchy for module <number> in library <work>.
+
+Analyzing hierarchy for module <bullet> in library <work> with parameters.
+	s = "00000000000000000000000000000100"
+	w = "00000000000000000000000000000100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Test>.
+WARNING:Xst:863 - "Test.v" line 63: Name conflict (<bb_1> and <BB_1>, renaming bb_1 as bb_1_rnm0).
+WARNING:Xst:863 - "Test.v" line 62: Name conflict (<AA_1> and <aa_1>, renaming AA_1 as aa_1_rnm0).
+WARNING:Xst:863 - "Test.v" line 63: Name conflict (<bb_10> and <BB_10>, renaming bb_10 as bb_10_rnm0).
+WARNING:Xst:863 - "Test.v" line 63: Name conflict (<aa_10> and <AA_10>, renaming aa_10 as aa_10_rnm0).
+	PERIOD = 32'sb00000001011111010111100001000000
+	aX = 32'sb00000000000000000000000011001000
+	aY = 32'sb00000000000000000000000100101100
+	bX = 32'sb00000000000000000000001001011000
+	bY = 32'sb00000000000000000000000100101100
+	eX = 32'sb00000000000000000000000110010000
+	eY = 32'sb00000000000000000000000100101100
+WARNING:Xst:864 - "Test.v" line 270: Comparisons to 'X' or 'Z' are treated as always false.
+WARNING:Xst:2211 - "ipcore_dir/div.v" line 89: Instantiating black box module <div>.
+WARNING:Xst:2211 - "ipcore_dir/div.v" line 96: Instantiating black box module <div>.
+Module <Test> is correct for synthesis.
+ 
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <divA> in unit <Test>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <divA> in unit <Test>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <divB> in unit <Test>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <divB> in unit <Test>.
+    Set property "SYN_NOPRUNE = 1" for unit <div>.
+    Set property "SYN_NOPRUNE = 1" for unit <div>.
+Analyzing module <planeA> in library <work>.
+	pL = 32'sb00000000000000000000000000101000
+	pW = 32'sb00000000000000000000000000001010
+	wL = 32'sb00000000000000000000000000001111
+	wP = 32'sb00000000000000000000000000001111
+	wW = 32'sb00000000000000000000000000001111
+Module <planeA> is correct for synthesis.
+ 
+Analyzing module <planeB> in library <work>.
+	pL = 32'sb00000000000000000000000000101000
+	pW = 32'sb00000000000000000000000000001010
+	wL = 32'sb00000000000000000000000000001111
+	wP = 32'sb00000000000000000000000000001010
+	wW = 32'sb00000000000000000000000000001111
+Module <planeB> is correct for synthesis.
+ 
+Analyzing module <number> in library <work>.
+Module <number> is correct for synthesis.
+ 
+Analyzing module <bullet> in library <work>.
+	s = 32'sb00000000000000000000000000000100
+	w = 32'sb00000000000000000000000000000100
+Module <bullet> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <bA11_t> in unit <Test> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <bB11_t> in unit <Test> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <planeA>.
+    Related source file is "planeA.v".
+    Found 1-bit register for signal <wing>.
+    Found 1-bit register for signal <body>.
+    Found 14-bit adder for signal <$add0000> created at line 53.
+    Found 13-bit adder for signal <$add0001> created at line 54.
+    Found 12-bit adder for signal <$add0002> created at line 43.
+    Found 13-bit subtractor for signal <$sub0000> created at line 53.
+    Found 13-bit subtractor for signal <$sub0001> created at line 54.
+    Found 14-bit subtractor for signal <$sub0002> created at line 54.
+    Found 14-bit subtractor for signal <add0000$sub0000> created at line 53.
+    Found 11-bit adder carry out for signal <add0003$addsub0000> created at line 43.
+    Found 12-bit adder for signal <add0004$addsub0000> created at line 54.
+    Found 12-bit adder for signal <add0004$addsub0001> created at line 54.
+    Found 12-bit adder for signal <body$add0000> created at line 43.
+    Found 11-bit comparator greater for signal <body$cmp_gt0000> created at line 43.
+    Found 12-bit comparator greater for signal <body$cmp_gt0001> created at line 43.
+    Found 12-bit comparator less for signal <body$cmp_lt0000> created at line 43.
+    Found 12-bit comparator less for signal <body$cmp_lt0001> created at line 43.
+    Found 12-bit adder for signal <wing$addsub0000> created at line 54.
+    Found 12-bit comparator greater for signal <wing$cmp_gt0000> created at line 53.
+    Found 11-bit comparator greater for signal <wing$cmp_gt0001> created at line 53.
+    Found 12-bit comparator greater for signal <wing$cmp_gt0002> created at line 54.
+    Found 12-bit comparator less for signal <wing$cmp_lt0000> created at line 53.
+    Found 12-bit comparator less for signal <wing$cmp_lt0001> created at line 53.
+    Found 14-bit comparator less for signal <wing$cmp_lt0002> created at line 53.
+    Found 12-bit comparator less for signal <wing$cmp_lt0003> created at line 54.
+    Found 14-bit comparator less for signal <wing$cmp_lt0004> created at line 54.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <planeA> synthesized.
+
+
+Synthesizing Unit <planeB>.
+    Related source file is "plane.v".
+    Found 1-bit register for signal <wing>.
+    Found 1-bit register for signal <body>.
+    Found 13-bit adder for signal <$add0000> created at line 53.
+    Found 14-bit adder for signal <$add0001> created at line 54.
+    Found 12-bit adder for signal <$add0002> created at line 43.
+    Found 13-bit subtractor for signal <$sub0000> created at line 53.
+    Found 14-bit subtractor for signal <$sub0001> created at line 53.
+    Found 14-bit subtractor for signal <add0001$sub0000> created at line 54.
+    Found 11-bit adder carry out for signal <add0003$addsub0000> created at line 43.
+    Found 12-bit adder for signal <add0004$addsub0000> created at line 54.
+    Found 12-bit adder for signal <add0004$addsub0001> created at line 54.
+    Found 12-bit adder for signal <body$add0000> created at line 43.
+    Found 11-bit comparator greater for signal <body$cmp_gt0000> created at line 43.
+    Found 12-bit comparator greater for signal <body$cmp_gt0001> created at line 43.
+    Found 12-bit comparator less for signal <body$cmp_lt0000> created at line 43.
+    Found 12-bit comparator less for signal <body$cmp_lt0001> created at line 43.
+    Found 12-bit adder for signal <wing$addsub0000> created at line 54.
+    Found 12-bit comparator greater for signal <wing$cmp_gt0000> created at line 53.
+    Found 11-bit comparator greater for signal <wing$cmp_gt0001> created at line 53.
+    Found 14-bit comparator greater for signal <wing$cmp_gt0002> created at line 53.
+    Found 12-bit comparator greater for signal <wing$cmp_gt0003> created at line 54.
+    Found 32-bit comparator greater for signal <wing$cmp_gt0004> created at line 54.
+    Found 12-bit comparator less for signal <wing$cmp_lt0000> created at line 53.
+    Found 12-bit comparator less for signal <wing$cmp_lt0001> created at line 53.
+    Found 12-bit comparator less for signal <wing$cmp_lt0002> created at line 54.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <planeB> synthesized.
+
+
+Synthesizing Unit <number>.
+    Related source file is "number.v".
+    Found 1-bit register for signal <pic>.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 120.
+    Found 11-bit comparator greatequal for signal <pic$cmp_ge0000> created at line 120.
+    Found 12-bit comparator lessequal for signal <pic$cmp_le0000> created at line 120.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <number> synthesized.
+
+
+Synthesizing Unit <bullet>.
+    Related source file is "bullet.v".
+    Found 1-bit register for signal <bullet>.
+    Found 12-bit adder for signal <$add0000> created at line 91.
+    Found 11-bit adder carry out for signal <add0001$addsub0000> created at line 91.
+    Found 12-bit adder for signal <add0002$add0000> created at line 91.
+    Found 11-bit adder carry out for signal <add0002$addsub0001> created at line 91.
+    Found 11-bit adder carry out for signal <add0003$addsub0000> created at line 91.
+    Found 11-bit adder carry out for signal <add0004$addsub0000> created at line 92.
+    Found 12-bit adder for signal <bullet$addsub0000> created at line 91.
+    Found 12-bit comparator greater for signal <bullet$cmp_gt0000> created at line 91.
+    Found 12-bit comparator greater for signal <bullet$cmp_gt0001> created at line 91.
+    Found 11-bit comparator greater for signal <bullet$cmp_gt0002> created at line 92.
+    Found 12-bit comparator less for signal <bullet$cmp_lt0000> created at line 91.
+    Found 12-bit comparator less for signal <bullet$cmp_lt0001> created at line 91.
+    Found 12-bit comparator less for signal <bullet$cmp_lt0002> created at line 92.
+    Found 11-bit register for signal <nowX>.
+    Found 11-bit addsub for signal <nowX$addsub0000>.
+    Found 11-bit register for signal <nowY>.
+    Found 1-bit register for signal <over>.
+    Found 11-bit comparator greatequal for signal <over$cmp_ge0000> created at line 58.
+    Found 11-bit comparator lessequal for signal <over$cmp_le0000> created at line 54.
+    Found 11-bit comparator lessequal for signal <over$cmp_le0001> created at line 58.
+    Found 1-bit register for signal <start>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <bullet> synthesized.
+
+
+Synthesizing Unit <Test>.
+    Related source file is "Test.v".
+WARNING:Xst:646 - Signal <rfdB> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rfdA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <kReg<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 7x14-bit ROM for signal <$rom0000>.
+    Found 1-bit register for signal <a>.
+    Found 11-bit comparator greatequal for signal <a$cmp_ge0000> created at line 593.
+    Found 11-bit comparator less for signal <a$cmp_lt0000> created at line 593.
+    Found 1-bit register for signal <a_lost>.
+    Found 1-bit register for signal <b>.
+    Found 11-bit adder carry out for signal <b$addsub0001> created at line 612.
+    Found 11-bit comparator lessequal for signal <b$cmp_ge0000> created at line 612.
+    Found 12-bit comparator greatequal for signal <b$cmp_le0000> created at line 612.
+    Found 1-bit register for signal <b_lost>.
+    Found 1-bit register for signal <bA10_t>.
+    Found 1-bit register for signal <bA12_t>.
+    Found 1-bit register for signal <bA13_t>.
+    Found 1-bit register for signal <bA14_t>.
+    Found 1-bit register for signal <bA15_t>.
+    Found 1-bit register for signal <bA16_t>.
+    Found 1-bit register for signal <bA17_t>.
+    Found 1-bit register for signal <bA18_t>.
+    Found 1-bit register for signal <bA19_t>.
+    Found 1-bit register for signal <bA1_t>.
+    Found 1-bit register for signal <bA20_t>.
+    Found 1-bit register for signal <bA2_t>.
+    Found 1-bit register for signal <bA3_t>.
+    Found 1-bit register for signal <bA4_t>.
+    Found 1-bit register for signal <bA5_t>.
+    Found 1-bit register for signal <bA6_t>.
+    Found 1-bit register for signal <bA7_t>.
+    Found 1-bit register for signal <bA8_t>.
+    Found 1-bit register for signal <bA9_t>.
+    Found 6-bit down counter for signal <bA_counter>.
+    Found 1-bit register for signal <bB10_t>.
+    Found 1-bit register for signal <bB12_t>.
+    Found 1-bit register for signal <bB13_t>.
+    Found 1-bit register for signal <bB14_t>.
+    Found 1-bit register for signal <bB15_t>.
+    Found 1-bit register for signal <bB16_t>.
+    Found 1-bit register for signal <bB17_t>.
+    Found 1-bit register for signal <bB18_t>.
+    Found 1-bit register for signal <bB19_t>.
+    Found 1-bit register for signal <bB1_t>.
+    Found 1-bit register for signal <bB20_t>.
+    Found 1-bit register for signal <bB2_t>.
+    Found 1-bit register for signal <bB3_t>.
+    Found 1-bit register for signal <bB4_t>.
+    Found 1-bit register for signal <bB5_t>.
+    Found 1-bit register for signal <bB6_t>.
+    Found 1-bit register for signal <bB7_t>.
+    Found 1-bit register for signal <bB8_t>.
+    Found 1-bit register for signal <bB9_t>.
+    Found 6-bit down counter for signal <bB_counter>.
+    Found 1-bit xor9 for signal <check>.
+    Found 25-bit up counter for signal <counter>.
+    Found 1-bit register for signal <cState>.
+    Found 1-bit register for signal <d>.
+    Found 1-bit register for signal <down>.
+    Found 6-bit up counter for signal <e_counter>.
+    Found 1-bit register for signal <equ>.
+    Found 11-bit comparator greatequal for signal <equ$cmp_ge0000> created at line 631.
+    Found 11-bit comparator less for signal <equ$cmp_lt0000> created at line 631.
+    Found 1-bit register for signal <equal>.
+    Found 11-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 166.
+    Found 11-bit comparator less for signal <hsync$cmp_lt0000> created at line 166.
+    Found 4-bit up counter for signal <kCounter>.
+    Found 8-bit register for signal <kData>.
+    Found 22-bit register for signal <kReg>.
+    Found 1-bit register for signal <left>.
+    Found 1-bit register for signal <nState>.
+    Found 1-bit register for signal <over>.
+    Found 11-bit updown accumulator for signal <planeAy>.
+    Found 12-bit adder for signal <planeAy$addsub0001> created at line 312.
+    Found 11-bit adder carry out for signal <planeAy$addsub0002> created at line 312.
+    Found 12-bit comparator greatequal for signal <planeAy$cmp_ge0000> created at line 312.
+    Found 13-bit comparator lessequal for signal <planeAy$cmp_le0000> created at line 311.
+    Found 13-bit subtractor for signal <planeAy$sub0000> created at line 311.
+    Found 11-bit updown accumulator for signal <planeBy>.
+    Found 12-bit adder for signal <planeBy$addsub0001> created at line 322.
+    Found 11-bit adder carry out for signal <planeBy$addsub0002> created at line 322.
+    Found 12-bit comparator greatequal for signal <planeBy$cmp_ge0000> created at line 322.
+    Found 13-bit comparator lessequal for signal <planeBy$cmp_le0000> created at line 321.
+    Found 13-bit subtractor for signal <planeBy$sub0000> created at line 321.
+    Found 1-bit register for signal <s>.
+    Found 1-bit register for signal <sig_f0>.
+    Found 1-bit register for signal <timer>.
+    Found 1-bit register for signal <up>.
+    Found 11-bit comparator greatequal for signal <vis$cmp_ge0000> created at line 165.
+    Found 11-bit comparator greatequal for signal <vis$cmp_ge0001> created at line 165.
+    Found 11-bit comparator lessequal for signal <vis$cmp_le0000> created at line 165.
+    Found 11-bit comparator lessequal for signal <vis$cmp_le0001> created at line 165.
+    Found 11-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 167.
+    Found 11-bit comparator less for signal <vsync$cmp_lt0000> created at line 167.
+    Found 1-bit register for signal <w>.
+    Found 11-bit up counter for signal <x>.
+    Found 11-bit up counter for signal <y>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   7 Counter(s).
+	inferred   2 Accumulator(s).
+	inferred  85 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  18 Comparator(s).
+	inferred   1 Xor(s).
+Unit <Test> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 7x14-bit ROM                                          : 1
+# Adders/Subtractors                                   : 321
+ 11-bit adder carry out                                : 169
+ 11-bit addsub                                         : 40
+ 11-bit subtractor                                     : 8
+ 12-bit adder                                          : 90
+ 12-bit subtractor                                     : 1
+ 13-bit adder                                          : 2
+ 13-bit subtractor                                     : 5
+ 14-bit adder                                          : 2
+ 14-bit subtractor                                     : 4
+# Counters                                             : 7
+ 11-bit up counter                                     : 2
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 6-bit down counter                                    : 2
+ 6-bit up counter                                      : 1
+# Accumulators                                         : 2
+ 11-bit updown accumulator                             : 2
+# Registers                                            : 265
+ 1-bit register                                        : 183
+ 11-bit register                                       : 80
+ 22-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 410
+ 11-bit comparator greatequal                          : 50
+ 11-bit comparator greater                             : 44
+ 11-bit comparator less                                : 4
+ 11-bit comparator lessequal                           : 83
+ 12-bit comparator greatequal                          : 3
+ 12-bit comparator greater                             : 86
+ 12-bit comparator less                                : 130
+ 12-bit comparator lessequal                           : 4
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator greater                             : 1
+ 14-bit comparator less                                : 2
+ 32-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/div.ngc>.
+Loading core <div> for timing and area information for instance <divA>.
+Loading core <div> for timing and area information for instance <divB>.
+INFO:Xst:2261 - The FF/Latch <nowX_2> in Unit <bA11_m> is equivalent to the following 3 FFs/Latches, which will be removed : <nowX_4> <nowX_7> <nowX_8> 
+INFO:Xst:2261 - The FF/Latch <nowX_0> in Unit <bA11_m> is equivalent to the following 6 FFs/Latches, which will be removed : <nowX_1> <nowX_3> <nowX_5> <nowX_6> <nowX_9> <nowX_10> 
+INFO:Xst:2261 - The FF/Latch <nowX_2> in Unit <bB11_m> is equivalent to the following 4 FFs/Latches, which will be removed : <nowX_3> <nowX_4> <nowX_6> <nowX_9> 
+INFO:Xst:2261 - The FF/Latch <nowX_0> in Unit <bB11_m> is equivalent to the following 5 FFs/Latches, which will be removed : <nowX_1> <nowX_5> <nowX_7> <nowX_8> <nowX_10> 
+WARNING:Xst:1710 - FF/Latch <nowX_0> (without init value) has a constant value of 0 in block <bA11_m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <nowX_0> (without init value) has a constant value of 0 in block <bB11_m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <kReg_0> of sequential type is unconnected in block <Test>.
+
+Synthesizing (advanced) Unit <bullet>.
+The following registers are absorbed into accumulator <nowX>: 1 register on signal <nowX>.
+Unit <bullet> synthesized (advanced).
+WARNING:Xst:2677 - Node <kReg_0> of sequential type is unconnected in block <Test>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 7x14-bit ROM                                          : 1
+# Adders/Subtractors                                   : 281
+ 11-bit adder carry out                                : 169
+ 11-bit subtractor                                     : 4
+ 12-bit adder                                          : 90
+ 12-bit subtractor                                     : 1
+ 13-bit adder                                          : 2
+ 13-bit subtractor                                     : 5
+ 14-bit adder                                          : 2
+ 14-bit subtractor                                     : 4
+ 3-bit subtractor                                      : 4
+# Counters                                             : 7
+ 11-bit up counter                                     : 2
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 6-bit down counter                                    : 2
+ 6-bit up counter                                      : 1
+# Accumulators                                         : 42
+ 11-bit updown accumulator                             : 2
+ 11-bit updown loadable accumulator                    : 40
+# Registers                                            : 652
+ Flip-Flops                                            : 652
+# Comparators                                          : 410
+ 11-bit comparator greatequal                          : 50
+ 11-bit comparator greater                             : 44
+ 11-bit comparator less                                : 4
+ 11-bit comparator lessequal                           : 83
+ 12-bit comparator greatequal                          : 3
+ 12-bit comparator greater                             : 86
+ 12-bit comparator less                                : 130
+ 12-bit comparator lessequal                           : 4
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator greater                             : 1
+ 14-bit comparator less                                : 2
+ 32-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Test> ...
+
+Optimizing unit <planeA> ...
+
+Optimizing unit <planeB> ...
+
+Optimizing unit <bullet> ...
+WARNING:Xst:1710 - FF/Latch <bB11_m/nowX_10> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bB11_m/nowX_8> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bB11_m/nowX_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bB11_m/nowX_5> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bB11_m/nowX_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bB11_m/nowX_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_10> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_9> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_6> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_5> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_3> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/nowX_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bA11_m/over> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <bB11_m/nowX_9> in Unit <Test> is equivalent to the following 10 FFs/Latches, which will be removed : <bB11_m/nowX_6> <bB11_m/nowX_4> <bB11_m/nowX_3> <bB11_m/nowX_2> <bB11_m/start> <bA11_m/nowX_8> <bA11_m/nowX_7> <bA11_m/nowX_4> <bA11_m/nowX_2> <bA11_m/start> 
+Found area constraint ratio of 100 (+ 5) on block Test, actual ratio is 77.
+FlipFlop x_10 has been replicated 2 time(s)
+FlipFlop x_2 has been replicated 1 time(s)
+FlipFlop x_3 has been replicated 2 time(s)
+FlipFlop x_4 has been replicated 2 time(s)
+FlipFlop x_5 has been replicated 2 time(s)
+FlipFlop x_6 has been replicated 2 time(s)
+FlipFlop x_7 has been replicated 2 time(s)
+FlipFlop x_8 has been replicated 2 time(s)
+FlipFlop x_9 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1175
+ Flip-Flops                                            : 1175
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Test.ngr
+Top Level Output File Name         : Test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 13872
+#      BUF                         : 2
+#      GND                         : 3
+#      INV                         : 694
+#      LUT1                        : 1709
+#      LUT2                        : 2818
+#      LUT2_D                      : 2
+#      LUT2_L                      : 6
+#      LUT3                        : 305
+#      LUT3_D                      : 7
+#      LUT3_L                      : 7
+#      LUT4                        : 461
+#      LUT4_D                      : 3
+#      LUT4_L                      : 28
+#      MULT_AND                    : 12
+#      MUXCY                       : 5002
+#      MUXF5                       : 42
+#      VCC                         : 3
+#      XORCY                       : 2768
+# FlipFlops/Latches                : 1379
+#      FD                          : 206
+#      FDC                         : 144
+#      FDCE                        : 1017
+#      FDPE                        : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 3
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     3488  out of   4656    74%  
+ Number of Slice Flip Flops:           1379  out of   9312    14%  
+ Number of 4 input LUTs:               6040  out of   9312    64%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1379  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst_IBUF_1(rst_IBUF_1:O)           | NONE(bB1_m/nowY_3)     | 392   |
+rst_IBUF_2(rst_IBUF_2:O)           | NONE(bA5_m/nowX_5)     | 392   |
+rst                                | IBUF                   | 389   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 14.326ns (Maximum Frequency: 69.805MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 10.097ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 14.326ns (frequency: 69.805MHz)
+  Total number of paths / destination ports: 78086 / 2292
+-------------------------------------------------------------------------
+Delay:               14.326ns (Levels of Logic = 21)
+  Source:            x_2_1 (FF)
+  Destination:       pB/wing (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: x_2_1 to pB/wing
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             43   0.591   1.441  x_2_1 (x_2_1)
+     LUT1:I0->O            1   0.704   0.000  pB/Msub__sub0000_cy<2>_rt (pB/Msub__sub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.464   0.000  pB/Msub__sub0000_cy<2> (pB/Msub__sub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<3> (pB/Msub__sub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<4> (pB/Msub__sub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<5> (pB/Msub__sub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<6> (pB/Msub__sub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<7> (pB/Msub__sub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<8> (pB/Msub__sub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub__sub0000_cy<9> (pB/Msub__sub0000_cy<9>)
+     XORCY:CI->O           2   0.804   0.526  pB/Msub__sub0000_xor<10> (pB/_sub0000<10>)
+     LUT2:I1->O            1   0.704   0.000  pB/Msub_add0001_sub0000_lut<10> (pB/Msub_add0001_sub0000_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  pB/Msub_add0001_sub0000_cy<10> (pB/Msub_add0001_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  pB/Msub_add0001_sub0000_cy<11> (pB/Msub_add0001_sub0000_cy<11>)
+     XORCY:CI->O           1   0.804   0.595  pB/Msub_add0001_sub0000_xor<12> (pB/add0001_sub0000<12>)
+     LUT1:I0->O            1   0.704   0.000  pB/Madd__add0001_cy<12>_rt (pB/Madd__add0001_cy<12>_rt)
+     MUXCY:S->O            0   0.464   0.000  pB/Madd__add0001_cy<12> (pB/Madd__add0001_cy<12>)
+     XORCY:CI->O           2   0.804   0.622  pB/Madd__add0001_xor<13> (pB/Mcompar_wing_cmp_gt0004_lut<4>)
+     LUT1:I0->O            1   0.704   0.000  pB/Mcompar_wing_cmp_gt0004_cy<4>_rt (pB/Mcompar_wing_cmp_gt0004_cy<4>_rt)
+     MUXCY:S->O            1   0.864   0.455  pB/Mcompar_wing_cmp_gt0004_cy<4> (pB/Mcompar_wing_cmp_gt0004_cy<4>)
+     LUT3:I2->O            1   0.704   0.424  pB/wing_mux00005 (pB/wing_mux00005)
+     LUT4:I3->O            1   0.704   0.000  pB/wing_mux000014 (pB/wing_mux0000)
+     FDC:D                     0.308          pB/wing
+    ----------------------------------------
+    Total                     14.326ns (10.263ns logic, 4.063ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            PS2_CLK (PAD)
+  Destination:       nState (FF)
+  Destination Clock: clk rising
+
+  Data Path: PS2_CLK to nState
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  PS2_CLK_IBUF (PS2_CLK_IBUF)
+     FD:D                      0.308          nState
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 207 / 5
+-------------------------------------------------------------------------
+Offset:              10.097ns (Levels of Logic = 5)
+  Source:            x_3 (FF)
+  Destination:       green (PAD)
+  Source Clock:      clk rising
+
+  Data Path: x_3 to green
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             68   0.591   1.449  x_3 (x_3)
+     LUT4:I0->O            1   0.704   0.595  green61 (green61)
+     LUT4:I0->O            1   0.704   0.455  green103_SW0 (N213)
+     LUT4:I2->O            1   0.704   0.499  green103 (green103)
+     LUT3:I1->O            1   0.704   0.420  green129 (green_OBUF)
+     OBUF:I->O                 3.272          green_OBUF (green)
+    ----------------------------------------
+    Total                     10.097ns (6.679ns logic, 3.418ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to divA.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to divA.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to divB.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to divB.
+
+
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 32.08 secs
+ 
+--> 
+
+Total memory usage is 360108 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   88 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

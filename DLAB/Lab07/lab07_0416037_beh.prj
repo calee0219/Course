@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/sqrt.v"
+verilog work "Lab07.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

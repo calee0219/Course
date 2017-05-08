@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+$main_col: #808080
+$butt_col: #C0C0C0
+$dis_col: 	#B6B6B6
+$word_col: #f7f7f7
+$butt_cli_col: #adadad
+$butt_tou_col: #c8c8c8
+$disabled_col: #808080
+
+$bold_siz: 0.3em
+$shad_siz: 0.14em
+$cal_wid: 20em
+$butt_wid: 4em
+$butt_hig: 4em
+$rad: 4px
+$word_siz: 1.2em
+
+.calculator
+  margin: auto auto
+  padding: 0 10px 5px 10px
+  text-align: center
+  vertical-align: middle
+  color: $word_col
+  font-size: $word_siz
+  background-color: $main_col
+  box-shadow: $bold_siz $bold_siz black
+  border-radius: $rad
+  width: $cal_wid
+  height: auto
+
+.display
+  position: relative
+  top: 10px
+  margin: $butt_wid*0.5 $butt_wid*0.5
+  //padding: $butt_hig*0.1 0
+  //background-color: $dis_col
+  border-width: 0 $bold_siz $bold_siz 0
+  border-radius: $rad
+  & .title
+    font-size: $word_siz*1.1
+  & .ans
+    //margin: $word_siz*0.1 6%
+    text-align: left
+    & .text
+      display: inline-block
+      text-align: left
+    & .num
+      display: inline-block
+      width: 82%
+      text-align: right
+  & .now
+    background-color: #adadad
+    border-radius: $rad*0.5
+  & .buff
+    margin: $word_siz*0.1 2%
+    text-align: right
+  & .hex, .dec, .oct, .bin
+    cursor: pointer
+    display: inline-block
+    width: $cal_wid*0.8
+    text-align: left
+    & .lab
+      display: inline-block
+      margin-left: 2px
+    & .dis_num
+      display: inline-block
+      width: 82%
+      text-align: right
+
+.title
+  margin-bottom: 10px
+  display: block
+
+.input
+  margin: $butt_hig*0.2 auto
+
+.row
+  display: block
+
+.function
+  position: relative
+
+.number
+  position: relative
+
+.button
+  cursor: pointer
+  background-color: $butt_col
+  display: inline-block
+  margin: 0 $bold_siz $bold_siz*2 0
+  box-shadow: $shad_siz $shad_siz #999
+  border-radius: $rad
+  width: $butt_wid
+  height: $butt_hig
+  &:hover
+    background-color: $butt_tou_col
+  &:active
+    background-color: $butt_cli_col
+    //transform: translateY($shad_siz*0.7)
+  &.disabled
+    opacity: 0.6
+    cursor: not-allowed

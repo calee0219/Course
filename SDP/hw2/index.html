@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Calculator</title>
+    <link rel="StyleSheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+<div class="calculator">
+    <div class="display">
+        <div class="title">Calculator</div>
+        <hr/>
+        <div>Input Mode: <span id="inputMode">Hex</span></div>
+        <div class="ans">
+            <div class="text">Func:</div>
+            <div class="num" id="func">0</div>
+        </div>
+        <div class="buff">0</div>
+        <div class="result">
+            <div class="hex" id="hexButton">
+                <div class="lab">HEX: </div>
+                <div class="dis_num" id="hex">0</div>
+            </div>
+            <div class="dec now" id="decButton">
+                <div class="lab">DEC: </div>
+                <div class="dis_num" id="dec">0</div>
+            </div>
+            <div class="oct" id="octButton">
+                <div class="lab">OCT: </div>
+                <div class="dis_num" id="oct">0</div>
+            </div>
+            <div class="bin" id="binButton">
+                <div class="lab">BIN : </div>
+                <div class="dis_num" id="bin">0</div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+    <div class="input">
+        <div class="function">
+            <div class="row">
+                <button class="button c">C</button>
+                <button class="button ce">CE</button>
+                <button class="button mode">mode</button>
+                <button class="button bs">&larr;</button>
+                <button class="button pm">&#8723;</button>
+            </div>
+        </div>
+        <div class="operator">
+            <div class="row">
+                <button class="button opt" id="modu">%</button>
+                <button class="button opt" id="divi">&div;</button>
+                <button class="button opt" id="muti">×</button>
+                <button class="button opt" id="minu">&minus;</button>
+                <button class="button opt" id="plus">&plus;</button>
+            </div>
+        </div>
+        <div class="number">
+            <div class="row">
+                <button class="button num hex disabled" disabled="disabled">E</button>
+                <button class="button num hex disabled" disabled="disabled">F</button>
+                <button class="button num oct">7</button>
+                <button class="button num dec">8</button>
+                <button class="button num dec">9</button>
+            </div>
+            <div class="row">
+                <button class="button num hex disabled" disabled="disabled">C</button>
+                <button class="button num hex disabled" disabled="disabled">D</button>
+                <button class="button num oct">4</button>
+                <button class="button num oct">5</button>
+                <button class="button num oct">6</button>
+            </div>
+            <div class="row">
+                <button class="button num hex disabled" disabled="disabled">A</button>
+                <button class="button num hex disabled" disabled="disabled">B</button>
+                <button class="button num bin">1</button>
+                <button class="button num oct">2</button>
+                <button class="button num oct">3</button>
+            </div>
+            <div class="row">
+                <button class="button lBracket disabled" disabled="disabled">(</button>
+                <button class="button rBracket disabled" disabled="disabled">)</button>
+                <button class="button num bin">0</button>
+                <button class="button dot disabled" disabled="disabled">.</button>
+                <button class="button equ">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

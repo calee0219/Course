@@ -1,0 +1,16 @@
+ncverilog TESTBED.v +define+RTL -access +r +notimingchecks
+echo "*******TEST1!!!!!*******"
+ncverilog TESTBED.v +define+RTL2 -access +r +notimingchecks
+echo "*******TEST2!!!!!*******"
+ncverilog TESTBED.v +define+RTL3 -access +r +notimingchecks
+echo "*******TEST3!!!!!*******"
+ncverilog TESTBED.v +define+RTL4 -access +r +notimingchecks
+echo "*******TEST4!!!!!*******"
+ncverilog TESTBED.v +define+RTL5 -access +r +notimingchecks
+echo "*******TEST5!!!!!*******"
+ncverilog TESTBED.v +define+RTL6 -access +r +notimingchecks
+echo "*******TEST6!!!!!*******"
+ncverilog TESTBED.v +define+RTL7 -access +r +notimingchecks
+echo "*******TEST7!!!!!*******"
+ncverilog TESTBED.v +define+RTL8 -access +r +notimingchecks
+echo "*******TEST8!!!!!*******"

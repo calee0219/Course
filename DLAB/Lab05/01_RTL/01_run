@@ -1,0 +1,3 @@
+ncverilog TESTBED.v +define+RTL -access +r +notimingchecks
+
+

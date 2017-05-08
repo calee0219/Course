@@ -1,0 +1,1974 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Frogger.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Frogger.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Frogger"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Frogger
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Frogger.v" in library work
+Module <Frogger> compiled
+No errors in compilation
+Analysis of file <"Frogger.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Frogger> in library <work> with parameters.
+	B4_Dy = "00000000000000000000000110101100"
+	B4_Lx = "00000000000000000000000001101000"
+	B4_Rx = "00000000000000000000001110001000"
+	B4_Ty = "00000000000000000000000101011100"
+	B5_Dy = "00000000000000000000000111111101"
+	B5_Lx = "00000000000000000000000001101000"
+	B5_Rx = "00000000000000000000001110001000"
+	B5_Ty = "00000000000000000000000110101101"
+	B6_Dy = "00000000000000000000001001001110"
+	B6_Lx = "00000000000000000000000001101000"
+	B6_Rx = "00000000000000000000001110001000"
+	B6_Ty = "00000000000000000000000111111110"
+	DownY = "00000000000000000000001001001011"
+	End_Dy = "00000000000000000000000001101000"
+	End_Lx = "00000000000000000000000001111100"
+	End_Rx = "00000000000000000000000101000100"
+	End_Ty = "00000000000000000000000000101100"
+	FB_Dy = "00000000000000000000000001101000"
+	FB_Lx = "00000000000000000000000001101000"
+	FB_Rx = "00000000000000000000001110001000"
+	FB_Ty = "00000000000000000000000000011000"
+	LeftX = "00000000000000000000000001101000"
+	PERIOD = "00000010111110101111000010000000"
+	RightX = "00000000000000000000001110001000"
+	SB_Dy = "00000000000000000000000100001010"
+	SB_Lx = "00000000000000000000000001101000"
+	SB_My = "00000000000000000000000010111010"
+	SB_Rx = "00000000000000000000001110001000"
+	SB_Ty = "00000000000000000000000001101001"
+	TB_Dy = "00000000000000000000000101011011"
+	TB_Lx = "00000000000000000000000001101000"
+	TB_Rx = "00000000000000000000001110001000"
+	TB_Ty = "00000000000000000000000100001011"
+	TopY = "00000000000000000000000000011000"
+	poX = "00000000000000000000000100110000"
+	poY = "00000000000000000000000011100000"
+	step_h = "00000000000000000000000000001010"
+	step_v = "00000000000000000000000001010001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Frogger>.
+WARNING:Xst:863 - "Frogger.v" line 26: Name conflict (<start> and <START>, renaming start as start_rnm0).
+	B4_Dy = 32'sb00000000000000000000000110101100
+	B4_Lx = 32'sb00000000000000000000000001101000
+	B4_Rx = 32'sb00000000000000000000001110001000
+	B4_Ty = 32'sb00000000000000000000000101011100
+	B5_Dy = 32'sb00000000000000000000000111111101
+	B5_Lx = 32'sb00000000000000000000000001101000
+	B5_Rx = 32'sb00000000000000000000001110001000
+	B5_Ty = 32'sb00000000000000000000000110101101
+	B6_Dy = 32'sb00000000000000000000001001001110
+	B6_Lx = 32'sb00000000000000000000000001101000
+	B6_Rx = 32'sb00000000000000000000001110001000
+	B6_Ty = 32'sb00000000000000000000000111111110
+	DownY = 32'sb00000000000000000000001001001011
+	End_Dy = 32'sb00000000000000000000000001101000
+	End_Lx = 32'sb00000000000000000000000001111100
+	End_Rx = 32'sb00000000000000000000000101000100
+	End_Ty = 32'sb00000000000000000000000000101100
+	FB_Dy = 32'sb00000000000000000000000001101000
+	FB_Lx = 32'sb00000000000000000000000001101000
+	FB_Rx = 32'sb00000000000000000000001110001000
+	FB_Ty = 32'sb00000000000000000000000000011000
+	LeftX = 32'sb00000000000000000000000001101000
+	PERIOD = 32'sb00000010111110101111000010000000
+	RightX = 32'sb00000000000000000000001110001000
+	SB_Dy = 32'sb00000000000000000000000100001010
+	SB_Lx = 32'sb00000000000000000000000001101000
+	SB_My = 32'sb00000000000000000000000010111010
+	SB_Rx = 32'sb00000000000000000000001110001000
+	SB_Ty = 32'sb00000000000000000000000001101001
+	TB_Dy = 32'sb00000000000000000000000101011011
+	TB_Lx = 32'sb00000000000000000000000001101000
+	TB_Rx = 32'sb00000000000000000000001110001000
+	TB_Ty = 32'sb00000000000000000000000100001011
+	TopY = 32'sb00000000000000000000000000011000
+	poX = 32'sb00000000000000000000000100110000
+	poY = 32'sb00000000000000000000000011100000
+	step_h = 32'sb00000000000000000000000000001010
+	step_v = 32'sb00000000000000000000000001010001
+INFO:Xst:1432 - Contents of array <su0> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su1> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su2> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su3> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su4> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su4> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su5> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su5> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su6> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su6> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su7> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su7> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su8> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su8> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su9> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su9> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su10> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su10> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su11> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su11> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su12> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su12> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su13> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su13> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su14> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su14> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su15> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su15> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su16> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su16> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su17> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su17> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su18> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su18> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su19> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su19> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su20> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su20> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su21> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su21> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su22> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su22> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su23> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su23> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su24> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su24> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su25> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su25> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su26> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su26> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su27> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su27> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su28> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su28> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su29> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su29> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su30> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su30> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su31> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su31> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su32> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su32> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su33> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su33> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su34> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su34> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su35> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su35> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su36> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su36> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su37> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su37> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su38> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su38> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su39> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su39> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su40> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su40> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su41> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su41> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su42> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su42> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su43> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su43> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su44> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su44> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su45> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su45> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su46> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su46> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su47> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su47> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su48> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su48> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su49> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su49> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su50> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su50> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su51> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su51> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su52> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su52> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su53> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su53> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su54> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su54> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su55> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su55> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su56> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su56> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su57> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su57> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su58> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su58> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su59> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su59> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su60> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su60> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su61> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su61> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su62> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su62> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su63> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su63> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su64> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su64> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su65> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su65> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su66> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su66> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su67> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su67> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su68> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su68> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su69> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su69> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su70> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su70> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su71> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su71> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su72> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su72> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su73> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su73> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su74> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su74> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su75> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su75> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su76> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su76> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su77> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su77> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su78> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su78> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su79> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su79> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su80> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su80> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su81> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su81> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su82> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su82> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su83> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su83> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su84> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su84> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su85> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su85> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su86> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su86> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su87> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su87> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su88> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su88> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su89> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su89> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su90> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su90> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su91> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su91> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su92> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su92> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su93> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su93> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su94> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su94> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su95> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su95> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su96> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su96> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su97> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su97> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su98> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su98> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su99> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su99> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su100> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su100> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su101> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su101> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su102> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su102> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su103> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su103> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su104> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su104> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su105> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su105> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su106> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su106> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su107> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su107> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su108> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su108> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su109> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su109> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su110> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su110> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su111> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su111> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su112> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su112> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su113> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su113> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su114> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su114> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su115> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su115> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su116> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su116> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su117> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su117> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su118> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su118> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su119> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su119> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su120> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su120> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su121> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su121> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su122> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su122> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su123> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su123> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su124> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su124> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su125> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su125> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su126> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su126> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su127> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su127> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su128> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su128> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su129> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su129> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su130> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su130> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su131> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su131> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su132> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su132> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su133> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su133> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su134> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su134> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su135> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su135> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su136> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su136> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su137> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su137> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su138> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su138> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su139> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su139> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su140> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su140> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su141> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su141> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su142> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su142> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su143> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su143> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su144> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su144> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su145> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su145> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su146> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su146> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su147> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su147> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su148> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su148> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su149> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su149> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su150> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su150> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su151> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su151> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su152> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su152> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su153> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su153> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su154> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su154> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su155> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su155> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su156> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su156> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su157> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su157> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su158> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su158> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su159> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su159> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su160> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su160> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su161> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su161> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su162> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su162> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su163> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su163> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su164> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su164> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su165> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su165> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su166> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su166> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su167> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su167> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su168> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su168> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su169> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su169> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su170> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su170> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su171> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su171> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su172> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su172> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su173> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su173> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su174> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su174> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su175> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su175> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su176> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su176> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su177> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su177> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su178> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su178> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su179> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su179> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su180> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su180> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su181> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su181> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su182> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su182> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su183> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su183> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su184> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su184> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su185> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su185> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su186> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su186> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su187> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su187> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su188> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su188> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su189> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su189> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su190> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su190> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su191> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su191> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su192> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su192> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su193> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su193> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su194> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su194> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su195> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su195> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su196> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su196> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su197> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su197> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su198> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su198> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su199> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su199> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su200> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su200> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su201> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su201> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su202> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su202> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su203> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su203> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su204> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su204> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su205> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su205> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su206> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su206> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su207> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su207> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su208> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su208> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su209> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su209> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su210> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su210> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su211> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su211> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su212> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su212> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su213> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su213> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su214> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su214> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su215> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su215> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su216> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su216> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su217> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su217> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su218> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su218> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su219> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su219> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su220> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su220> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su221> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su221> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su222> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su222> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su223> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su223> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su224> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su224> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su225> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su225> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su226> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su226> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su227> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su227> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su228> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su228> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su229> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su229> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su230> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su230> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su231> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su231> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su232> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su232> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su233> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su233> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su234> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su234> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su235> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su235> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su236> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su236> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su237> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su237> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su238> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su238> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su239> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su239> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su240> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su240> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su241> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su241> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su242> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su242> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su243> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su243> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su244> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su244> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su245> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su245> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su246> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su246> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su247> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su247> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su248> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su248> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su249> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su249> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su250> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su250> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su251> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su251> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <su252> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <su252> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go0> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go1> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go2> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go3> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go4> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go4> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go5> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go5> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go6> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go6> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go7> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go7> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go8> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go8> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go9> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go9> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go10> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go10> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go11> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go11> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go12> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go12> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go13> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go13> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go14> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go14> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go15> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go15> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go16> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go16> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go17> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go17> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go18> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go18> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go19> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go19> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go20> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go20> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go21> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go21> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go22> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go22> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go23> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go23> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go24> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go24> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go25> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go25> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go26> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go26> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go27> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go27> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go28> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go28> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go29> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go29> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go30> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go30> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go31> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go31> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go32> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go32> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go33> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go33> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go34> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go34> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go35> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go35> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go36> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go36> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go37> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go37> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go38> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go38> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go39> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go39> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go40> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go40> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go41> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go41> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go42> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go42> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go43> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go43> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go44> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go44> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go45> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go45> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go46> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go46> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go47> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go47> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go48> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go48> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go49> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go49> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go50> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go50> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go51> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go51> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go52> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go52> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go53> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go53> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go54> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go54> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go55> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go55> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go56> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go56> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go57> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go57> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go58> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go58> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go59> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go59> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go60> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go60> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go61> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go61> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go62> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go62> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go63> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go63> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go64> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go64> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go65> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go65> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go66> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go66> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go67> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go67> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go68> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go68> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go69> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go69> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go70> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go70> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go71> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go71> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go72> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go72> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go73> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go73> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go74> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go74> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go75> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go75> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go76> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go76> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go77> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go77> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go78> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go78> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go79> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go79> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go80> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go80> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go81> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go81> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go82> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go82> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go83> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go83> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go84> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go84> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go85> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go85> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go86> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go86> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go87> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go87> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go88> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go88> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go89> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go89> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go90> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go90> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go91> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go91> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go92> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go92> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go93> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go93> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go94> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go94> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go95> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go95> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go96> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go96> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go97> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go97> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go98> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go98> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go99> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go99> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go100> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go100> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go101> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go101> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go102> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go102> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go103> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go103> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go104> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go104> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go105> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go105> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go106> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go106> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go107> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go107> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go108> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go108> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go109> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go109> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go110> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go110> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go111> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go111> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go112> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go112> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go113> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go113> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go114> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go114> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go115> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go115> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go116> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go116> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go117> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go117> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go118> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go118> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go119> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go119> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go120> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go120> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go121> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go121> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go122> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go122> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go123> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go123> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go124> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go124> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go125> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go125> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go126> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go126> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go127> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go127> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go128> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go128> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go129> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go129> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go130> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go130> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go131> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go131> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go132> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go132> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go133> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go133> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <go134> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <go134> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:864 - "Frogger.v" line 1404: Comparisons to 'X' or 'Z' are treated as always false.
+Module <Frogger> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Frogger>.
+    Related source file is "Frogger.v".
+WARNING:Xst:646 - Signal <su253> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <kReg<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <FB_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <End_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 401x1-bit ROM for signal <$varindex0014> created at line 363.
+    Found 401x1-bit ROM for signal <$varindex0015> created at line 364.
+    Found 401x1-bit ROM for signal <$varindex0016> created at line 365.
+    Found 401x1-bit ROM for signal <$varindex0017> created at line 366.
+    Found 401x1-bit ROM for signal <$varindex0018> created at line 367.
+    Found 401x1-bit ROM for signal <$varindex0019> created at line 368.
+    Found 401x1-bit ROM for signal <$varindex0020> created at line 369.
+    Found 401x1-bit ROM for signal <$varindex0021> created at line 370.
+    Found 401x1-bit ROM for signal <$varindex0022> created at line 371.
+    Found 401x1-bit ROM for signal <$varindex0023> created at line 372.
+    Found 401x1-bit ROM for signal <$varindex0024> created at line 373.
+    Found 401x1-bit ROM for signal <$varindex0025> created at line 374.
+    Found 401x1-bit ROM for signal <$varindex0026> created at line 375.
+    Found 401x1-bit ROM for signal <$varindex0027> created at line 376.
+    Found 401x1-bit ROM for signal <$varindex0028> created at line 377.
+    Found 401x1-bit ROM for signal <$varindex0029> created at line 378.
+    Found 401x1-bit ROM for signal <$varindex0030> created at line 379.
+    Found 401x1-bit ROM for signal <$varindex0031> created at line 380.
+    Found 401x1-bit ROM for signal <$varindex0032> created at line 381.
+    Found 401x1-bit ROM for signal <$varindex0033> created at line 382.
+    Found 401x1-bit ROM for signal <$varindex0034> created at line 383.
+    Found 401x1-bit ROM for signal <$varindex0035> created at line 384.
+    Found 401x1-bit ROM for signal <$varindex0036> created at line 385.
+    Found 401x1-bit ROM for signal <$varindex0037> created at line 386.
+    Found 401x1-bit ROM for signal <$varindex0038> created at line 387.
+    Found 401x1-bit ROM for signal <$varindex0039> created at line 388.
+    Found 401x1-bit ROM for signal <$varindex0040> created at line 389.
+    Found 401x1-bit ROM for signal <$varindex0041> created at line 390.
+    Found 401x1-bit ROM for signal <$varindex0042> created at line 391.
+    Found 401x1-bit ROM for signal <$varindex0043> created at line 392.
+    Found 401x1-bit ROM for signal <$varindex0044> created at line 393.
+    Found 401x1-bit ROM for signal <$varindex0045> created at line 394.
+    Found 401x1-bit ROM for signal <$varindex0046> created at line 395.
+    Found 401x1-bit ROM for signal <$varindex0047> created at line 396.
+    Found 401x1-bit ROM for signal <$varindex0048> created at line 397.
+    Found 401x1-bit ROM for signal <$varindex0049> created at line 398.
+    Found 401x1-bit ROM for signal <$varindex0050> created at line 399.
+    Found 401x1-bit ROM for signal <$varindex0051> created at line 400.
+    Found 401x1-bit ROM for signal <$varindex0052> created at line 401.
+    Found 401x1-bit ROM for signal <$varindex0053> created at line 402.
+    Found 401x1-bit ROM for signal <$varindex0054> created at line 403.
+    Found 401x1-bit ROM for signal <$varindex0055> created at line 404.
+    Found 401x1-bit ROM for signal <$varindex0056> created at line 405.
+    Found 401x1-bit ROM for signal <$varindex0057> created at line 406.
+    Found 401x1-bit ROM for signal <$varindex0058> created at line 407.
+    Found 401x1-bit ROM for signal <$varindex0059> created at line 408.
+    Found 401x1-bit ROM for signal <$varindex0060> created at line 409.
+    Found 401x1-bit ROM for signal <$varindex0061> created at line 410.
+    Found 401x1-bit ROM for signal <$varindex0062> created at line 411.
+    Found 401x1-bit ROM for signal <$varindex0063> created at line 412.
+    Found 401x1-bit ROM for signal <$varindex0064> created at line 413.
+    Found 401x1-bit ROM for signal <$varindex0065> created at line 414.
+    Found 401x1-bit ROM for signal <$varindex0066> created at line 415.
+    Found 401x1-bit ROM for signal <$varindex0067> created at line 416.
+    Found 401x1-bit ROM for signal <$varindex0068> created at line 417.
+    Found 401x1-bit ROM for signal <$varindex0069> created at line 418.
+    Found 401x1-bit ROM for signal <$varindex0070> created at line 419.
+    Found 401x1-bit ROM for signal <$varindex0071> created at line 420.
+    Found 401x1-bit ROM for signal <$varindex0072> created at line 421.
+    Found 401x1-bit ROM for signal <$varindex0073> created at line 422.
+    Found 401x1-bit ROM for signal <$varindex0074> created at line 423.
+    Found 401x1-bit ROM for signal <$varindex0075> created at line 424.
+    Found 401x1-bit ROM for signal <$varindex0076> created at line 425.
+    Found 401x1-bit ROM for signal <$varindex0077> created at line 426.
+    Found 401x1-bit ROM for signal <$varindex0078> created at line 427.
+    Found 401x1-bit ROM for signal <$varindex0079> created at line 428.
+    Found 401x1-bit ROM for signal <$varindex0080> created at line 429.
+    Found 401x1-bit ROM for signal <$varindex0081> created at line 430.
+    Found 401x1-bit ROM for signal <$varindex0082> created at line 431.
+    Found 401x1-bit ROM for signal <$varindex0083> created at line 432.
+    Found 401x1-bit ROM for signal <$varindex0084> created at line 433.
+    Found 401x1-bit ROM for signal <$varindex0085> created at line 434.
+    Found 401x1-bit ROM for signal <$varindex0086> created at line 435.
+    Found 401x1-bit ROM for signal <$varindex0087> created at line 436.
+    Found 401x1-bit ROM for signal <$varindex0088> created at line 437.
+    Found 401x1-bit ROM for signal <$varindex0089> created at line 438.
+    Found 401x1-bit ROM for signal <$varindex0090> created at line 439.
+    Found 401x1-bit ROM for signal <$varindex0091> created at line 440.
+    Found 401x1-bit ROM for signal <$varindex0092> created at line 441.
+    Found 401x1-bit ROM for signal <$varindex0093> created at line 442.
+    Found 401x1-bit ROM for signal <$varindex0094> created at line 443.
+    Found 401x1-bit ROM for signal <$varindex0095> created at line 444.
+    Found 401x1-bit ROM for signal <$varindex0096> created at line 445.
+    Found 401x1-bit ROM for signal <$varindex0097> created at line 446.
+    Found 401x1-bit ROM for signal <$varindex0098> created at line 447.
+    Found 401x1-bit ROM for signal <$varindex0099> created at line 448.
+    Found 401x1-bit ROM for signal <$varindex0100> created at line 449.
+    Found 401x1-bit ROM for signal <$varindex0101> created at line 450.
+    Found 401x1-bit ROM for signal <$varindex0102> created at line 451.
+    Found 401x1-bit ROM for signal <$varindex0103> created at line 452.
+    Found 401x1-bit ROM for signal <$varindex0104> created at line 453.
+    Found 401x1-bit ROM for signal <$varindex0105> created at line 454.
+    Found 401x1-bit ROM for signal <$varindex0106> created at line 455.
+    Found 401x1-bit ROM for signal <$varindex0107> created at line 456.
+    Found 401x1-bit ROM for signal <$varindex0108> created at line 457.
+    Found 401x1-bit ROM for signal <$varindex0109> created at line 458.
+    Found 401x1-bit ROM for signal <$varindex0110> created at line 459.
+    Found 401x1-bit ROM for signal <$varindex0111> created at line 460.
+    Found 401x1-bit ROM for signal <$varindex0112> created at line 461.
+    Found 401x1-bit ROM for signal <$varindex0113> created at line 462.
+    Found 401x1-bit ROM for signal <$varindex0114> created at line 463.
+    Found 401x1-bit ROM for signal <$varindex0115> created at line 464.
+    Found 401x1-bit ROM for signal <$varindex0116> created at line 465.
+    Found 401x1-bit ROM for signal <$varindex0117> created at line 466.
+    Found 401x1-bit ROM for signal <$varindex0118> created at line 467.
+    Found 401x1-bit ROM for signal <$varindex0119> created at line 468.
+    Found 401x1-bit ROM for signal <$varindex0120> created at line 469.
+    Found 401x1-bit ROM for signal <$varindex0121> created at line 470.
+    Found 401x1-bit ROM for signal <$varindex0122> created at line 471.
+    Found 401x1-bit ROM for signal <$varindex0123> created at line 472.
+    Found 401x1-bit ROM for signal <$varindex0124> created at line 473.
+    Found 401x1-bit ROM for signal <$varindex0125> created at line 474.
+    Found 401x1-bit ROM for signal <$varindex0126> created at line 475.
+    Found 401x1-bit ROM for signal <$varindex0127> created at line 476.
+    Found 401x1-bit ROM for signal <$varindex0128> created at line 477.
+    Found 401x1-bit ROM for signal <$varindex0129> created at line 478.
+    Found 401x1-bit ROM for signal <$varindex0130> created at line 479.
+    Found 401x1-bit ROM for signal <$varindex0131> created at line 480.
+    Found 401x1-bit ROM for signal <$varindex0132> created at line 481.
+    Found 401x1-bit ROM for signal <$varindex0133> created at line 482.
+    Found 401x1-bit ROM for signal <$varindex0134> created at line 483.
+    Found 401x1-bit ROM for signal <$varindex0135> created at line 484.
+    Found 401x1-bit ROM for signal <$varindex0136> created at line 485.
+    Found 401x1-bit ROM for signal <$varindex0137> created at line 486.
+    Found 401x1-bit ROM for signal <$varindex0138> created at line 487.
+    Found 401x1-bit ROM for signal <$varindex0139> created at line 488.
+    Found 401x1-bit ROM for signal <$varindex0140> created at line 489.
+    Found 401x1-bit ROM for signal <$varindex0141> created at line 490.
+    Found 401x1-bit ROM for signal <$varindex0142> created at line 491.
+    Found 401x1-bit ROM for signal <$varindex0143> created at line 492.
+    Found 401x1-bit ROM for signal <$varindex0144> created at line 493.
+    Found 401x1-bit ROM for signal <$varindex0145> created at line 494.
+    Found 401x1-bit ROM for signal <$varindex0146> created at line 495.
+    Found 401x1-bit ROM for signal <$varindex0147> created at line 496.
+    Found 401x1-bit ROM for signal <$varindex0148> created at line 497.
+    Found 401x1-bit ROM for signal <$varindex0149> created at line 498.
+    Found 401x1-bit ROM for signal <$varindex0150> created at line 499.
+    Found 401x1-bit ROM for signal <$varindex0151> created at line 500.
+    Found 401x1-bit ROM for signal <$varindex0152> created at line 501.
+    Found 401x1-bit ROM for signal <$varindex0153> created at line 502.
+    Found 401x1-bit ROM for signal <$varindex0154> created at line 503.
+    Found 401x1-bit ROM for signal <$varindex0155> created at line 504.
+    Found 401x1-bit ROM for signal <$varindex0156> created at line 505.
+    Found 401x1-bit ROM for signal <$varindex0157> created at line 506.
+    Found 401x1-bit ROM for signal <$varindex0158> created at line 507.
+    Found 401x1-bit ROM for signal <$varindex0159> created at line 508.
+    Found 401x1-bit ROM for signal <$varindex0160> created at line 509.
+    Found 401x1-bit ROM for signal <$varindex0161> created at line 510.
+    Found 401x1-bit ROM for signal <$varindex0162> created at line 511.
+    Found 401x1-bit ROM for signal <$varindex0163> created at line 512.
+    Found 401x1-bit ROM for signal <$varindex0164> created at line 513.
+    Found 401x1-bit ROM for signal <$varindex0165> created at line 514.
+    Found 401x1-bit ROM for signal <$varindex0166> created at line 515.
+    Found 401x1-bit ROM for signal <$varindex0167> created at line 516.
+    Found 401x1-bit ROM for signal <$varindex0168> created at line 517.
+    Found 401x1-bit ROM for signal <$varindex0169> created at line 518.
+    Found 401x1-bit ROM for signal <$varindex0170> created at line 519.
+    Found 401x1-bit ROM for signal <$varindex0171> created at line 520.
+    Found 401x1-bit ROM for signal <$varindex0172> created at line 521.
+    Found 401x1-bit ROM for signal <$varindex0173> created at line 522.
+    Found 401x1-bit ROM for signal <$varindex0174> created at line 523.
+    Found 401x1-bit ROM for signal <$varindex0175> created at line 524.
+    Found 401x1-bit ROM for signal <$varindex0176> created at line 525.
+    Found 401x1-bit ROM for signal <$varindex0177> created at line 526.
+    Found 401x1-bit ROM for signal <$varindex0178> created at line 527.
+    Found 401x1-bit ROM for signal <$varindex0179> created at line 528.
+    Found 401x1-bit ROM for signal <$varindex0180> created at line 529.
+    Found 401x1-bit ROM for signal <$varindex0181> created at line 530.
+    Found 401x1-bit ROM for signal <$varindex0182> created at line 531.
+    Found 401x1-bit ROM for signal <$varindex0183> created at line 532.
+    Found 401x1-bit ROM for signal <$varindex0184> created at line 533.
+    Found 401x1-bit ROM for signal <$varindex0185> created at line 534.
+    Found 401x1-bit ROM for signal <$varindex0186> created at line 535.
+    Found 401x1-bit ROM for signal <$varindex0187> created at line 536.
+    Found 401x1-bit ROM for signal <$varindex0188> created at line 537.
+    Found 401x1-bit ROM for signal <$varindex0189> created at line 538.
+    Found 401x1-bit ROM for signal <$varindex0190> created at line 539.
+    Found 401x1-bit ROM for signal <$varindex0191> created at line 540.
+    Found 401x1-bit ROM for signal <$varindex0192> created at line 541.
+    Found 401x1-bit ROM for signal <$varindex0193> created at line 542.
+    Found 401x1-bit ROM for signal <$varindex0194> created at line 543.
+    Found 401x1-bit ROM for signal <$varindex0195> created at line 544.
+    Found 401x1-bit ROM for signal <$varindex0196> created at line 545.
+    Found 401x1-bit ROM for signal <$varindex0197> created at line 546.
+    Found 401x1-bit ROM for signal <$varindex0198> created at line 547.
+    Found 401x1-bit ROM for signal <$varindex0199> created at line 548.
+    Found 401x1-bit ROM for signal <$varindex0200> created at line 549.
+    Found 401x1-bit ROM for signal <$varindex0201> created at line 550.
+    Found 401x1-bit ROM for signal <$varindex0202> created at line 551.
+    Found 401x1-bit ROM for signal <$varindex0203> created at line 552.
+    Found 401x1-bit ROM for signal <$varindex0204> created at line 553.
+    Found 401x1-bit ROM for signal <$varindex0205> created at line 554.
+    Found 401x1-bit ROM for signal <$varindex0206> created at line 555.
+    Found 401x1-bit ROM for signal <$varindex0207> created at line 556.
+    Found 401x1-bit ROM for signal <$varindex0208> created at line 557.
+    Found 401x1-bit ROM for signal <$varindex0209> created at line 558.
+    Found 401x1-bit ROM for signal <$varindex0210> created at line 559.
+    Found 401x1-bit ROM for signal <$varindex0211> created at line 560.
+    Found 401x1-bit ROM for signal <$varindex0212> created at line 561.
+    Found 401x1-bit ROM for signal <$varindex0213> created at line 562.
+    Found 401x1-bit ROM for signal <$varindex0214> created at line 563.
+    Found 401x1-bit ROM for signal <$varindex0215> created at line 564.
+    Found 401x1-bit ROM for signal <$varindex0216> created at line 565.
+    Found 401x1-bit ROM for signal <$varindex0217> created at line 566.
+    Found 401x1-bit ROM for signal <$varindex0218> created at line 567.
+    Found 401x1-bit ROM for signal <$varindex0219> created at line 568.
+    Found 401x1-bit ROM for signal <$varindex0220> created at line 569.
+    Found 401x1-bit ROM for signal <$varindex0221> created at line 570.
+    Found 401x1-bit ROM for signal <$varindex0222> created at line 571.
+    Found 401x1-bit ROM for signal <$varindex0223> created at line 572.
+    Found 401x1-bit ROM for signal <$varindex0224> created at line 573.
+    Found 401x1-bit ROM for signal <$varindex0225> created at line 574.
+    Found 401x1-bit ROM for signal <$varindex0226> created at line 575.
+    Found 401x1-bit ROM for signal <$varindex0227> created at line 576.
+    Found 401x1-bit ROM for signal <$varindex0228> created at line 577.
+    Found 401x1-bit ROM for signal <$varindex0229> created at line 578.
+    Found 401x1-bit ROM for signal <$varindex0230> created at line 579.
+    Found 401x1-bit ROM for signal <$varindex0231> created at line 580.
+    Found 401x1-bit ROM for signal <$varindex0232> created at line 581.
+    Found 401x1-bit ROM for signal <$varindex0233> created at line 582.
+    Found 401x1-bit ROM for signal <$varindex0234> created at line 583.
+    Found 401x1-bit ROM for signal <$varindex0235> created at line 584.
+    Found 401x1-bit ROM for signal <$varindex0236> created at line 585.
+    Found 401x1-bit ROM for signal <$varindex0237> created at line 586.
+    Found 401x1-bit ROM for signal <$varindex0238> created at line 587.
+    Found 401x1-bit ROM for signal <$varindex0239> created at line 588.
+    Found 401x1-bit ROM for signal <$varindex0240> created at line 589.
+    Found 400x1-bit ROM for signal <$varindex0271> created at line 769.
+    Found 400x1-bit ROM for signal <$varindex0272> created at line 770.
+    Found 400x1-bit ROM for signal <$varindex0273> created at line 771.
+    Found 400x1-bit ROM for signal <$varindex0274> created at line 772.
+    Found 400x1-bit ROM for signal <$varindex0275> created at line 773.
+    Found 400x1-bit ROM for signal <$varindex0276> created at line 774.
+    Found 400x1-bit ROM for signal <$varindex0279> created at line 777.
+    Found 400x1-bit ROM for signal <$varindex0280> created at line 778.
+    Found 400x1-bit ROM for signal <$varindex0281> created at line 779.
+    Found 400x1-bit ROM for signal <$varindex0282> created at line 780.
+    Found 400x1-bit ROM for signal <$varindex0283> created at line 781.
+    Found 400x1-bit ROM for signal <$varindex0284> created at line 782.
+    Found 400x1-bit ROM for signal <$varindex0285> created at line 783.
+    Found 400x1-bit ROM for signal <$varindex0286> created at line 784.
+    Found 400x1-bit ROM for signal <$varindex0287> created at line 785.
+    Found 400x1-bit ROM for signal <$varindex0288> created at line 786.
+    Found 400x1-bit ROM for signal <$varindex0289> created at line 787.
+    Found 400x1-bit ROM for signal <$varindex0290> created at line 788.
+    Found 400x1-bit ROM for signal <$varindex0291> created at line 789.
+    Found 400x1-bit ROM for signal <$varindex0292> created at line 790.
+    Found 400x1-bit ROM for signal <$varindex0293> created at line 791.
+    Found 400x1-bit ROM for signal <$varindex0294> created at line 792.
+    Found 400x1-bit ROM for signal <$varindex0295> created at line 793.
+    Found 400x1-bit ROM for signal <$varindex0296> created at line 794.
+    Found 400x1-bit ROM for signal <$varindex0297> created at line 795.
+    Found 400x1-bit ROM for signal <$varindex0298> created at line 796.
+    Found 400x1-bit ROM for signal <$varindex0299> created at line 797.
+    Found 400x1-bit ROM for signal <$varindex0300> created at line 798.
+    Found 400x1-bit ROM for signal <$varindex0301> created at line 799.
+    Found 400x1-bit ROM for signal <$varindex0302> created at line 800.
+    Found 400x1-bit ROM for signal <$varindex0303> created at line 801.
+    Found 400x1-bit ROM for signal <$varindex0304> created at line 802.
+    Found 400x1-bit ROM for signal <$varindex0305> created at line 803.
+    Found 400x1-bit ROM for signal <$varindex0306> created at line 804.
+    Found 400x1-bit ROM for signal <$varindex0307> created at line 805.
+    Found 400x1-bit ROM for signal <$varindex0308> created at line 806.
+    Found 400x1-bit ROM for signal <$varindex0309> created at line 807.
+    Found 400x1-bit ROM for signal <$varindex0310> created at line 808.
+    Found 400x1-bit ROM for signal <$varindex0311> created at line 809.
+    Found 400x1-bit ROM for signal <$varindex0312> created at line 810.
+    Found 400x1-bit ROM for signal <$varindex0313> created at line 811.
+    Found 400x1-bit ROM for signal <$varindex0314> created at line 812.
+    Found 400x1-bit ROM for signal <$varindex0315> created at line 813.
+    Found 400x1-bit ROM for signal <$varindex0316> created at line 814.
+    Found 400x1-bit ROM for signal <$varindex0317> created at line 815.
+    Found 400x1-bit ROM for signal <$varindex0318> created at line 816.
+    Found 400x1-bit ROM for signal <$varindex0319> created at line 817.
+    Found 400x1-bit ROM for signal <$varindex0320> created at line 818.
+    Found 400x1-bit ROM for signal <$varindex0321> created at line 819.
+    Found 400x1-bit ROM for signal <$varindex0322> created at line 820.
+    Found 400x1-bit ROM for signal <$varindex0323> created at line 821.
+    Found 400x1-bit ROM for signal <$varindex0324> created at line 822.
+    Found 400x1-bit ROM for signal <$varindex0325> created at line 823.
+    Found 400x1-bit ROM for signal <$varindex0328> created at line 826.
+    Found 400x1-bit ROM for signal <$varindex0329> created at line 827.
+    Found 400x1-bit ROM for signal <$varindex0330> created at line 828.
+    Found 400x1-bit ROM for signal <$varindex0331> created at line 829.
+    Found 400x1-bit ROM for signal <$varindex0332> created at line 830.
+    Found 400x1-bit ROM for signal <$varindex0333> created at line 831.
+    Found 400x1-bit ROM for signal <$varindex0334> created at line 832.
+    Found 400x1-bit ROM for signal <$varindex0348> created at line 846.
+    Found 400x1-bit ROM for signal <$varindex0349> created at line 847.
+    Found 400x1-bit ROM for signal <$varindex0350> created at line 848.
+    Found 400x1-bit ROM for signal <$varindex0351> created at line 849.
+    Found 400x1-bit ROM for signal <$varindex0352> created at line 850.
+    Found 400x1-bit ROM for signal <$varindex0353> created at line 851.
+    Found 400x1-bit ROM for signal <$varindex0354> created at line 852.
+    Found 400x1-bit ROM for signal <$varindex0355> created at line 853.
+    Found 400x1-bit ROM for signal <$varindex0356> created at line 854.
+    Found 400x1-bit ROM for signal <$varindex0357> created at line 855.
+    Found 400x1-bit ROM for signal <$varindex0358> created at line 856.
+    Found 400x1-bit ROM for signal <$varindex0359> created at line 857.
+    Found 400x1-bit ROM for signal <$varindex0360> created at line 858.
+    Found 400x1-bit ROM for signal <$varindex0361> created at line 859.
+    Found 400x1-bit ROM for signal <$varindex0362> created at line 860.
+    Found 400x1-bit ROM for signal <$varindex0363> created at line 861.
+    Found 400x1-bit ROM for signal <$varindex0364> created at line 862.
+    Found 14-bit adder for signal <$add0003> created at line 941.
+    Found 14-bit adder for signal <$add0005> created at line 944.
+    Found 14-bit adder for signal <$add0007> created at line 947.
+    Found 14-bit adder for signal <$add0009> created at line 950.
+    Found 12-bit adder for signal <$add0011> created at line 959.
+    Found 12-bit adder for signal <$add0013> created at line 962.
+    Found 12-bit adder for signal <$add0015> created at line 965.
+    Found 14-bit adder for signal <$add0017> created at line 974.
+    Found 12-bit adder for signal <$add0019> created at line 983.
+    Found 12-bit adder for signal <$add0021> created at line 987.
+    Found 14-bit adder for signal <$add0023> created at line 996.
+    Found 14-bit adder for signal <$add0025> created at line 1000.
+    Found 14-bit subtractor for signal <$sub0000> created at line 959.
+    Found 14-bit subtractor for signal <$sub0001> created at line 962.
+    Found 14-bit subtractor for signal <$sub0002> created at line 965.
+    Found 14-bit subtractor for signal <$sub0003> created at line 983.
+    Found 14-bit subtractor for signal <$sub0004> created at line 987.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 928.
+    Found 11-bit adder carry out for signal <add0001$addsub0000> created at line 928.
+    Found 11-bit adder carry out for signal <add0002$addsub0000> created at line 941.
+    Found 14-bit subtractor for signal <add0003$sub0000> created at line 941.
+    Found 11-bit adder carry out for signal <add0004$addsub0000> created at line 944.
+    Found 14-bit subtractor for signal <add0005$sub0000> created at line 944.
+    Found 11-bit adder carry out for signal <add0006$addsub0000> created at line 947.
+    Found 14-bit subtractor for signal <add0007$sub0000> created at line 947.
+    Found 11-bit adder carry out for signal <add0008$addsub0000> created at line 950.
+    Found 14-bit subtractor for signal <add0009$sub0000> created at line 950.
+    Found 11-bit adder carry out for signal <add0010$addsub0000> created at line 959.
+    Found 11-bit adder carry out for signal <add0011$addsub0001> created at line 959.
+    Found 11-bit adder carry out for signal <add0012$addsub0000> created at line 962.
+    Found 11-bit adder carry out for signal <add0013$addsub0001> created at line 962.
+    Found 11-bit adder carry out for signal <add0014$addsub0000> created at line 965.
+    Found 11-bit adder carry out for signal <add0015$addsub0001> created at line 965.
+    Found 11-bit adder carry out for signal <add0016$addsub0000> created at line 974.
+    Found 14-bit subtractor for signal <add0017$sub0000> created at line 974.
+    Found 11-bit adder carry out for signal <add0018$addsub0000> created at line 983.
+    Found 11-bit adder carry out for signal <add0019$addsub0001> created at line 983.
+    Found 11-bit adder carry out for signal <add0020$addsub0000> created at line 987.
+    Found 11-bit adder carry out for signal <add0021$addsub0001> created at line 987.
+    Found 11-bit adder carry out for signal <add0022$addsub0000> created at line 996.
+    Found 14-bit subtractor for signal <add0023$sub0000> created at line 996.
+    Found 11-bit adder carry out for signal <add0024$addsub0000> created at line 1000.
+    Found 14-bit subtractor for signal <add0025$sub0000> created at line 1000.
+    Found 1-bit xor9 for signal <check>.
+    Found 31-bit register for signal <count>.
+    Found 31-bit adder for signal <count$addsub0000> created at line 902.
+    Found 1-bit register for signal <cState>.
+    Found 1-bit register for signal <down>.
+    Found 11-bit register for signal <Frog_Rx>.
+    Found 11-bit addsub for signal <Frog_Rx$addsub0001>.
+    Found 11-bit adder carry out for signal <Frog_Rx$addsub0002> created at line 1146.
+    Found 12-bit comparator greater for signal <Frog_Rx$cmp_gt0000> created at line 1146.
+    Found 13-bit comparator less for signal <Frog_Rx$cmp_lt0000> created at line 1145.
+    Found 13-bit subtractor for signal <Frog_Rx$sub0000> created at line 1145.
+    Found 11-bit register for signal <Frog_Ty>.
+    Found 11-bit addsub for signal <Frog_Ty$addsub0001>.
+    Found 11-bit adder carry out for signal <Frog_Ty$addsub0002> created at line 1164.
+    Found 12-bit comparator greater for signal <Frog_Ty$cmp_gt0000> created at line 1164.
+    Found 13-bit comparator less for signal <Frog_Ty$cmp_lt0000> created at line 1163.
+    Found 13-bit subtractor for signal <Frog_Ty$sub0000> created at line 1163.
+    Found 1-bit register for signal <gameover>.
+    Found 21-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 76.
+    Found 21-bit comparator less for signal <hsync$cmp_lt0000> created at line 76.
+    Found 4-bit up counter for signal <kCounter>.
+    Found 8-bit register for signal <kData>.
+    Found 22-bit register for signal <kReg>.
+    Found 11-bit register for signal <L1_Rx>.
+    Found 11-bit subtractor for signal <L1_Rx$addsub0000> created at line 1180.
+    Found 11-bit adder carry out for signal <L1_Rx$addsub0001> created at line 1180.
+    Found 11-bit comparator lessequal for signal <L1_Rx$cmp_le0000> created at line 1177.
+    Found 11-bit adder for signal <L1_Rx$mux0000>.
+    Found 11-bit register for signal <L2_Rx>.
+    Found 11-bit subtractor for signal <L2_Rx$addsub0000> created at line 1195.
+    Found 11-bit adder carry out for signal <L2_Rx$addsub0001> created at line 1195.
+    Found 11-bit comparator lessequal for signal <L2_Rx$cmp_le0000> created at line 1192.
+    Found 11-bit adder for signal <L2_Rx$mux0000>.
+    Found 11-bit register for signal <L3_Rx>.
+    Found 11-bit subtractor for signal <L3_Rx$addsub0000> created at line 1210.
+    Found 11-bit adder carry out for signal <L3_Rx$addsub0001> created at line 1210.
+    Found 11-bit comparator lessequal for signal <L3_Rx$cmp_le0000> created at line 1207.
+    Found 11-bit adder for signal <L3_Rx$mux0000>.
+    Found 11-bit register for signal <L4_Rx>.
+    Found 11-bit subtractor for signal <L4_Rx$addsub0000> created at line 1225.
+    Found 11-bit adder carry out for signal <L4_Rx$addsub0001> created at line 1225.
+    Found 11-bit comparator lessequal for signal <L4_Rx$cmp_le0000> created at line 1222.
+    Found 11-bit adder for signal <L4_Rx$mux0000>.
+    Found 11-bit register for signal <L5_Rx>.
+    Found 11-bit subtractor for signal <L5_Rx$addsub0000> created at line 1243.
+    Found 11-bit subtractor for signal <L5_Rx$addsub0001> created at line 1243.
+    Found 11-bit comparator greatequal for signal <L5_Rx$cmp_ge0000> created at line 1240.
+    Found 11-bit addsub for signal <L5_Rx$mux0000>.
+    Found 11-bit register for signal <L6_Rx>.
+    Found 11-bit subtractor for signal <L6_Rx$addsub0000> created at line 1258.
+    Found 11-bit subtractor for signal <L6_Rx$addsub0001> created at line 1258.
+    Found 11-bit comparator greatequal for signal <L6_Rx$cmp_ge0000> created at line 1255.
+    Found 11-bit addsub for signal <L6_Rx$mux0000>.
+    Found 11-bit register for signal <L7_Rx>.
+    Found 11-bit subtractor for signal <L7_Rx$addsub0000> created at line 1273.
+    Found 11-bit subtractor for signal <L7_Rx$addsub0001> created at line 1273.
+    Found 11-bit comparator greatequal for signal <L7_Rx$cmp_ge0000> created at line 1270.
+    Found 11-bit addsub for signal <L7_Rx$mux0000>.
+    Found 1-bit register for signal <left>.
+    Found 1-bit register for signal <nState>.
+    Found 1-bit register for signal <over>.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0000> created at line 939.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0001> created at line 941.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0002> created at line 944.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0003> created at line 947.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0004> created at line 950.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0005> created at line 937.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0006> created at line 957.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0007> created at line 959.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0008> created at line 962.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0009> created at line 965.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0010> created at line 955.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0011> created at line 972.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0012> created at line 970.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0013> created at line 981.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0014> created at line 979.
+    Found 21-bit comparator greatequal for signal <over$cmp_ge0015> created at line 994.
+    Found 12-bit comparator greater for signal <over$cmp_gt0000> created at line 941.
+    Found 12-bit comparator greater for signal <over$cmp_gt0001> created at line 944.
+    Found 12-bit comparator greater for signal <over$cmp_gt0002> created at line 947.
+    Found 12-bit comparator greater for signal <over$cmp_gt0003> created at line 950.
+    Found 12-bit comparator greater for signal <over$cmp_gt0004> created at line 959.
+    Found 12-bit comparator greater for signal <over$cmp_gt0005> created at line 962.
+    Found 12-bit comparator greater for signal <over$cmp_gt0006> created at line 965.
+    Found 12-bit comparator greater for signal <over$cmp_gt0007> created at line 974.
+    Found 21-bit comparator greater for signal <over$cmp_gt0008> created at line 974.
+    Found 22-bit comparator greater for signal <over$cmp_gt0009> created at line 974.
+    Found 21-bit comparator greater for signal <over$cmp_gt0010> created at line 974.
+    Found 12-bit comparator greater for signal <over$cmp_gt0011> created at line 987.
+    Found 21-bit comparator greater for signal <over$cmp_gt0012> created at line 987.
+    Found 22-bit comparator greater for signal <over$cmp_gt0013> created at line 987.
+    Found 12-bit comparator greater for signal <over$cmp_gt0014> created at line 983.
+    Found 21-bit comparator greater for signal <over$cmp_gt0015> created at line 983.
+    Found 22-bit comparator greater for signal <over$cmp_gt0016> created at line 983.
+    Found 12-bit comparator greater for signal <over$cmp_gt0017> created at line 1000.
+    Found 21-bit comparator greater for signal <over$cmp_gt0018> created at line 1000.
+    Found 22-bit comparator greater for signal <over$cmp_gt0019> created at line 1000.
+    Found 12-bit comparator greater for signal <over$cmp_gt0020> created at line 996.
+    Found 21-bit comparator greater for signal <over$cmp_gt0021> created at line 996.
+    Found 22-bit comparator greater for signal <over$cmp_gt0022> created at line 996.
+    Found 21-bit comparator greater for signal <over$cmp_gt0023> created at line 979.
+    Found 21-bit comparator greater for signal <over$cmp_gt0024> created at line 970.
+    Found 21-bit comparator greater for signal <over$cmp_gt0025> created at line 955.
+    Found 21-bit comparator greater for signal <over$cmp_gt0026> created at line 937.
+    Found 21-bit comparator greater for signal <over$cmp_gt0027> created at line 932.
+    Found 21-bit comparator greater for signal <over$cmp_gt0028> created at line 932.
+    Found 21-bit comparator greater for signal <over$cmp_gt0029> created at line 928.
+    Found 21-bit comparator greater for signal <over$cmp_gt0030> created at line 928.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0000> created at line 939.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0001> created at line 941.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0002> created at line 941.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0003> created at line 941.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0004> created at line 944.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0005> created at line 944.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0006> created at line 944.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0007> created at line 947.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0008> created at line 947.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0009> created at line 947.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0010> created at line 950.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0011> created at line 950.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0012> created at line 950.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0013> created at line 937.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0014> created at line 957.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0015> created at line 959.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0016> created at line 959.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0017> created at line 959.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0018> created at line 962.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0019> created at line 962.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0020> created at line 962.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0021> created at line 965.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0022> created at line 965.
+    Found 22-bit comparator lessequal for signal <over$cmp_le0023> created at line 965.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0024> created at line 955.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0025> created at line 972.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0026> created at line 974.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0027> created at line 970.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0028> created at line 981.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0029> created at line 987.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0030> created at line 983.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0031> created at line 979.
+    Found 21-bit comparator lessequal for signal <over$cmp_le0032> created at line 994.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0033> created at line 1000.
+    Found 12-bit comparator lessequal for signal <over$cmp_le0034> created at line 996.
+    Found 21-bit comparator less for signal <over$cmp_lt0000> created at line 974.
+    Found 21-bit comparator less for signal <over$cmp_lt0001> created at line 974.
+    Found 21-bit comparator less for signal <over$cmp_lt0002> created at line 987.
+    Found 21-bit comparator less for signal <over$cmp_lt0003> created at line 983.
+    Found 21-bit comparator less for signal <over$cmp_lt0004> created at line 1000.
+    Found 21-bit comparator less for signal <over$cmp_lt0005> created at line 996.
+    Found 21-bit comparator less for signal <over$cmp_lt0006> created at line 979.
+    Found 21-bit comparator less for signal <over$cmp_lt0007> created at line 970.
+    Found 21-bit comparator less for signal <over$cmp_lt0008> created at line 955.
+    Found 21-bit comparator less for signal <over$cmp_lt0009> created at line 937.
+    Found 21-bit comparator less for signal <over$cmp_lt0010> created at line 932.
+    Found 21-bit comparator less for signal <over$cmp_lt0011> created at line 932.
+    Found 21-bit comparator less for signal <over$cmp_lt0012> created at line 928.
+    Found 21-bit comparator less for signal <over$cmp_lt0013> created at line 928.
+    Found 1-bit register for signal <r_blue>.
+    Found 1-bit register for signal <r_green>.
+    Found 1-bit register for signal <r_red>.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0000> created at line 1024.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0001> created at line 1024.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0002> created at line 1028.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0003> created at line 1028.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0004> created at line 1070.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0005> created at line 1080.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0006> created at line 1084.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0007> created at line 1090.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0008> created at line 1104.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0009> created at line 1093.
+    Found 21-bit comparator greatequal for signal <r_red$cmp_ge0010> created at line 1097.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0000> created at line 1024.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0001> created at line 1024.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0002> created at line 1028.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0003> created at line 1028.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0004> created at line 1070.
+    Found 22-bit comparator lessequal for signal <r_red$cmp_le0005> created at line 1070.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0006> created at line 1080.
+    Found 22-bit comparator lessequal for signal <r_red$cmp_le0007> created at line 1080.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0008> created at line 1084.
+    Found 22-bit comparator lessequal for signal <r_red$cmp_le0009> created at line 1084.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0010> created at line 1093.
+    Found 22-bit comparator lessequal for signal <r_red$cmp_le0011> created at line 1093.
+    Found 21-bit comparator lessequal for signal <r_red$cmp_le0012> created at line 1097.
+    Found 22-bit comparator lessequal for signal <r_red$cmp_le0013> created at line 1097.
+    Found 21-bit comparator less for signal <r_red$cmp_lt0000> created at line 1051.
+    Found 21-bit comparator less for signal <r_red$cmp_lt0001> created at line 1067.
+    Found 21-bit comparator less for signal <r_red$cmp_lt0002> created at line 1077.
+    Found 21-bit comparator less for signal <r_red$cmp_lt0003> created at line 1090.
+    Found 21-bit comparator less for signal <r_red$cmp_lt0004> created at line 1104.
+    Found 11-bit register for signal <RC1_Rx>.
+    Found 11-bit subtractor for signal <RC1_Rx$addsub0000> created at line 1333.
+    Found 11-bit adder carry out for signal <RC1_Rx$addsub0001> created at line 1333.
+    Found 11-bit comparator lessequal for signal <RC1_Rx$cmp_le0000> created at line 1330.
+    Found 11-bit adder for signal <RC1_Rx$mux0000>.
+    Found 11-bit register for signal <RC2_Rx>.
+    Found 11-bit subtractor for signal <RC2_Rx$addsub0000> created at line 1347.
+    Found 11-bit adder carry out for signal <RC2_Rx$addsub0001> created at line 1347.
+    Found 11-bit comparator lessequal for signal <RC2_Rx$cmp_le0000> created at line 1344.
+    Found 11-bit adder for signal <RC2_Rx$mux0000>.
+    Found 1-bit register for signal <right>.
+    Found 1-bit register for signal <sig_f0>.
+    Found 1-bit register for signal <start_rnm0>.
+    Found 1-bit register for signal <success>.
+    Found 1-bit register for signal <super>.
+    Found 1-bit register for signal <timer>.
+    Found 1-bit register for signal <up>.
+    Found 21-bit comparator greatequal for signal <vis$cmp_ge0000> created at line 61.
+    Found 21-bit comparator greatequal for signal <vis$cmp_ge0001> created at line 61.
+    Found 21-bit comparator lessequal for signal <vis$cmp_le0000> created at line 61.
+    Found 21-bit comparator lessequal for signal <vis$cmp_le0001> created at line 61.
+    Found 21-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 77.
+    Found 21-bit comparator less for signal <vsync$cmp_lt0000> created at line 77.
+    Found 11-bit register for signal <WT_Rx>.
+    Found 11-bit subtractor for signal <WT_Rx$addsub0000> created at line 1287.
+    Found 11-bit adder carry out for signal <WT_Rx$addsub0001> created at line 1287.
+    Found 11-bit comparator lessequal for signal <WT_Rx$cmp_le0000> created at line 1284.
+    Found 11-bit adder for signal <WT_Rx$mux0000>.
+    Found 21-bit up counter for signal <x>.
+    Found 21-bit up counter for signal <y>.
+    Found 11-bit register for signal <YC1_Rx>.
+    Found 11-bit subtractor for signal <YC1_Rx$addsub0000> created at line 1302.
+    Found 11-bit subtractor for signal <YC1_Rx$addsub0001> created at line 1302.
+    Found 11-bit comparator greatequal for signal <YC1_Rx$cmp_ge0000> created at line 1299.
+    Found 11-bit addsub for signal <YC1_Rx$mux0000>.
+    Found 11-bit register for signal <YC2_Rx>.
+    Found 11-bit subtractor for signal <YC2_Rx$addsub0000> created at line 1318.
+    Found 11-bit subtractor for signal <YC2_Rx$addsub0001> created at line 1318.
+    Found 11-bit comparator greatequal for signal <YC2_Rx$cmp_ge0000> created at line 1315.
+    Found 11-bit addsub for signal <YC2_Rx$mux0000>.
+    Summary:
+	inferred 304 ROM(s).
+	inferred   3 Counter(s).
+	inferred  77 D-type flip-flop(s).
+	inferred  88 Adder/Subtractor(s).
+	inferred 150 Comparator(s).
+	inferred   1 Xor(s).
+Unit <Frogger> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 304
+ 400x1-bit ROM                                         : 77
+ 401x1-bit ROM                                         : 227
+# Adders/Subtractors                                   : 88
+ 11-bit adder                                          : 7
+ 11-bit adder carry out                                : 28
+ 11-bit addsub                                         : 7
+ 11-bit subtractor                                     : 17
+ 12-bit adder                                          : 5
+ 13-bit subtractor                                     : 2
+ 14-bit adder                                          : 7
+ 14-bit subtractor                                     : 12
+ 22-bit adder                                          : 1
+ 22-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
+# Counters                                             : 3
+ 21-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 33
+ 1-bit register                                        : 16
+ 11-bit register                                       : 14
+ 22-bit register                                       : 1
+ 31-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 150
+ 11-bit comparator greatequal                          : 5
+ 11-bit comparator lessequal                           : 7
+ 12-bit comparator greater                             : 14
+ 12-bit comparator lessequal                           : 12
+ 13-bit comparator less                                : 2
+ 21-bit comparator greatequal                          : 31
+ 21-bit comparator greater                             : 14
+ 21-bit comparator less                                : 21
+ 21-bit comparator lessequal                           : 27
+ 22-bit comparator greater                             : 5
+ 22-bit comparator lessequal                           : 12
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <kReg_0> of sequential type is unconnected in block <Frogger>.
+WARNING:Xst:2677 - Node <kReg_0> of sequential type is unconnected in block <Frogger>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 304
+ 400x1-bit ROM                                         : 77
+ 401x1-bit ROM                                         : 227
+# Adders/Subtractors                                   : 88
+ 11-bit adder                                          : 7
+ 11-bit adder carry out                                : 28
+ 11-bit addsub                                         : 7
+ 11-bit subtractor                                     : 17
+ 12-bit adder                                          : 5
+ 13-bit subtractor                                     : 2
+ 14-bit adder                                          : 7
+ 14-bit subtractor                                     : 12
+ 22-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 3
+ 21-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 230
+ Flip-Flops                                            : 230
+# Comparators                                          : 150
+ 11-bit comparator greatequal                          : 5
+ 11-bit comparator lessequal                           : 7
+ 12-bit comparator greater                             : 14
+ 12-bit comparator lessequal                           : 12
+ 13-bit comparator less                                : 2
+ 21-bit comparator greatequal                          : 31
+ 21-bit comparator greater                             : 14
+ 21-bit comparator less                                : 21
+ 21-bit comparator lessequal                           : 27
+ 22-bit comparator greater                             : 5
+ 22-bit comparator lessequal                           : 12
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0014> <Mrom__varindex0240> are equivalent, XST will keep only <Mrom__varindex0014>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0018> <Mrom__varindex0236> are equivalent, XST will keep only <Mrom__varindex0018>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0034> <Mrom__varindex0035> <Mrom__varindex0036> <Mrom__varindex0037> <Mrom__varindex0038> are equivalent, XST will keep only <Mrom__varindex0034>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0041> <Mrom__varindex0040> are equivalent, XST will keep only <Mrom__varindex0041>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0069> <Mrom__varindex0185> are equivalent, XST will keep only <Mrom__varindex0069>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0073> <Mrom__varindex0181> are equivalent, XST will keep only <Mrom__varindex0073>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0080> <Mrom__varindex0081> <Mrom__varindex0082> <Mrom__varindex0083> <Mrom__varindex0084> <Mrom__varindex0085> <Mrom__varindex0086> <Mrom__varindex0087> <Mrom__varindex0088> <Mrom__varindex0089> are equivalent, XST will keep only <Mrom__varindex0080>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0091> <Mrom__varindex0092> <Mrom__varindex0093> are equivalent, XST will keep only <Mrom__varindex0091>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0095> <Mrom__varindex0096> <Mrom__varindex0097> <Mrom__varindex0098> <Mrom__varindex0099> <Mrom__varindex0100> <Mrom__varindex0101> are equivalent, XST will keep only <Mrom__varindex0095>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0102> <Mrom__varindex0103> <Mrom__varindex0104> <Mrom__varindex0105> <Mrom__varindex0106> <Mrom__varindex0107> <Mrom__varindex0108> <Mrom__varindex0109> <Mrom__varindex0112> are equivalent, XST will keep only <Mrom__varindex0102>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0110> <Mrom__varindex0111> are equivalent, XST will keep only <Mrom__varindex0110>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0113> <Mrom__varindex0114> <Mrom__varindex0125> <Mrom__varindex0126> <Mrom__varindex0127> <Mrom__varindex0128> <Mrom__varindex0129> <Mrom__varindex0130> <Mrom__varindex0131> <Mrom__varindex0132> <Mrom__varindex0133> <Mrom__varindex0134> <Mrom__varindex0135> <Mrom__varindex0136> are equivalent, XST will keep only <Mrom__varindex0113>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0116> <Mrom__varindex0117> <Mrom__varindex0118> <Mrom__varindex0119> <Mrom__varindex0120> are equivalent, XST will keep only <Mrom__varindex0116>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0138> <Mrom__varindex0139> <Mrom__varindex0140> <Mrom__varindex0141> <Mrom__varindex0142> <Mrom__varindex0143> <Mrom__varindex0144> <Mrom__varindex0145> <Mrom__varindex0146> <Mrom__varindex0147> are equivalent, XST will keep only <Mrom__varindex0138>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0149> <Mrom__varindex0150> <Mrom__varindex0151> <Mrom__varindex0152> are equivalent, XST will keep only <Mrom__varindex0149>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0189> <Mrom__varindex0190> <Mrom__varindex0191> <Mrom__varindex0192> <Mrom__varindex0221> <Mrom__varindex0222> <Mrom__varindex0224> are equivalent, XST will keep only <Mrom__varindex0189>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0194> <Mrom__varindex0195> are equivalent, XST will keep only <Mrom__varindex0194>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0204> <Mrom__varindex0205> <Mrom__varindex0206> <Mrom__varindex0207> <Mrom__varindex0208> are equivalent, XST will keep only <Mrom__varindex0204>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0210> <Mrom__varindex0211> are equivalent, XST will keep only <Mrom__varindex0210>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0212> <Mrom__varindex0213> <Mrom__varindex0214> <Mrom__varindex0215> are equivalent, XST will keep only <Mrom__varindex0212>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0216> <Mrom__varindex0218> are equivalent, XST will keep only <Mrom__varindex0216>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0271> <Mrom__varindex0272> <Mrom__varindex0273> <Mrom__varindex0274> <Mrom__varindex0275> <Mrom__varindex0276> are equivalent, XST will keep only <Mrom__varindex0271>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0279> <Mrom__varindex0280> <Mrom__varindex0281> <Mrom__varindex0282> <Mrom__varindex0283> <Mrom__varindex0284> <Mrom__varindex0285> <Mrom__varindex0286> are equivalent, XST will keep only <Mrom__varindex0279>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0287> <Mrom__varindex0288> <Mrom__varindex0289> <Mrom__varindex0290> <Mrom__varindex0291> <Mrom__varindex0292> <Mrom__varindex0293> are equivalent, XST will keep only <Mrom__varindex0287>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0295> <Mrom__varindex0301> are equivalent, XST will keep only <Mrom__varindex0295>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0296> <Mrom__varindex0300> are equivalent, XST will keep only <Mrom__varindex0296>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0297> <Mrom__varindex0299> are equivalent, XST will keep only <Mrom__varindex0297>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0303> <Mrom__varindex0304> <Mrom__varindex0305> <Mrom__varindex0306> <Mrom__varindex0307> <Mrom__varindex0308> <Mrom__varindex0309> are equivalent, XST will keep only <Mrom__varindex0303>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0310> <Mrom__varindex0311> <Mrom__varindex0312> <Mrom__varindex0313> <Mrom__varindex0314> <Mrom__varindex0315> <Mrom__varindex0316> <Mrom__varindex0317> are equivalent, XST will keep only <Mrom__varindex0310>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0319> <Mrom__varindex0320> <Mrom__varindex0321> <Mrom__varindex0322> <Mrom__varindex0323> <Mrom__varindex0324> <Mrom__varindex0325> are equivalent, XST will keep only <Mrom__varindex0319>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0328> <Mrom__varindex0329> <Mrom__varindex0330> <Mrom__varindex0331> <Mrom__varindex0332> <Mrom__varindex0333> <Mrom__varindex0334> are equivalent, XST will keep only <Mrom__varindex0328>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0350> <Mrom__varindex0351> are equivalent, XST will keep only <Mrom__varindex0350>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0359> <Mrom__varindex0360> are equivalent, XST will keep only <Mrom__varindex0359>.
+INFO:Xst:2146 - In block <Frogger>, ROM <Mrom__varindex0361> <Mrom__varindex0362> are equivalent, XST will keep only <Mrom__varindex0361>.
+WARNING:Xst:1710 - FF/Latch <RC2_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RC1_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L4_Rx_1> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L4_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L4_Rx_2> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L3_Rx_1> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L3_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L2_Rx_1> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L2_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L2_Rx_2> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L1_Rx_1> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L1_Rx_0> (without init value) has a constant value of 0 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Frogger> ...
+WARNING:Xst:1710 - FF/Latch <L3_Rx_2> (without init value) has a constant value of 1 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <L1_Rx_2> (without init value) has a constant value of 1 in block <Frogger>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Frogger, actual ratio is 41.
+FlipFlop x_0 has been replicated 1 time(s)
+FlipFlop x_1 has been replicated 1 time(s)
+FlipFlop x_2 has been replicated 1 time(s)
+FlipFlop x_3 has been replicated 1 time(s)
+FlipFlop x_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 266
+ Flip-Flops                                            : 266
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Frogger.ngr
+Top Level Output File Name         : Frogger
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 5836
+#      GND                         : 1
+#      INV                         : 303
+#      LUT1                        : 312
+#      LUT2                        : 811
+#      LUT2_D                      : 11
+#      LUT2_L                      : 4
+#      LUT3                        : 475
+#      LUT3_D                      : 34
+#      LUT3_L                      : 24
+#      LUT4                        : 1076
+#      LUT4_D                      : 71
+#      LUT4_L                      : 114
+#      MULT_AND                    : 5
+#      MUXCY                       : 1655
+#      MUXF5                       : 262
+#      MUXF6                       : 36
+#      VCC                         : 1
+#      XORCY                       : 641
+# FlipFlops/Latches                : 266
+#      FDC                         : 64
+#      FDCE                        : 136
+#      FDE                         : 5
+#      FDPE                        : 61
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 4
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1741  out of   4656    37%  
+ Number of Slice Flip Flops:            266  out of   9312     2%  
+ Number of 4 input LUTs:               3235  out of   9312    34%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 266   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 261   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 18.622ns (Maximum Frequency: 53.700MHz)
+   Minimum input arrival time before clock: 7.939ns
+   Maximum output required time after clock: 11.116ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 18.622ns (frequency: 53.700MHz)
+  Total number of paths / destination ports: 248654 / 463
+-------------------------------------------------------------------------
+Delay:               18.622ns (Levels of Logic = 27)
+  Source:            L4_Rx_7 (FF)
+  Destination:       over (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: L4_Rx_7 to over
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             7   0.591   0.883  L4_Rx_7 (L4_Rx_7)
+     LUT1:I0->O            1   0.704   0.000  Madd_add0008_addsub0000_cy<7>_rt (Madd_add0008_addsub0000_cy<7>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_add0008_addsub0000_cy<7> (Madd_add0008_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_add0008_addsub0000_cy<8> (Madd_add0008_addsub0000_cy<8>)
+     XORCY:CI->O           3   0.804   0.706  Madd_add0008_addsub0000_xor<9> (add0008_addsub0000<9>)
+     LUT1:I0->O            1   0.704   0.000  Msub_add0009_sub0000_cy<9>_rt (Msub_add0009_sub0000_cy<9>_rt)
+     MUXCY:S->O            1   0.464   0.000  Msub_add0009_sub0000_cy<9> (Msub_add0009_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_add0009_sub0000_cy<10> (Msub_add0009_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Msub_add0009_sub0000_cy<11> (Msub_add0009_sub0000_cy<11>)
+     XORCY:CI->O           1   0.804   0.595  Msub_add0009_sub0000_xor<12> (add0009_sub0000<12>)
+     LUT1:I0->O            1   0.704   0.000  Madd__add0009_cy<12>_rt (Madd__add0009_cy<12>_rt)
+     MUXCY:S->O            0   0.464   0.000  Madd__add0009_cy<12> (Madd__add0009_cy<12>)
+     XORCY:CI->O           9   0.804   0.899  Madd__add0009_xor<13> (_add0009<13>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_over_cmp_le0012_lut<13> (Mcompar_over_cmp_le0012_lut<13>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_over_cmp_le0012_cy<13> (Mcompar_over_cmp_le0012_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<14> (Mcompar_over_cmp_le0012_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<15> (Mcompar_over_cmp_le0012_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<16> (Mcompar_over_cmp_le0012_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<17> (Mcompar_over_cmp_le0012_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<18> (Mcompar_over_cmp_le0012_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<19> (Mcompar_over_cmp_le0012_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_over_cmp_le0012_cy<20> (Mcompar_over_cmp_le0012_cy<20>)
+     MUXCY:CI->O           1   0.459   0.424  Mcompar_over_cmp_le0012_cy<21> (over_cmp_le0012)
+     LUT4:I3->O            3   0.704   0.566  over_and0015 (over_and0015)
+     LUT3:I2->O            2   0.704   0.451  over_not000173 (over_not000173)
+     LUT4:I3->O            1   0.704   0.420  over_not000193 (over_not000193)
+     MUXF5:S->O            1   0.739   0.424  over_not0001336_SW0 (N206)
+     LUT4:I3->O            1   0.704   0.420  over_not0001371 (over_not0001)
+     FDCE:CE                   0.555          over
+    ----------------------------------------
+    Total                     18.622ns (12.834ns logic, 5.788ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 12 / 8
+-------------------------------------------------------------------------
+Offset:              7.939ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       up (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to up
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           264   1.218   1.370  rst_IBUF (rst_IBUF)
+     LUT3:I2->O            1   0.704   0.424  down_and00001_SW1 (N778)
+     LUT4:I3->O            3   0.704   0.610  down_and00001 (N92)
+     LUT3:I1->O            2   0.704   0.526  right_and000011 (N253)
+     LUT3:I1->O            1   0.704   0.420  up_and00001 (up_and0000)
+     FDE:CE                    0.555          up
+    ----------------------------------------
+    Total                      7.939ns (4.589ns logic, 3.350ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 330 / 5
+-------------------------------------------------------------------------
+Offset:              11.116ns (Levels of Logic = 11)
+  Source:            x_3 (FF)
+  Destination:       blue (PAD)
+  Source Clock:      clk rising
+
+  Data Path: x_3 to blue
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             33   0.591   1.438  x_3 (x_3)
+     LUT1:I0->O            1   0.704   0.000  Mcompar_vis_cmp_ge0000_cy<0>_rt (Mcompar_vis_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_vis_cmp_ge0000_cy<0> (Mcompar_vis_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_vis_cmp_ge0000_cy<1> (Mcompar_vis_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_vis_cmp_ge0000_cy<2> (Mcompar_vis_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_vis_cmp_ge0000_cy<3> (Mcompar_vis_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_vis_cmp_ge0000_cy<4> (Mcompar_vis_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_vis_cmp_ge0000_cy<5> (Mcompar_vis_cmp_ge0000_cy<5>)
+     MUXCY:CI->O          21   0.459   1.303  Mcompar_vis_cmp_ge0000_cy<6> (vis_cmp_ge0000)
+     LUT4:I0->O            4   0.704   0.762  vis1 (vis)
+     LUT4:I0->O            1   0.704   0.420  red1 (red_OBUF)
+     OBUF:I->O                 3.272          red_OBUF (red)
+    ----------------------------------------
+    Total                     11.116ns (7.193ns logic, 3.923ns route)
+                                       (64.7% logic, 35.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 123.00 secs
+Total CPU time to Xst completion: 123.35 secs
+ 
+--> 
+
+Total memory usage is 562284 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :  811 (   0 filtered)
+

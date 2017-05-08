@@ -1,0 +1,623 @@
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "D:/Final/Final.xst" -ofn "D:/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Desktop/Final/Final.xst" -ofn "C:/Users/shlab_89/Desktop/Final/Final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Final.ucf -p xc3s500e-fg320-4 Final.ngc Final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Final_map.ncd Final.ngd Final.pcf 
+par -w -intstyle ise -ol high -t 1 Final_map.ncd Final.ncd Final.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Final.twx Final.ncd -o Final.twr Final.pcf -ucf Final.ucf 
+bitgen -intstyle ise -f Final.ut Final.ncd 

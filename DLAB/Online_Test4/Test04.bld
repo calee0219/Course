@@ -1,0 +1,55 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Test04.ucf -p
+xc3s500e-fg320-4 Test04.ngc Test04.ngd
+
+Reading NGO file "D:/Test04/Test04.ngc" ...
+Loading design module "ipcore_dir/div.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Test04.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divSec2/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divMin2/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divNum2/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divSec/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divMin/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "n2s/divNum/blk00000003/sig000000b2"
+   is on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   6
+
+Total memory usage is 212232 kilobytes
+
+Writing NGD file "Test04.ngd" ...
+Total REAL time to NGDBUILD completion:  12 sec
+Total CPU time to NGDBUILD completion:   12 sec
+
+Writing NGDBUILD log file "Test04.bld"...

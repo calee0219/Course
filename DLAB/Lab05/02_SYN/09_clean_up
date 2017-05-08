@@ -1,0 +1,5 @@
+rm -rf Netlist/*
+rm -rf Report/*
+rm -rf syn.log
+rm -rf command.log
+

@@ -1,0 +1,2 @@
+ncverilog TESTBED.v +define+RTL -access +r +notimingchecks
+echo "*******TEST1!!!!!*******"

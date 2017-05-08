@@ -1,0 +1,2 @@
+wvResizeWindow -win $_nWave1 77 8 3759 2130
+wvExit

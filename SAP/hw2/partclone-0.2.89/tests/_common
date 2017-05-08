@@ -1,0 +1,123 @@
+#!/bin/bash
+
+break_debug=0
+logfile='test.log'
+img='floppy.img'
+raw='floppy.raw'
+dd_bs=1024
+normal_size=$((1024*1024*1))
+floppy_size=1024
+current_dir=`pwd`
+ptldir="../src"
+
+ptlinfo=$ptldir/partclone.info
+ptlchkimg=$ptldir/partclone.chkimg
+ptlrestore=$ptldir/partclone.restore
+
+mkfs_option_for_ext2='-F'
+mkfs_option_for_ext3='-F'
+mkfs_option_for_ext4='-F'
+mkfs_option_for_reiserfs='-q'
+mkfs_option_for_reiser4='-f -y'
+mkfs_option_for_ntfs='-f -F'
+mkfs_option_for_jfs='-q'
+mkfs_option_for_xfs='-f'
+mkfs_option_for_btrfs='-f'
+mkfs_option_for_fat12='-F 12'
+mkfs_option_for_fat16='-F 16'
+mkfs_option_for_fat32='-F 32'
+#mkfs_option_for_minix='-3'
+
+## file system
+# mountable for writing file system
+mountable_fs="ext2 ext3 ext4 vfat exfat minix jfs xfs reiserfs ntfs btrfs hfsplus f2fs nilfs2"
+
+# vmfs file system can't format, can mount read-only
+# ufs mkfs.ufs can't format special file as partition
+extra_fs="vmfs ufs"
+
+# foramtable file system reiser4 can't mount, ufs read-only
+formatable_fs="$mountable_fs reiser4"
+
+_check_root(){
+    if [[ $UID -ne 0 ]]; then
+	echo "$0 must be run as root"
+	exit 1
+    fi
+}
+
+_check_return_code(){
+    if [ $? != 0 ]; then
+	echo "return code fail"
+	exit
+    fi
+}
+
+_ptlbreak(){
+    if [ $break_debug -ne 0 ];then
+
+	echo "continue test process(Y/n)? default yes"
+	read con
+	if [ "$con" == "n" ];then
+	    exit 1
+	fi
+    fi
+
+}
+_test_size(){
+    fs=$1
+    case "$fs" in
+	fat12)
+	    normal_size=$((1024*8))
+	;;
+	fat16)
+	    normal_size=$((1024*32))
+	;;
+	fat32|fat|vfat)
+	    normal_size=$((1024*128))
+	;;
+    esac
+
+    echo $normal_size
+}
+
+
+_findmkfs(){
+    fs=$1
+    case "$fs" in
+	fat12|fat16|fat32|fat|vfat)
+	    fs="vfat"
+	;;
+    esac
+
+    mkfs_path=$(locate mkfs.$fs|grep sbin|head -n 1)
+    if [ -z $mkfs_path ]; then
+	echo  >&2 "can't find mkfs.$fs"
+	exit 1
+    fi
+    echo $mkfs_path
+
+}
+
+_ptlname(){
+    fs=$1
+    case "$fs" in
+	ext2|ext3|ext4|extfs)
+	    ptl="$ptldir/partclone.extfs"
+	;;
+	fat16|fat12|fat32|fat|vfat)
+	    ptl="$ptldir/partclone.fat"
+	;;
+	hfsplus)
+	    ptl="$ptldir/partclone.hfsp"
+	;;
+	*)
+	    ptl="$ptldir/partclone.$fs"
+    esac
+
+    if [ ! -f $ptl ]; then
+	echo >&2 "can't find $ptl"
+	exit 1
+    fi
+    echo "$ptl"
+}

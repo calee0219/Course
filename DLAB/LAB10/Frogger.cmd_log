@@ -1,0 +1,300 @@
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.xst" -ofn "C:/Users/Leo/Desktop/Dlab/Lab10/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/test/Frogger.xst" -ofn "C:/Users/shlab_89/Downloads/test/Frogger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Frogger.ucf -p xc3s500e-fg320-4 Frogger.ngc Frogger.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Frogger_map.ncd Frogger.ngd Frogger.pcf 
+par -w -intstyle ise -ol high -t 1 Frogger_map.ncd Frogger.ncd Frogger.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Frogger.twx Frogger.ncd -o Frogger.twr Frogger.pcf -ucf Frogger.ucf 
+bitgen -intstyle ise -f Frogger.ut Frogger.ncd 

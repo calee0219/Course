@@ -1,0 +1,112 @@
+wvResizeWindow -win $_nWave1 588 844 1855 1056
+wvOpenFile -win $_nWave1 {/users/dlab2016/2016dlab31/Lab03/01_RTL/IMPOR.fsdb}
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvSetPosition -win $_nWave1 {("G1" 8)}
+wvSetPosition -win $_nWave1 {("G1" 8)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk} \
+{/TESTBED/in[2:0]} \
+{/TESTBED/in_valid} \
+{/TESTBED/mode[2:0]} \
+{/TESTBED/out[2:0]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/rst_n} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 )}
+wvSetPosition -win $_nWave1 {("G1" 8)}
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/I_IMPOR"
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk} \
+{/TESTBED/in[2:0]} \
+{/TESTBED/in_valid} \
+{/TESTBED/mode[2:0]} \
+{/TESTBED/out[2:0]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/rst_n} \
+{/TESTBED/I_IMPOR/cnt1[20:0]} \
+{/TESTBED/I_IMPOR/cnt2[20:0]} \
+{/TESTBED/I_IMPOR/rst} \
+{/TESTBED/I_IMPOR/sta10[2:0]} \
+{/TESTBED/I_IMPOR/sta11[2:0]} \
+{/TESTBED/I_IMPOR/sta12[2:0]} \
+{/TESTBED/I_IMPOR/sta13[2:0]} \
+{/TESTBED/I_IMPOR/sta14[2:0]} \
+{/TESTBED/I_IMPOR/sta15[2:0]} \
+{/TESTBED/I_IMPOR/sta16[2:0]} \
+{/TESTBED/I_IMPOR/sta17[2:0]} \
+{/TESTBED/I_IMPOR/sta18[2:0]} \
+{/TESTBED/I_IMPOR/sta20[2:0]} \
+{/TESTBED/I_IMPOR/sta21[2:0]} \
+{/TESTBED/I_IMPOR/sta22[2:0]} \
+{/TESTBED/I_IMPOR/sta23[2:0]} \
+{/TESTBED/I_IMPOR/sta24[2:0]} \
+{/TESTBED/I_IMPOR/sta25[2:0]} \
+{/TESTBED/I_IMPOR/sta26[2:0]} \
+{/TESTBED/I_IMPOR/sta27[2:0]} \
+{/TESTBED/I_IMPOR/sta28[2:0]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 \
+           24 25 26 27 28 29 )}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk} \
+{/TESTBED/in[2:0]} \
+{/TESTBED/in_valid} \
+{/TESTBED/mode[2:0]} \
+{/TESTBED/out[2:0]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/rst_n} \
+{/TESTBED/I_IMPOR/cnt1[20:0]} \
+{/TESTBED/I_IMPOR/cnt2[20:0]} \
+{/TESTBED/I_IMPOR/rst} \
+{/TESTBED/I_IMPOR/sta10[2:0]} \
+{/TESTBED/I_IMPOR/sta11[2:0]} \
+{/TESTBED/I_IMPOR/sta12[2:0]} \
+{/TESTBED/I_IMPOR/sta13[2:0]} \
+{/TESTBED/I_IMPOR/sta14[2:0]} \
+{/TESTBED/I_IMPOR/sta15[2:0]} \
+{/TESTBED/I_IMPOR/sta16[2:0]} \
+{/TESTBED/I_IMPOR/sta17[2:0]} \
+{/TESTBED/I_IMPOR/sta18[2:0]} \
+{/TESTBED/I_IMPOR/sta20[2:0]} \
+{/TESTBED/I_IMPOR/sta21[2:0]} \
+{/TESTBED/I_IMPOR/sta22[2:0]} \
+{/TESTBED/I_IMPOR/sta23[2:0]} \
+{/TESTBED/I_IMPOR/sta24[2:0]} \
+{/TESTBED/I_IMPOR/sta25[2:0]} \
+{/TESTBED/I_IMPOR/sta26[2:0]} \
+{/TESTBED/I_IMPOR/sta27[2:0]} \
+{/TESTBED/I_IMPOR/sta28[2:0]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 \
+           24 25 26 27 28 29 )}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvGetSignalClose -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 32547.362110 -snap {("G1" 19)}
+wvSetCursor -win $_nWave1 25926.139089 -snap {("G1" 2)}
+wvSetCursor -win $_nWave1 26177.577938 -snap {("G1" 1)}
+wvExit

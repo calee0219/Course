@@ -1,0 +1,63 @@
+#!/bin/bash
+set -e
+
+. _common
+break_debug=0
+manual_fs="ext2"
+dd_count=$normal_size
+[ -z $manual_fs ] || test_fs=$manual_fs
+
+echo -e "partclone.info test"
+echo -e "===================\n"
+#main
+for fs in $test_fs; do
+    
+    ptlfs=$(_ptlname $fs)
+    mkfs=$(_findmkfs $fs)
+    echo -e "create raw file $raw\n"
+    _ptlbreak
+    [ -f $raw ] && rm $raw
+    echo -e "    dd if=/dev/zero of=$raw bs=$dd_bs count=$dd_count\n"
+    dd if=/dev/zero of=$raw bs=$dd_bs count=$dd_count
+
+    echo -e "\nformat $raw as $fs raw partition\n"
+    echo -e "    mkfs.$fs `eval echo "$"mkfs_option_for_$fs""` $raw\n"
+    _ptlbreak
+    $mkfs `eval echo "$"mkfs_option_for_$fs""` $raw
+
+    echo -e "\nclone $raw to $img\n"
+    [ -f $img ] && rm $img
+    echo -e "    $ptlfs -d -c -s $raw -O $img -F -L $logfile\n"
+    _ptlbreak
+    $ptlfs -d -c -s $raw -O $img -F -L $logfile
+    _check_return_code
+
+    echo -e "\nprint image header\n"
+    echo -e "    $ptlinfo -s $img -L $logfile\n"
+    _ptlbreak
+    $ptlinfo -s $img -L $logfile
+    _check_return_code
+
+    echo -e "\nprint image header from stdin image\n"
+    echo -e "    cat $img | $ptlinfo -s - -L $logfile\n"
+    _ptlbreak
+    cat $img | $ptlinfo -s - -L $logfile
+    _check_return_code
+
+    echo -e "\ncheck logfile\n"
+    echo -e "\ncat $logfile\n"
+    _ptlbreak
+    cat $logfile
+    _check_return_code
+
+    set +e
+    echo -e "\ngive no options\n"
+    $ptlinfo
+    set -e
+
+    echo -e "\ninfo test ok\n"
+    echo -e "\nclear tmp files $img $raw $logfile $md5\n"
+    _ptlbreak
+    rm -f $img $raw $logfile $md5
+
+done

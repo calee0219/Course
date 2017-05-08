@@ -1,0 +1,602 @@
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "D:/Lab08_0416037/Lab08_0416037.xst" -ofn "D:/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 
+xst -intstyle ise -ifn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.xst" -ofn "C:/Users/shlab_89/Downloads/Lab08_0416037/Lab08_0416037.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Lab08_0416037.ucf -p xc3s500e-fg320-4 Lab08_0416037.ngc Lab08_0416037.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Lab08_0416037_map.ncd Lab08_0416037.ngd Lab08_0416037.pcf 
+par -w -intstyle ise -ol high -t 1 Lab08_0416037_map.ncd Lab08_0416037.ncd Lab08_0416037.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Lab08_0416037.twx Lab08_0416037.ncd -o Lab08_0416037.twr Lab08_0416037.pcf -ucf Lab08_0416037.ucf 
+bitgen -intstyle ise -f Lab08_0416037.ut Lab08_0416037.ncd 

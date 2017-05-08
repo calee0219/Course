@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+$main_col: #202020
+$butt_col: #515151
+$word_col: #111111
+$dis_col: #f7f7f7
+
+$bold_siz: 0.2em
+$cal_wid: 20em
+$butt_wid: 2.5em
+$butt_hig: 2.5em
+$rad: 10px
+$word_siz: 2em
+
+.calculator
+  color: $word_col
+  margin: auto auto
+  text-align: center
+  vertical-align: middle
+  font-size: $word_siz
+  background-color: $main_col
+  border: $bold_siz solid black
+  border-width: 0 $bold_siz $bold_siz 0
+  border-radius: $rad*2
+  width: $cal_wid
+  height: auto
+
+.display
+  position: relative
+  top: 10px
+  margin: $butt_hig*0.5 $butt_wid*0.5
+  background-color: $dis_col
+  border-width: 0 $bold_siz $bold_siz 0
+  border-radius: $rad*1.5
+  & .title
+    font-size: $word_siz*1.1
+  & .block
+    display: block
+  & .ans
+    margin: $word_siz*0.1 6%
+    text-align: left
+    & .text
+      display: inline-block
+      text-align: left
+    & .num
+      display: inline-block
+      width: 76%
+      text-align: right
+  & .hex, .dec, .oct, .bin
+    display: inline-block
+    margin: $cal_wid*0.01
+    width: $cal_wid*0.37
+    text-align: left
+    & .lab
+      display: inline-block
+    & .dis_num
+      display: inline-block
+      width: 50%
+      text-align: right
+
+.title
+  margin-bottom: 10px
+  display: block
+
+.input
+  margin: $butt_hig*0.2 auto
+
+.row
+  display: block
+
+.function
+  position: relative
+
+.number
+  position: relative
+
+.buttom
+  margin: 2px
+  background-color: $butt_col
+  display: inline-block
+  border: $bold_siz solid black
+  border-width: 0 $bold_siz $bold_siz 0
+  border-radius: $rad
+  width: $butt_wid
+  height: $butt_hig

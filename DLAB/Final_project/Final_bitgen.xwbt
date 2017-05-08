@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\shlab_89\Desktop\Final\Final.ncd
+OUTFILE=C:\Users\shlab_89\Desktop\Final\Final.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\shlab_89\Desktop\Final
+LICENSE=WebPack
+USER_INFO=210916478_1777501413_210612880_740

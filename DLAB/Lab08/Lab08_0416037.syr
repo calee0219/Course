@@ -1,0 +1,855 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: Lab08_0416037.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Lab08_0416037.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Lab08_0416037"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Lab08_0416037
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ipcore_dir/div.v" in library work
+Compiling verilog file "n2s.v" in library work
+Module <div> compiled
+Compiling verilog file "LCD.v" in library work
+Module <n2s> compiled
+Compiling verilog file "ipcore_dir/sqrt.v" in library work
+Module <LCD> compiled
+Compiling verilog file "Lab08_0416037.v" in library work
+Module <sqrt> compiled
+Module <Lab08_0416037> compiled
+No errors in compilation
+Analysis of file <"Lab08_0416037.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Lab08_0416037> in library <work> with parameters.
+	ADD = "00000000000000000000000000000001"
+	IDLE = "00000000000000000000000000000000"
+	MULT = "00000000000000000000000000000011"
+	NUM = "00000000000000000000000000000010"
+	OPT = "00000000000000000000000000000001"
+	RESET = "00000000000000000000000000000000"
+	SQRT = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <LCD> in library <work>.
+
+Analyzing hierarchy for module <n2s> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Lab08_0416037>.
+	ADD = 32'sb00000000000000000000000000000001
+	IDLE = 32'sb00000000000000000000000000000000
+	MULT = 32'sb00000000000000000000000000000011
+	NUM = 32'sb00000000000000000000000000000010
+	OPT = 32'sb00000000000000000000000000000001
+	RESET = 32'sb00000000000000000000000000000000
+	SQRT = 32'sb00000000000000000000000000000010
+WARNING:Xst:2211 - "ipcore_dir/sqrt.v" line 73: Instantiating black box module <sqrt>.
+Module <Lab08_0416037> is correct for synthesis.
+ 
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <sqrt_module> in unit <Lab08_0416037>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <sqrt_module> in unit <Lab08_0416037>.
+    Set property "SYN_NOPRUNE = 1" for unit <sqrt>.
+Analyzing module <LCD> in library <work>.
+Module <LCD> is correct for synthesis.
+ 
+Analyzing module <n2s> in library <work>.
+WARNING:Xst:883 - "n2s.v" line 89: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "n2s.v" line 134: Ignored duplicate item in case statement. 
+WARNING:Xst:2211 - "ipcore_dir/div.v" line 37: Instantiating black box module <div>.
+WARNING:Xst:2211 - "ipcore_dir/div.v" line 45: Instantiating black box module <div>.
+Module <n2s> is correct for synthesis.
+ 
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <div1> in unit <n2s>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <div1> in unit <n2s>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <div2> in unit <n2s>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <div2> in unit <n2s>.
+    Set property "SYN_NOPRUNE = 1" for unit <div>.
+    Set property "SYN_NOPRUNE = 1" for unit <div>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <LCD>.
+    Related source file is "LCD.v".
+    Found 6-bit register for signal <Code>.
+    Found 24-bit up counter for signal <count>.
+    Found 7-bit comparator less for signal <count$cmp_lt0000> created at line 22.
+    Found 1-bit register for signal <refresh>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <LCD> synthesized.
+
+
+Synthesizing Unit <n2s>.
+    Related source file is "n2s.v".
+WARNING:Xst:646 - Signal <uAns<399:128>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rfd2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rfd1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dAns<399:128>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 31-bit up counter for signal <counter>.
+    Found 6-bit comparator less for signal <counter$cmp_lt0000> created at line 60.
+    Found 400-bit register for signal <dAns>.
+    Found 400-bit register for signal <uAns>.
+    Found 6-bit adder for signal <uStr$add0000> created at line 53.
+    Found 6-bit adder for signal <uStr$add0001> created at line 53.
+    Found 6-bit adder for signal <uStr$add0002> created at line 53.
+INFO:Xst:738 - HDL ADVISOR - 400 flip-flops were inferred for signal <uAns>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:738 - HDL ADVISOR - 400 flip-flops were inferred for signal <dAns>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 800 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <n2s> synthesized.
+
+
+Synthesizing Unit <Lab08_0416037>.
+    Related source file is "Lab08_0416037.v".
+WARNING:Xst:1870 - Variable <WAIT_TIME> is used but never assigned. Tied to value 00000000000111101000010010000000.
+WARNING:Xst:1870 - Variable <HAHA_STOP> is used but never assigned. Tied to value 00000000000000000000001111101000.
+    Register <LED> equivalent to <dNum> has been removed
+WARNING:Xst:643 - "Lab08_0416037.v" line 215: The result of a 8x4-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 8-bit register for signal <ans>.
+    Found 8-bit adder for signal <ans$add0000> created at line 214.
+    Found 8x4-bit multiplier for signal <ans$mult0001> created at line 215.
+    Found 1-bit register for signal <can>.
+    Found 21-bit register for signal <cnt>.
+    Found 21-bit adder for signal <cnt$addsub0000> created at line 177.
+    Found 2-bit register for signal <cState>.
+    Found 8-bit register for signal <dNum>.
+    Found 11-bit register for signal <haha>.
+    Found 11-bit adder for signal <haha$addsub0000> created at line 151.
+    Found 33-bit comparator greatequal for signal <nState$cmp_ge0000> created at line 131.
+    Found 33-bit comparator greater for signal <nState$cmp_gt0000> created at line 127.
+    Found 2-bit register for signal <opt>.
+    Summary:
+	inferred  53 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Comparator(s).
+Unit <Lab08_0416037> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 9
+ 11-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 6-bit adder                                           : 6
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 24-bit up counter                                     : 1
+ 31-bit up counter                                     : 2
+# Registers                                            : 1609
+ 1-bit register                                        : 1602
+ 11-bit register                                       : 1
+ 2-bit register                                        : 2
+ 21-bit register                                       : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 5
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+ 6-bit comparator less                                 : 2
+ 7-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/sqrt.ngc>.
+Reading Secure Unit <blk0000000c>.
+Reading core <ipcore_dir/div.ngc>.
+Loading core <sqrt> for timing and area information for instance <sqrt_module>.
+Loading core <div> for timing and area information for instance <div1>.
+Loading core <div> for timing and area information for instance <div2>.
+WARNING:Xst:1710 - FF/Latch <dAns_7> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_15> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_23> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_31> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_39> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_47> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_55> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_63> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_71> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_79> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_87> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_95> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_103> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_111> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_119> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dAns_127> (without init value) has a constant value of 0 in block <n2s_down>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_7> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_15> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_23> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_31> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_39> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_47> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_55> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_63> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_71> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_79> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_87> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_95> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_103> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_111> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_119> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uAns_127> (without init value) has a constant value of 0 in block <n2s_up>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <div1>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal fractional<3> may hinder XST clustering optimizations.
+Unit <div1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <div2>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal quotient<3> may hinder XST clustering optimizations.
+Unit <div2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 9
+ 11-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 6-bit adder                                           : 6
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 24-bit up counter                                     : 1
+ 31-bit up counter                                     : 2
+# Registers                                            : 572
+ Flip-Flops                                            : 572
+# Comparators                                          : 5
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+ 6-bit comparator less                                 : 2
+ 7-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <dAns_7> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_15> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_23> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_31> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_39> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_47> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_55> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_63> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_71> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_79> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_87> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_95> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_103> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_111> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_119> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dAns_127> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_7> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_15> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_23> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_31> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_39> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_47> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_55> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_63> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_71> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_79> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_87> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_95> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_103> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_111> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_119> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uAns_127> (without init value) has a constant value of 0 in block <n2s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <counter_29> of sequential type is unconnected in block <n2s>.
+WARNING:Xst:2677 - Node <counter_30> of sequential type is unconnected in block <n2s>.
+
+Optimizing unit <Lab08_0416037> ...
+
+Optimizing unit <n2s> ...
+
+Optimizing unit <LCD> ...
+WARNING:Xst:2677 - Node <n2s_down/uAns_0> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_1> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_2> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_3> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_4> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_5> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_6> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_8> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_9> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_10> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_11> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_12> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_13> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_14> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_16> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_17> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_18> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_19> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_20> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_21> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_22> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_24> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_25> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_26> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_27> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_28> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_29> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_30> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_32> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_33> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_34> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_35> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_36> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_37> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_38> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_40> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_41> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_42> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_43> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_44> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_45> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_46> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_48> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_49> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_50> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_51> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_52> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_53> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_54> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_56> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_57> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_58> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_59> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_61> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_62> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_60> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_64> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_65> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_66> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_67> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_68> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_69> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_70> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_72> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_73> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_74> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_75> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_76> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_77> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_78> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_80> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_81> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_82> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_83> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_84> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_85> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_86> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_88> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_89> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_90> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_91> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_92> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_94> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_93> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_96> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_97> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_98> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_99> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_100> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_101> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_102> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_104> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_105> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_106> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_107> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_108> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_109> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_110> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_112> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_113> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_114> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_115> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_116> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_117> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_118> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_120> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_121> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_122> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_123> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_124> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_125> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_down/uAns_126> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_0> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_1> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_2> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_3> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_4> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_5> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_6> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_8> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_9> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_10> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_11> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_12> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_13> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_14> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_16> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_17> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_18> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_19> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_20> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_21> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_22> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_24> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_25> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_26> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_27> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_28> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_29> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_30> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_32> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_33> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_34> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_35> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_36> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_37> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_38> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_40> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_41> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_42> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_43> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_44> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_45> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_46> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_48> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_49> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_50> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_51> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_52> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_53> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_54> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_56> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_57> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_59> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_60> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_58> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_61> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_62> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_64> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_65> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_66> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_67> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_68> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_69> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_70> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_72> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_73> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_74> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_75> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_76> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_77> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_78> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_80> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_81> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_82> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_83> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_84> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_85> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_86> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_88> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_89> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_90> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_91> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_92> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_93> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_94> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_96> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_97> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_98> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_99> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_100> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_101> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_102> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_104> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_105> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_106> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_107> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_108> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_109> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_110> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_112> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_113> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_114> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_115> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_116> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_117> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_118> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_120> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_121> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_122> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_124> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_125> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_123> of sequential type is unconnected in block <Lab08_0416037>.
+WARNING:Xst:2677 - Node <n2s_up/dAns_126> of sequential type is unconnected in block <Lab08_0416037>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Lab08_0416037, actual ratio is 30.
+FlipFlop n2s_down/counter_23 has been replicated 1 time(s)
+FlipFlop n2s_down/counter_25 has been replicated 1 time(s)
+FlipFlop n2s_down/counter_27 has been replicated 1 time(s)
+FlipFlop n2s_down/counter_28 has been replicated 1 time(s)
+FlipFlop n2s_up/counter_24 has been replicated 1 time(s)
+FlipFlop n2s_up/counter_25 has been replicated 1 time(s)
+FlipFlop n2s_up/counter_28 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 373
+ Flip-Flops                                            : 373
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Lab08_0416037.ngr
+Top Level Output File Name         : Lab08_0416037
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 2946
+#      GND                         : 6
+#      INV                         : 95
+#      LUT1                        : 43
+#      LUT2                        : 101
+#      LUT2_D                      : 13
+#      LUT2_L                      : 5
+#      LUT3                        : 462
+#      LUT3_D                      : 28
+#      LUT3_L                      : 43
+#      LUT4                        : 879
+#      LUT4_D                      : 67
+#      LUT4_L                      : 186
+#      MULT_AND                    : 36
+#      MUXCY                       : 453
+#      MUXF5                       : 77
+#      VCC                         : 6
+#      XORCY                       : 446
+# FlipFlops/Latches                : 1346
+#      FD                          : 950
+#      FDC                         : 122
+#      FDCE                        : 1
+#      FDCP                        : 224
+#      FDE                         : 24
+#      FDP                         : 2
+#      FDRE                        : 23
+# Shift Registers                  : 4
+#      SRL16                       : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 8
+#      OBUF                        : 15
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1369  out of   4656    29%  
+ Number of Slice Flip Flops:           1346  out of   9312    14%  
+ Number of 4 input LUTs:               1926  out of   9312    20%  
+    Number used as logic:              1922
+    Number used as Shift registers:       4
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1350  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 349   |
+N0(XST_GND:G)                      | NONE(n2s_down/dAns_0)  | 224   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.762ns (Maximum Frequency: 114.133MHz)
+   Minimum input arrival time before clock: 8.229ns
+   Maximum output required time after clock: 4.532ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.762ns (frequency: 114.133MHz)
+  Total number of paths / destination ports: 30838 / 1323
+-------------------------------------------------------------------------
+Delay:               8.762ns (Levels of Logic = 5)
+  Source:            n2s_down/counter_24 (FF)
+  Destination:       n2s_down/dAns_88 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: n2s_down/counter_24 to n2s_down/dAns_88
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             40   0.591   1.344  n2s_down/counter_24 (n2s_down/counter_24)
+     LUT3_D:I1->O         23   0.704   1.206  n2s_down/uAns_399_cmp_eq000411 (n2s_down/N25)
+     LUT4_D:I3->O         28   0.704   1.265  n2s_down/uAns_399_cmp_eq00201 (n2s_down/uAns_399_cmp_eq0020)
+     LUT4_L:I3->LO         1   0.704   0.104  n2s_down/dAns_88_mux000012 (n2s_down/dAns_88_mux000012)
+     LUT4:I3->O            1   0.704   0.424  n2s_down/dAns_88_mux000018 (n2s_down/dAns_88_mux000018)
+     LUT4:I3->O            1   0.704   0.000  n2s_down/dAns_88_mux000035 (n2s_down/dAns_88_mux0000)
+     FDCP:D                    0.308          n2s_down/dAns_88
+    ----------------------------------------
+    Total                      8.762ns (4.419ns logic, 4.343ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 386 / 76
+-------------------------------------------------------------------------
+Offset:              8.229ns (Levels of Logic = 8)
+  Source:            SW<0> (PAD)
+  Destination:       dNum_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: SW<0> to dNum_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.218   0.844  SW_0_IBUF (SW_0_IBUF)
+     LUT2:I0->O            1   0.704   0.000  Madd_ans_add0000_lut<0> (Madd_ans_add0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd_ans_add0000_cy<0> (Madd_ans_add0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_ans_add0000_cy<1> (Madd_ans_add0000_cy<1>)
+     XORCY:CI->O           4   0.804   0.762  Madd_ans_add0000_xor<2> (ans_add0000<2>)
+     LUT4:I0->O            1   0.704   0.420  dNum_mux0000<2>8_SW0 (N62)
+     MUXF5:S->O            1   0.739   0.499  dNum_mux0000<2>30_SW0 (N127)
+     LUT3:I1->O            1   0.704   0.000  dNum_mux0000<2>85 (dNum_mux0000<2>)
+     FDC:D                     0.308          dNum_2
+    ----------------------------------------
+    Total                      8.229ns (5.704ns logic, 2.525ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              4.532ns (Levels of Logic = 1)
+  Source:            dNum_7 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dNum_7 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.669  dNum_7 (dNum_7)
+     OBUF:I->O                 3.272          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.532ns (3.863ns logic, 0.669ns route)
+                                       (85.2% logic, 14.8% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to sqrt_module.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to sqrt_module.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to n2s_down/div2.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to n2s_down/div2.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to n2s_down/div1.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to n2s_down/div1.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to n2s_up/div2.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to n2s_up/div2.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to n2s_up/div1.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to n2s_up/div1.
+
+
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 32.23 secs
+ 
+--> 
+
+Total memory usage is 357616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  320 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

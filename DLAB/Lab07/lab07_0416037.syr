@@ -1,0 +1,444 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: lab07_0416037.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab07_0416037.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab07_0416037"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : lab07_0416037
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ipcore_dir/sqrt.v" in library work
+Compiling verilog file "Lab07.v" in library work
+Module <sqrt> compiled
+Module <lab07_0416037> compiled
+No errors in compilation
+Analysis of file <"lab07_0416037.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <lab07_0416037> in library <work> with parameters.
+	ADD = "00000000000000000000000000000001"
+	IDLE = "00000000000000000000000000000000"
+	MULT = "00000000000000000000000000000011"
+	NUM = "00000000000000000000000000000010"
+	OPT = "00000000000000000000000000000001"
+	RESET = "00000000000000000000000000000000"
+	SQRT = "00000000000000000000000000000010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <lab07_0416037>.
+	ADD = 32'sb00000000000000000000000000000001
+	IDLE = 32'sb00000000000000000000000000000000
+	MULT = 32'sb00000000000000000000000000000011
+	NUM = 32'sb00000000000000000000000000000010
+	OPT = 32'sb00000000000000000000000000000001
+	RESET = 32'sb00000000000000000000000000000000
+	SQRT = 32'sb00000000000000000000000000000010
+WARNING:Xst:2211 - "ipcore_dir/sqrt.v" line 63: Instantiating black box module <sqrt>.
+Module <lab07_0416037> is correct for synthesis.
+ 
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <sqrt_module> in unit <lab07_0416037>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <sqrt_module> in unit <lab07_0416037>.
+    Set property "SYN_NOPRUNE = 1" for unit <sqrt>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lab07_0416037>.
+    Related source file is "Lab07.v".
+WARNING:Xst:1870 - Variable <WAIT_TIME> is used but never assigned. Tied to value 00000000000111101000010010000000.
+WARNING:Xst:1870 - Variable <HAHA_STOP> is used but never assigned. Tied to value 00000000000000000000001111101000.
+WARNING:Xst:643 - "Lab07.v" line 177: The result of a 8x4-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 8-bit register for signal <LED>.
+    Found 8-bit register for signal <ans>.
+    Found 8-bit adder for signal <ans$add0000> created at line 176.
+    Found 8x4-bit multiplier for signal <ans$mult0001> created at line 177.
+    Found 1-bit register for signal <can>.
+    Found 21-bit register for signal <cnt>.
+    Found 21-bit adder for signal <cnt$addsub0000> created at line 139.
+    Found 2-bit register for signal <cState>.
+    Found 11-bit register for signal <haha>.
+    Found 11-bit adder for signal <haha$addsub0000> created at line 113.
+    Found 33-bit comparator greatequal for signal <nState$cmp_ge0000> created at line 93.
+    Found 33-bit comparator greater for signal <nState$cmp_gt0000> created at line 89.
+    Found 2-bit register for signal <opt>.
+    Summary:
+	inferred  53 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Comparator(s).
+Unit <lab07_0416037> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 1
+ 11-bit register                                       : 1
+ 2-bit register                                        : 2
+ 21-bit register                                       : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 2
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/sqrt.ngc>.
+Reading Secure Unit <blk0000000c>.
+Loading core <sqrt> for timing and area information for instance <sqrt_module>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+# Comparators                                          : 2
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <lab07_0416037> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab07_0416037, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lab07_0416037.ngr
+Top Level Output File Name         : lab07_0416037
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 318
+#      GND                         : 2
+#      INV                         : 10
+#      LUT1                        : 39
+#      LUT2                        : 11
+#      LUT2_D                      : 4
+#      LUT3                        : 26
+#      LUT3_D                      : 7
+#      LUT4                        : 95
+#      LUT4_D                      : 6
+#      LUT4_L                      : 5
+#      MUXCY                       : 50
+#      MUXF5                       : 21
+#      VCC                         : 2
+#      XORCY                       : 40
+# FlipFlops/Latches                : 90
+#      FD                          : 14
+#      FDC                         : 52
+#      FDCE                        : 1
+#      FDRE                        : 23
+# Shift Registers                  : 4
+#      SRL16                       : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      133  out of   4656     2%  
+ Number of Slice Flip Flops:             90  out of   9312     0%  
+ Number of 4 input LUTs:                207  out of   9312     2%  
+    Number used as logic:               203
+    Number used as Shift registers:       4
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 94    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 53    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.137ns (Maximum Frequency: 140.115MHz)
+   Minimum input arrival time before clock: 7.643ns
+   Maximum output required time after clock: 4.496ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.137ns (frequency: 140.115MHz)
+  Total number of paths / destination ports: 1724 / 99
+-------------------------------------------------------------------------
+Delay:               7.137ns (Levels of Logic = 2)
+  Source:            ans_5 (FF)
+  Destination:       LED_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ans_5 to LED_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.591   0.708  ans_5 (ans_5)
+     MULT18X18SIO:A5->P7    2   4.344   0.482  Mmult_ans_mult0001 (ans_mult0001<7>)
+     LUT3:I2->O            1   0.704   0.000  ans_mux0000<0>1 (ans_mux0000<0>)
+     FDC:D                     0.308          ans_7
+    ----------------------------------------
+    Total                      7.137ns (5.947ns logic, 1.190ns route)
+                                       (83.3% logic, 16.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 342 / 52
+-------------------------------------------------------------------------
+Offset:              7.643ns (Levels of Logic = 3)
+  Source:            SW<0> (PAD)
+  Destination:       LED_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: SW<0> to LED_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.587  SW_0_IBUF (SW_0_IBUF)
+     MULT18X18SIO:B0->P7    2   4.344   0.482  Mmult_ans_mult0001 (ans_mult0001<7>)
+     LUT3:I2->O            1   0.704   0.000  ans_mux0000<0>1 (ans_mux0000<0>)
+     FDC:D                     0.308          ans_7
+    ----------------------------------------
+    Total                      7.643ns (6.574ns logic, 1.069ns route)
+                                       (86.0% logic, 14.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.496ns (Levels of Logic = 1)
+  Source:            LED_7 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: LED_7 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.591   0.633  LED_7 (LED_7)
+     OBUF:I->O                 3.272          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.496ns (3.863ns logic, 0.633ns route)
+                                       (85.9% logic, 14.1% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to sqrt_module.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to sqrt_module.
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.30 secs
+ 
+--> 
+
+Total memory usage is 270564 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

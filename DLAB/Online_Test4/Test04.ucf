@@ -1,0 +1,105 @@
+
+
+NET "min[1]" LOC = N17;
+NET "min[0]" LOC = H18;
+
+
+NET "min[1]" IOSTANDARD = LVTTL;
+NET "min[0]" IOSTANDARD = LVTTL;
+
+
+NET "sec[1]" LOC = L14;
+NET "sec[0]" LOC = L13;
+
+
+NET "sec[1]" IOSTANDARD = LVTTL;
+NET "sec[0]" IOSTANDARD = LVTTL;
+
+
+NET "clk" LOC = C9;
+
+
+NET "clk" IOSTANDARD = LVCMOS33;
+
+
+NET "dec" LOC = D18;
+NET "inc" LOC = H13;
+NET "rst" LOC = K17;
+NET "sp" LOC = V4;
+
+
+NET "dec" IOSTANDARD = LVTTL;
+NET "inc" IOSTANDARD = LVTTL;
+NET "rst" IOSTANDARD = LVTTL;
+NET "sp" IOSTANDARD = LVTTL;
+NET "dec" PULLDOWN;
+NET "inc" PULLDOWN;
+NET "rst" PULLDOWN;
+NET "sp" PULLDOWN;
+NET "sec[0]" PULLDOWN;
+NET "sec[1]" PULLDOWN;
+NET "min[0]" PULLDOWN;
+NET "min[1]" PULLDOWN;
+
+# PlanAhead Generated physical constraints 
+
+NET "SF_D[11]" LOC = M15;
+NET "SF_D[10]" LOC = P17;
+NET "SF_D[9]" LOC = R16;
+NET "SF_D[8]" LOC = R15;
+
+# PlanAhead Generated IO constraints 
+
+NET "SF_D[11]" IOSTANDARD = LVCMOS33;
+NET "SF_D[10]" IOSTANDARD = LVCMOS33;
+NET "SF_D[9]" IOSTANDARD = LVCMOS33;
+NET "SF_D[8]" IOSTANDARD = LVCMOS33;
+NET "SF_D[11]" DRIVE = 4;
+NET "SF_D[10]" DRIVE = 4;
+NET "SF_D[9]" DRIVE = 4;
+NET "SF_D[8]" DRIVE = 4;
+
+# PlanAhead Generated physical constraints 
+
+NET "LCD_E" LOC = M18;
+NET "LCD_RS" LOC = L18;
+NET "LCD_RW" LOC = L17;
+
+# PlanAhead Generated IO constraints 
+
+NET "LCD_E" IOSTANDARD = LVCMOS33;
+NET "LCD_RS" IOSTANDARD = LVCMOS33;
+NET "LCD_RW" IOSTANDARD = LVCMOS33;
+NET "LCD_E" DRIVE = 4;
+NET "LCD_RS" DRIVE = 4;
+NET "LCD_RW" DRIVE = 4;
+
+# PlanAhead Generated physical constraints 
+
+NET "LED[7]" LOC = F9;
+NET "LED[6]" LOC = E9;
+NET "LED[5]" LOC = D11;
+NET "LED[4]" LOC = C11;
+NET "LED[3]" LOC = F11;
+NET "LED[2]" LOC = E11;
+NET "LED[1]" LOC = E12;
+NET "LED[0]" LOC = F12;
+
+# PlanAhead Generated IO constraints 
+
+NET "LED[7]" IOSTANDARD = LVTTL;
+NET "LED[6]" IOSTANDARD = LVTTL;
+NET "LED[5]" IOSTANDARD = LVTTL;
+NET "LED[4]" IOSTANDARD = LVTTL;
+NET "LED[3]" IOSTANDARD = LVTTL;
+NET "LED[2]" IOSTANDARD = LVTTL;
+NET "LED[1]" IOSTANDARD = LVTTL;
+NET "LED[0]" IOSTANDARD = LVTTL;
+NET "LED[7]" DRIVE = 8;
+NET "LED[6]" DRIVE = 8;
+NET "LED[5]" DRIVE = 8;
+NET "LED[4]" DRIVE = 8;
+NET "LED[3]" DRIVE = 8;
+NET "LED[2]" DRIVE = 8;
+NET "LED[1]" DRIVE = 8;
+NET "LED[0]" DRIVE = 8;

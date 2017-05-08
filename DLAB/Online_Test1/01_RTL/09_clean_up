@@ -1,0 +1,4 @@
+rm -rf INCA_libs
+rm -rf *.fsdb
+rm -rf n*
+rm -rf *~
