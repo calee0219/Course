@@ -13,6 +13,7 @@ int F = 5;
 
 int DP(int index, int cost, int f_cnt)
 {
+    //cout << index << " " << cost << " " << f_cnt << endl;
     if(cost < 0) return -1e8;
     if(f_cnt < 0) return -1e8;
     if(index < 0) return 0;
@@ -24,7 +25,7 @@ int DP(int index, int cost, int f_cnt)
     } else {
         dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt)+ATTA[index]);
     }
-    cout << index << " | " << cost << " | " << f_cnt << " | " << dp[index][cost][f_cnt] << endl;
+    //cout << index << " | " << cost << " | " << f_cnt << " | " << dp[index][cost][f_cnt] << endl;
     return dp[index][cost][f_cnt];
 }
 
@@ -39,7 +40,7 @@ int main()
     char* offset = buffer;
     int T = (int)*offset++;
     while(T--) {
-        cout << "===========" << endl;
+        //cout << "===========" << endl;
         f_used = false;
         TYPE.clear(); COST.clear(); ATTA.clear();
         char check = (int)*offset++;
@@ -69,7 +70,7 @@ int main()
         }
         for(int i = 0; i < n; ++i) {
             for(int j = 0; j < n; ++j) {
-                for(int k = 0; i < 5; ++k)
+                for(int k = 0; k < 5; ++k)
                     dp[i][j][k] = 0;
             }
             int sz = (*offset++) & 31; // size of string
