@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bitset>
 #include <fstream>
 using namespace std;
 
@@ -20,7 +21,7 @@ int main()
             cout << (int)(c & 15);
             cout << " array";
         } else if(c >= 0xa0 && c <= 0xbf) { // string
-            cout << (bitset<8>)c;
+            cout << (int)(c & 31);
             //cout << (int)(c & 31);
             cout << " string";
         } else {
