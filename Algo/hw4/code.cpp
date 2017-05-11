@@ -5,18 +5,27 @@
 using namespace std;
 
 bool f_used = false;
-int dp[10010][10010];
+int dp[10010][10010][5];
 vector<string> TYPE;
 vector<int> COST, ATTA;
 int n, m;
 int F = 5;
 
-int DP(int index, int cost)
+int DP(int index, int cost, int f_cnt)
 {
-    if(index <= 0 || cost <= 0) return 0;
-    dp[index][cost] = max(DP(index-1, cost), DP(index-1, cost-COST[index])+ATTA[index]);
-    cout << dp[index][cost] << endl;
-    return dp[index][cost];
+    if(cost < 0) return -1e8;
+    if(f_cnt < 0) return -1e8;
+    if(index < 0) return 0;
+    if(dp[index][cost][f_cnt]) return dp[index][cost][f_cnt];
+    if(TYPE[index] == "follower" && f_cnt == 4) {
+        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt-1)+ATTA[index]+2);
+    } else if(TYPE[index] == "follower") {
+        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt-1)+ATTA[index]);
+    } else {
+        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt)+ATTA[index]);
+    }
+    cout << index << " | " << cost << " | " << f_cnt << " | " << dp[index][cost][f_cnt] << endl;
+    return dp[index][cost][f_cnt];
 }
 
 int main()
@@ -30,6 +39,7 @@ int main()
     char* offset = buffer;
     int T = (int)*offset++;
     while(T--) {
+        cout << "===========" << endl;
         f_used = false;
         TYPE.clear(); COST.clear(); ATTA.clear();
         char check = (int)*offset++;
@@ -58,7 +68,10 @@ int main()
             offset += 4;
         }
         for(int i = 0; i < n; ++i) {
-            dp[i][0] = 0; dp[i][1] = 0;
+            for(int j = 0; j < n; ++j) {
+                for(int k = 0; i < 5; ++k)
+                    dp[i][j][k] = 0;
+            }
             int sz = (*offset++) & 31; // size of string
             string str;
             int cost, attack, def;
@@ -74,8 +87,8 @@ int main()
             COST.push_back(cost);
             ATTA.push_back(attack);
         }
-        DP(n, m);
-        cout << dp[n][m] << endl;
+        DP(n-1, m, 4);
+        cout << dp[n-1][m][4] << endl;
     }
     is.close();
     delete[] buffer;
