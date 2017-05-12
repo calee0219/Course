@@ -1,4 +1,3 @@
-/* 4/7 */
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -50,25 +49,26 @@ int main()
             COST.push_back(cost);
             ATTA.push_back(attack);
         }
-        int dp[10010] = {};
+        int dp[10010][6] = {{}};
         int f_num[10010] = {};
         for(int i = 0; i < n; ++i) {
             for(int j = m; j-COST[i] >= 0; --j) {
-                if(TYPE[i] == "follower") {
-                    f_num[j]++;
-                    if(f_num[j] == 1)
-                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]+2);
-                    else if(f_num[j] > 5)
-                        dp[j] = dp[j];
-                    else
-                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
-                } else {
-                    dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
+                for(int k = 0; k < 5; ++k) {
+                    if(TYPE[i] == "follower") {
+                        if(k == 0)
+                            dp[j][k] = max(dp[j][k], dp[j-COST[i]][k+1]+ATTA[i]+2);
+                        else if(k < 5)
+                            dp[j][k] = max(dp[j][k], dp[j-COST[i]][k+1]+ATTA[i]);
+                        else
+                            dp[j][k] = dp[j][k];
+                    } else {
+                        dp[j][k] = max(dp[j][k], dp[j-COST[i]][k]+ATTA[i]);
+                    }
                 }
                 //cout << j << " | " << dp[j] << endl;
             }
         }
-        cout << dp[m] << endl;
+        cout << max(dp[m][0],max(dp[m][1],max(dp[m][2],max(dp[m][3],dp[m][4])))) << endl;
     }
     return 0;
 }

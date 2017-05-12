@@ -1,4 +1,4 @@
-/* 4/7 */
+/* 26 */
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -55,13 +55,15 @@ int main()
         for(int i = 0; i < n; ++i) {
             for(int j = m; j-COST[i] >= 0; --j) {
                 if(TYPE[i] == "follower") {
-                    f_num[j]++;
-                    if(f_num[j] == 1)
+                    int tmp = dp[j];
+                    if(f_num[j] == 0)
                         dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]+2);
                     else if(f_num[j] > 5)
                         dp[j] = dp[j];
                     else
                         dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
+                    if(dp[j] != tmp)
+                        f_num[j]++;
                 } else {
                     dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
                 }

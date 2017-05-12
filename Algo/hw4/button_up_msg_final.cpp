@@ -1,4 +1,3 @@
-/* 4/7 */
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -7,9 +6,16 @@
 using namespace std;
 
 //int dp[10010][10010][5];
-vector<string> TYPE;
-vector<int> COST, ATTA;
-int n, m;
+struct Card {
+    string TYPE;
+    int COST, ATTA;
+    bool operator<(const Card& b)const {
+        return ATTA > b.ATTA;
+    }
+};
+//vector<string> TYPE;
+//vector<int> COST, ATTA;
+//int n, m;
 
 int main()
 {
@@ -23,7 +29,8 @@ int main()
     std::size_t T = upd.get().as<std::size_t>();
     while(T--) {
         //cout << "===========" << endl;
-        TYPE.clear(); COST.clear(); ATTA.clear();
+        //TYPE.clear(); COST.clear(); ATTA.clear();
+        vector<Card> vc;
         msgpack::unpack(upd, buffer.data(), buffer.size(), offset);
         int n;
         msgpack::object msg(upd.get());
@@ -40,35 +47,38 @@ int main()
         for(int j = 0; j < sz; ++j) {
             stringstream ss(vs[j]);
             string str;
-            int cost, attack, def;
+            Card c;
             ss << str;
-            ss >> str;
-            ss >> cost;
-            ss >> attack;
-            ss >> def;
-            TYPE.push_back(str);
-            COST.push_back(cost);
-            ATTA.push_back(attack);
+            ss >> c.TYPE;
+            ss >> c.COST;
+            ss >> c.ATTA;
+            vc.push_back(c);
+            //TYPE.push_back(str);
+            //COST.push_back(cost);
+            //ATTA.push_back(attack);
         }
-        int dp[10010] = {};
+        sort(vc.begin(), vc.end());
+        //for(int i = 0; i < vc.size(); ++i) cout << vc[i].ATTA << " ";
+        int dp[10010][6] = {{}};
         int f_num[10010] = {};
         for(int i = 0; i < n; ++i) {
-            for(int j = m; j-COST[i] >= 0; --j) {
-                if(TYPE[i] == "follower") {
-                    f_num[j]++;
-                    if(f_num[j] == 1)
-                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]+2);
-                    else if(f_num[j] > 5)
-                        dp[j] = dp[j];
-                    else
-                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
-                } else {
-                    dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
+            for(int j = m; j-vc[i].COST >= 0; --j) {
+                for(int k = 5; k >= 0; --k) {
+                    if(vc[i].TYPE == "follower") {
+                        if(k == 5)
+                            dp[j][k] = max(dp[j][k], dp[j-vc[i].COST][k-1]+vc[i].ATTA+2);
+                        else if(k == 0)
+                            dp[j][k] = dp[j][k];
+                        else
+                            dp[j][k] = max(dp[j][k], dp[j-vc[i].COST][k-1]+vc[i].ATTA);
+                    } else {
+                        dp[j][k] = max(dp[j][k], dp[j-vc[i].COST][k]+vc[i].ATTA);
+                    }
                 }
                 //cout << j << " | " << dp[j] << endl;
             }
         }
-        cout << dp[m] << endl;
+        cout << dp[m][5] << endl;
     }
     return 0;
 }
