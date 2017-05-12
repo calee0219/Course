@@ -4,26 +4,10 @@
 #include <vector>
 using namespace std;
 
-int dp[110][110][5];
+//int dp[10010][10010][5];
 vector<string> TYPE;
 vector<int> COST, ATTA;
 int n, m;
-
-int DP(int index, int cost, int f_cnt)
-{
-    if(cost < 0) return -1e8;
-    if(f_cnt < 0) return -1e8;
-    if(index < 0) return 0;
-    if(dp[index][cost][f_cnt]) return dp[index][cost][f_cnt];
-    if(TYPE[index] == "follower" && f_cnt == 4) {
-        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt-1)+ATTA[index]+2);
-    } else if(TYPE[index] == "follower") {
-        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt-1)+ATTA[index]);
-    } else {
-        dp[index][cost][f_cnt] = max(DP(index-1, cost, f_cnt), DP(index-1, cost-COST[index], f_cnt)+ATTA[index]);
-    }
-    return dp[index][cost][f_cnt];
-}
 
 int main()
 {
@@ -64,10 +48,10 @@ int main()
             offset += 4;
         }
         for(size_t i = 0; i < n; ++i) {
-            for(size_t j = 0; j < n; ++j) {
-                for(size_t k = 0; k < 5; ++k)
-                    dp[i][j][k] = 0;
-            }
+            //for(size_t j = 0; j < n; ++j) {
+                //for(size_t k = 0; k < 5; ++k)
+                    //dp[i][j][k] = 0;
+            //}
             short sz = (*offset++) & 31; // size of string
             string str;
             int cost, attack, def;
@@ -83,7 +67,25 @@ int main()
             COST.push_back(cost);
             ATTA.push_back(attack);
         }
-        cout << DP(n-1, m, 4) << endl;
+        int dp[10010] = {};
+        int f_num[10010] = {};
+        for(int i = 0; i < n; ++i) {
+            for(int j = m; j-COST[i] >= 0; --j) {
+                if(TYPE[i] == "follower") {
+                    f_num[j]++;
+                    if(f_num[j] == 1)
+                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]+2);
+                    else if(f_num[j] > 5)
+                        dp[j] = dp[j];
+                    else
+                        dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
+                } else {
+                    dp[j] = max(dp[j], dp[j-COST[i]]+ATTA[i]);
+                }
+                //cout << j << " | " << dp[j] << endl;
+            }
+        }
+        cout << dp[m] << endl;
     }
     is.close();
     delete[] buffer;
