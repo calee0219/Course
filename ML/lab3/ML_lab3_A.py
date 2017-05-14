@@ -119,9 +119,15 @@ if __name__ == "__main__":
                 print(test.columns.values[5-j], end=' ')
                 print(test.iloc[0,j])
                 sys.exit()
+    ans = 0
     for i in ac:
+        ans = max(ans, ac[i])
         print(i, end=": ")
-        print(ac[i])
+        print(ac[i], end='\t')
+    print('\n\nBest fit:', end=' ')
+    for i in ac:
+        if ans == ac[i]:
+            print(i)
 
     # # used Gausian predict
     # model = GaussianNB()
