@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
 import pandas as pd
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
@@ -12,8 +13,42 @@ def Classify(data):
         data.loc[i,'SED-IN'] = int(float(data.loc[i,'SED-IN']) / 2)
         data.loc[i,'COND-IN'] = int(float(data.loc[i,'COND-IN']) / 200)
         data.loc[i,'SS-OUT'] = int(float(data.loc[i,'SS-OUT']) / 10)
-        data.loc[i,'SED-OUT'] = int(float(data.loc[i,'SED-OUT']) * 100)
+        data.loc[i,'SED-OUT'] = int(float(data.loc[i,'SED-OUT']) / 1000)
         data.loc[i,'COND-OUT'] = int(float(data.loc[i,'COND-OUT']) / 100)
+
+
+def Frequency_Table(data, f_table, alpha=10):
+    # how many data for each target
+    target_count = dict(data.iloc[:,6].value_counts())
+    for i in range(data.shape[1]-1): # i features for each data
+        # for 2D dict, add the first D
+        table_list = {}
+        feature_layer_up = {}
+        feature_layer_do = {}
+        for j in target_count:
+            feature_layer_up[j] = 0
+            feature_layer_do[j] = 1000
+        for j in range(data.shape[0]): # j rows in dataset
+            target = data.iloc[j,6]
+            match_f = data.iloc[j,i]
+            feature_layer_do[target] = min(feature_layer_do[target],match_f)
+            feature_layer_up[target] = max(feature_layer_up[target],match_f)
+            # add the second D to 2D dict
+            if not (target in table_list):
+                table_list[target] = {}
+            if not (match_f in table_list[target]):
+                table_list[target][match_f] = 0
+            # table_list[target][match_f] += 1/target_count[target];
+            table_list[target][match_f] += 1;
+        # Laplace smoothing
+        for j in target_count:
+            rg = int(feature_layer_up[j] - feature_layer_do[j]) + 1
+            for k in range(int(feature_layer_do[j]), int(feature_layer_up[j])+1):
+                if k in table_list[j]:
+                    table_list[j][k] = (table_list[j][k]+alpha)/(target_count[j]+alpha*rg)
+                else:
+                    table_list[j][k] = alpha/(target_count[j]+alpha*rg)
+        f_table.append(table_list)
 
 
 if __name__ == "__main__":
@@ -30,16 +65,9 @@ if __name__ == "__main__":
         target_P[i] = target_count[i]/13
     print(target_P)
     # frequency table
-    f_table = []
-    for i in range(6):
-        table_list = {}
-        for j in range(data.shape[0]):
-            if not (data.iloc[j,6] in table_list):
-                table_list[data.iloc[j,6]] = {}
-            if not (data.iloc[j,i] in table_list[data.iloc[j,6]]):
-                table_list[data.iloc[j,6]][data.iloc[j,i]] = 0
-            table_list[data.iloc[j,6]][data.iloc[j,i]] += 1/target_count[data.iloc[j,6]];
-        f_table.append(table_list)
+    f_table = [] # list of 2D dict: [feature_num][target][bin] -> P
+    # (fequency_table, k for laplace smooth)
+    Frequency_Table(data, f_table)
     ord = 0
     for i in f_table:
         print()
