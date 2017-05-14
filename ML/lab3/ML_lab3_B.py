@@ -4,7 +4,6 @@
 import pandas as pd
 import numpy as np
 import re
-import fuckit
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.naive_bayes import MultinomialNB
@@ -118,9 +117,9 @@ if __name__ == "__main__":
     # model = BernoulliNB()
     # model = MultinomialNB()
     model.fit(data_feature, data_target)
-    pred = model.predict(data_feature)
-    m = confusion_matrix(data_target, pred)
-    print(np.trace(m)/np.sum(m))
+    # pred = model.predict(data_feature)
+    # m = confusion_matrix(data_target, pred)
+    # print(np.trace(m)/np.sum(m))
     md = model.predict(test_feature)
     for i in range(len(md)):
         print(str(test.iloc[i,0])+": "+str(md[i]))
