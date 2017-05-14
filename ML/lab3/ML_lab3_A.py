@@ -23,16 +23,20 @@ def Frequency_Table(data, f_table, alpha=10):
     for i in range(data.shape[1]-1): # i features for each data
         # for 2D dict, add the first D
         table_list = {}
-        feature_layer_up = {}
-        feature_layer_do = {}
-        for j in target_count:
-            feature_layer_up[j] = 0
-            feature_layer_do[j] = 1000
+        # feature_layer_up = {}
+        # feature_layer_do = {}
+        # for j in target_count:
+            # feature_layer_up[j] = 0
+            # feature_layer_do[j] = 1000
+        feature_layer_do = 1000
+        feature_layer_up = 0
         for j in range(data.shape[0]): # j rows in dataset
             target = data.iloc[j,6]
             match_f = data.iloc[j,i]
-            feature_layer_do[target] = min(feature_layer_do[target],match_f)
-            feature_layer_up[target] = max(feature_layer_up[target],match_f)
+            # feature_layer_do[target] = min(feature_layer_do[target],match_f)
+            # feature_layer_up[target] = max(feature_layer_up[target],match_f)
+            feature_layer_do = min(feature_layer_do,match_f)
+            feature_layer_up = max(feature_layer_up,match_f)
             # add the second D to 2D dict
             if not (target in table_list):
                 table_list[target] = {}
@@ -42,8 +46,10 @@ def Frequency_Table(data, f_table, alpha=10):
             table_list[target][match_f] += 1;
         # Laplace smoothing
         for j in target_count:
-            rg = int(feature_layer_up[j] - feature_layer_do[j]) + 1
-            for k in range(int(feature_layer_do[j]), int(feature_layer_up[j])+1):
+            # rg = int(feature_layer_up[j] - feature_layer_do[j]) + 1
+            rg = int(feature_layer_up - feature_layer_do) + 1
+            # for k in range(int(feature_layer_do[j]), int(feature_layer_up[j])+1):
+            for k in range(int(feature_layer_do), int(feature_layer_up)+1):
                 if k in table_list[j]:
                     table_list[j][k] = (table_list[j][k]+alpha)/(target_count[j]+alpha*rg)
                 else:
@@ -63,6 +69,7 @@ if __name__ == "__main__":
     target_P = {}
     for i in target_count:
         target_P[i] = target_count[i]/13
+    print()
     print(target_P)
     # frequency table
     f_table = [] # list of 2D dict: [feature_num][target][bin] -> P
@@ -91,19 +98,27 @@ if __name__ == "__main__":
         'SED-OUT'  : pd.Series([0.25]),
         'COND-OUT' : pd.Series([1642]),
         })
-    test.reindex_axis(['SS-IN','SED-IN','COND-IN','SS-OUT','SED-OUT','COND-OUT'], axis=1)
+    # test.reindex_axis(['SS-IN','SED-IN','COND-IN','SS-OUT','SED-OUT','COND-OUT'], axis=1)
+    test = test[['SS-IN','SED-IN','COND-IN','SS-OUT','SED-OUT','COND-OUT']]
     print("\ntest origin")
     print(test)
     Classify(test)
     print("\ntest after classify")
     print(test)
-
+    print()
     # propobility matrix
     ac = target_P
     for i in target_P:
         for j in range(test.shape[1]):
-            if test.iloc[0,j] in f_table[j][i]:
+            # if test.iloc[0,j] in f_table[j][i]:
+            try:
                 ac[i] *= f_table[j][i][test.iloc[0,j]]
+            except:
+                print("no Fequency Table record for data", end=' ')
+                print(i, end=' ')
+                print(test.columns.values[5-j], end=' ')
+                print(test.iloc[0,j])
+                sys.exit()
     for i in ac:
         print(i, end=": ")
         print(ac[i])
