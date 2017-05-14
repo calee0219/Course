@@ -1,0 +1,69 @@
+train origin
+    SS-IN  SED-IN  COND-IN  SS-OUT   SED-OUT  COND-OUT   STATUS
+0     168     3.0     1814    15.0     0.001    1879.0       ok
+1     156     3.0     1358    14.0     0.010    1425.0       ok
+2     176     3.5     2200    16.0     0.005    2140.0       ok
+3     256     3.0     2070    27.0     0.200    2700.0       ok
+4     230     5.0     1410   131.0     3.500    1575.0  settler
+5     116     3.0     1238   104.0     0.060    1221.0  settler
+6     242     7.0     1315   104.0     0.010    1434.0  settler
+7     242     4.5     1183    78.0     0.020    1374.0  settler
+8     174     2.5     1110    73.0     1.500    1256.0  settler
+9    1004    35.0     1218    81.0  1172.000      33.3   solids
+10   1228    46.0     1889    82.4  1932.000      42.1   solids
+11    965    17.0     2120    20.0  1030.000    1966.0   solids
+12   2008    32.0     1257    13.0  1038.000    1289.0   solids
+
+train after classify
+    SS-IN  SED-IN  COND-IN  SS-OUT  SED-OUT  COND-OUT   STATUS
+0       1     1.0        9     1.0      0.0      18.0       ok
+1       1     1.0        6     1.0      0.0      14.0       ok
+2       1     1.0       11     1.0      0.0      21.0       ok
+3       2     1.0       10     2.0      0.0      27.0       ok
+4       2     2.0        7    13.0      0.0      15.0  settler
+5       1     1.0        6    10.0      0.0      12.0  settler
+6       2     3.0        6    10.0      0.0      14.0  settler
+7       2     2.0        5     7.0      0.0      13.0  settler
+8       1     1.0        5     7.0      0.0      12.0  settler
+9      10    17.0        6     8.0      1.0       0.0   solids
+10     12    23.0        9     8.0      1.0       0.0   solids
+11      9     8.0       10     2.0      1.0      19.0   solids
+12     20    16.0        6     1.0      1.0      12.0   solids
+
+{'settler': 0.38461538461538464, 'ok': 0.30769230769230771, 'solids': 0.30769230769230771}
+
+P(SS-IN=1|ok)=0.06	P(SS-IN=2|ok)=0.05	P(SS-IN=3|ok)=0.05	P(SS-IN=4|ok)=0.05	P(SS-IN=5|ok)=0.05	P(SS-IN=6|ok)=0.05	P(SS-IN=7|ok)=0.05	P(SS-IN=8|ok)=0.05	P(SS-IN=9|ok)=0.05	P(SS-IN=10|ok)=0.05	P(SS-IN=11|ok)=0.05	P(SS-IN=12|ok)=0.05	P(SS-IN=13|ok)=0.05	P(SS-IN=14|ok)=0.05	P(SS-IN=15|ok)=0.05	P(SS-IN=16|ok)=0.05	P(SS-IN=17|ok)=0.05	P(SS-IN=18|ok)=0.05	P(SS-IN=19|ok)=0.05	P(SS-IN=20|ok)=0.05	
+P(SS-IN=2|settler)=0.06	P(SS-IN=1|settler)=0.06	P(SS-IN=3|settler)=0.05	P(SS-IN=4|settler)=0.05	P(SS-IN=5|settler)=0.05	P(SS-IN=6|settler)=0.05	P(SS-IN=7|settler)=0.05	P(SS-IN=8|settler)=0.05	P(SS-IN=9|settler)=0.05	P(SS-IN=10|settler)=0.05	P(SS-IN=11|settler)=0.05	P(SS-IN=12|settler)=0.05	P(SS-IN=13|settler)=0.05	P(SS-IN=14|settler)=0.05	P(SS-IN=15|settler)=0.05	P(SS-IN=16|settler)=0.05	P(SS-IN=17|settler)=0.05	P(SS-IN=18|settler)=0.05	P(SS-IN=19|settler)=0.05	P(SS-IN=20|settler)=0.05	
+P(SS-IN=10|solids)=0.05	P(SS-IN=12|solids)=0.05	P(SS-IN=9|solids)=0.05	P(SS-IN=20|solids)=0.05	P(SS-IN=1|solids)=0.05	P(SS-IN=2|solids)=0.05	P(SS-IN=3|solids)=0.05	P(SS-IN=4|solids)=0.05	P(SS-IN=5|solids)=0.05	P(SS-IN=6|solids)=0.05	P(SS-IN=7|solids)=0.05	P(SS-IN=8|solids)=0.05	P(SS-IN=11|solids)=0.05	P(SS-IN=13|solids)=0.05	P(SS-IN=14|solids)=0.05	P(SS-IN=15|solids)=0.05	P(SS-IN=16|solids)=0.05	P(SS-IN=17|solids)=0.05	P(SS-IN=18|solids)=0.05	P(SS-IN=19|solids)=0.05	
+
+P(SED-IN=1.0|ok)=0.06	P(SED-IN=2|ok)=0.04	P(SED-IN=3|ok)=0.04	P(SED-IN=4|ok)=0.04	P(SED-IN=5|ok)=0.04	P(SED-IN=6|ok)=0.04	P(SED-IN=7|ok)=0.04	P(SED-IN=8|ok)=0.04	P(SED-IN=9|ok)=0.04	P(SED-IN=10|ok)=0.04	P(SED-IN=11|ok)=0.04	P(SED-IN=12|ok)=0.04	P(SED-IN=13|ok)=0.04	P(SED-IN=14|ok)=0.04	P(SED-IN=15|ok)=0.04	P(SED-IN=16|ok)=0.04	P(SED-IN=17|ok)=0.04	P(SED-IN=18|ok)=0.04	P(SED-IN=19|ok)=0.04	P(SED-IN=20|ok)=0.04	P(SED-IN=21|ok)=0.04	P(SED-IN=22|ok)=0.04	P(SED-IN=23|ok)=0.04	
+P(SED-IN=2.0|settler)=0.05	P(SED-IN=1.0|settler)=0.05	P(SED-IN=3.0|settler)=0.05	P(SED-IN=4|settler)=0.04	P(SED-IN=5|settler)=0.04	P(SED-IN=6|settler)=0.04	P(SED-IN=7|settler)=0.04	P(SED-IN=8|settler)=0.04	P(SED-IN=9|settler)=0.04	P(SED-IN=10|settler)=0.04	P(SED-IN=11|settler)=0.04	P(SED-IN=12|settler)=0.04	P(SED-IN=13|settler)=0.04	P(SED-IN=14|settler)=0.04	P(SED-IN=15|settler)=0.04	P(SED-IN=16|settler)=0.04	P(SED-IN=17|settler)=0.04	P(SED-IN=18|settler)=0.04	P(SED-IN=19|settler)=0.04	P(SED-IN=20|settler)=0.04	P(SED-IN=21|settler)=0.04	P(SED-IN=22|settler)=0.04	P(SED-IN=23|settler)=0.04	
+P(SED-IN=17.0|solids)=0.05	P(SED-IN=23.0|solids)=0.05	P(SED-IN=8.0|solids)=0.05	P(SED-IN=16.0|solids)=0.05	P(SED-IN=1|solids)=0.04	P(SED-IN=2|solids)=0.04	P(SED-IN=3|solids)=0.04	P(SED-IN=4|solids)=0.04	P(SED-IN=5|solids)=0.04	P(SED-IN=6|solids)=0.04	P(SED-IN=7|solids)=0.04	P(SED-IN=9|solids)=0.04	P(SED-IN=10|solids)=0.04	P(SED-IN=11|solids)=0.04	P(SED-IN=12|solids)=0.04	P(SED-IN=13|solids)=0.04	P(SED-IN=14|solids)=0.04	P(SED-IN=15|solids)=0.04	P(SED-IN=18|solids)=0.04	P(SED-IN=19|solids)=0.04	P(SED-IN=20|solids)=0.04	P(SED-IN=21|solids)=0.04	P(SED-IN=22|solids)=0.04	
+
+P(COND-IN=9|ok)=0.15	P(COND-IN=6|ok)=0.15	P(COND-IN=11|ok)=0.15	P(COND-IN=10|ok)=0.15	P(COND-IN=5|ok)=0.14	P(COND-IN=7|ok)=0.14	P(COND-IN=8|ok)=0.14	
+P(COND-IN=7|settler)=0.15	P(COND-IN=6|settler)=0.16	P(COND-IN=5|settler)=0.16	P(COND-IN=8|settler)=0.13	P(COND-IN=9|settler)=0.13	P(COND-IN=10|settler)=0.13	P(COND-IN=11|settler)=0.13	
+P(COND-IN=6|solids)=0.16	P(COND-IN=9|solids)=0.15	P(COND-IN=10|solids)=0.15	P(COND-IN=5|solids)=0.14	P(COND-IN=7|solids)=0.14	P(COND-IN=8|solids)=0.14	P(COND-IN=11|solids)=0.14	
+
+P(SS-OUT=1.0|ok)=0.10	P(SS-OUT=2.0|ok)=0.08	P(SS-OUT=3|ok)=0.07	P(SS-OUT=4|ok)=0.07	P(SS-OUT=5|ok)=0.07	P(SS-OUT=6|ok)=0.07	P(SS-OUT=7|ok)=0.07	P(SS-OUT=8|ok)=0.07	P(SS-OUT=9|ok)=0.07	P(SS-OUT=10|ok)=0.07	P(SS-OUT=11|ok)=0.07	P(SS-OUT=12|ok)=0.07	P(SS-OUT=13|ok)=0.07	
+P(SS-OUT=13.0|settler)=0.08	P(SS-OUT=10.0|settler)=0.09	P(SS-OUT=7.0|settler)=0.09	P(SS-OUT=1|settler)=0.07	P(SS-OUT=2|settler)=0.07	P(SS-OUT=3|settler)=0.07	P(SS-OUT=4|settler)=0.07	P(SS-OUT=5|settler)=0.07	P(SS-OUT=6|settler)=0.07	P(SS-OUT=8|settler)=0.07	P(SS-OUT=9|settler)=0.07	P(SS-OUT=11|settler)=0.07	P(SS-OUT=12|settler)=0.07	
+P(SS-OUT=8.0|solids)=0.09	P(SS-OUT=2.0|solids)=0.08	P(SS-OUT=1.0|solids)=0.08	P(SS-OUT=3|solids)=0.07	P(SS-OUT=4|solids)=0.07	P(SS-OUT=5|solids)=0.07	P(SS-OUT=6|solids)=0.07	P(SS-OUT=7|solids)=0.07	P(SS-OUT=9|solids)=0.07	P(SS-OUT=10|solids)=0.07	P(SS-OUT=11|solids)=0.07	P(SS-OUT=12|solids)=0.07	P(SS-OUT=13|solids)=0.07	
+
+P(SED-OUT=0.0|ok)=0.58	P(SED-OUT=1|ok)=0.42	
+P(SED-OUT=0.0|settler)=0.60	P(SED-OUT=1|settler)=0.40	
+P(SED-OUT=1.0|solids)=0.58	P(SED-OUT=0|solids)=0.42	
+
+P(COND-OUT=18.0|ok)=0.04	P(COND-OUT=14.0|ok)=0.04	P(COND-OUT=21.0|ok)=0.04	P(COND-OUT=27.0|ok)=0.04	P(COND-OUT=0|ok)=0.04	P(COND-OUT=1|ok)=0.04	P(COND-OUT=2|ok)=0.04	P(COND-OUT=3|ok)=0.04	P(COND-OUT=4|ok)=0.04	P(COND-OUT=5|ok)=0.04	P(COND-OUT=6|ok)=0.04	P(COND-OUT=7|ok)=0.04	P(COND-OUT=8|ok)=0.04	P(COND-OUT=9|ok)=0.04	P(COND-OUT=10|ok)=0.04	P(COND-OUT=11|ok)=0.04	P(COND-OUT=12|ok)=0.04	P(COND-OUT=13|ok)=0.04	P(COND-OUT=15|ok)=0.04	P(COND-OUT=16|ok)=0.04	P(COND-OUT=17|ok)=0.04	P(COND-OUT=19|ok)=0.04	P(COND-OUT=20|ok)=0.04	P(COND-OUT=22|ok)=0.04	P(COND-OUT=23|ok)=0.04	P(COND-OUT=24|ok)=0.04	P(COND-OUT=25|ok)=0.04	P(COND-OUT=26|ok)=0.04	
+P(COND-OUT=15.0|settler)=0.04	P(COND-OUT=12.0|settler)=0.04	P(COND-OUT=14.0|settler)=0.04	P(COND-OUT=13.0|settler)=0.04	P(COND-OUT=0|settler)=0.04	P(COND-OUT=1|settler)=0.04	P(COND-OUT=2|settler)=0.04	P(COND-OUT=3|settler)=0.04	P(COND-OUT=4|settler)=0.04	P(COND-OUT=5|settler)=0.04	P(COND-OUT=6|settler)=0.04	P(COND-OUT=7|settler)=0.04	P(COND-OUT=8|settler)=0.04	P(COND-OUT=9|settler)=0.04	P(COND-OUT=10|settler)=0.04	P(COND-OUT=11|settler)=0.04	P(COND-OUT=16|settler)=0.04	P(COND-OUT=17|settler)=0.04	P(COND-OUT=18|settler)=0.04	P(COND-OUT=19|settler)=0.04	P(COND-OUT=20|settler)=0.04	P(COND-OUT=21|settler)=0.04	P(COND-OUT=22|settler)=0.04	P(COND-OUT=23|settler)=0.04	P(COND-OUT=24|settler)=0.04	P(COND-OUT=25|settler)=0.04	P(COND-OUT=26|settler)=0.04	P(COND-OUT=27|settler)=0.04	
+P(COND-OUT=0.0|solids)=0.04	P(COND-OUT=19.0|solids)=0.04	P(COND-OUT=12.0|solids)=0.04	P(COND-OUT=1|solids)=0.04	P(COND-OUT=2|solids)=0.04	P(COND-OUT=3|solids)=0.04	P(COND-OUT=4|solids)=0.04	P(COND-OUT=5|solids)=0.04	P(COND-OUT=6|solids)=0.04	P(COND-OUT=7|solids)=0.04	P(COND-OUT=8|solids)=0.04	P(COND-OUT=9|solids)=0.04	P(COND-OUT=10|solids)=0.04	P(COND-OUT=11|solids)=0.04	P(COND-OUT=13|solids)=0.04	P(COND-OUT=14|solids)=0.04	P(COND-OUT=15|solids)=0.04	P(COND-OUT=16|solids)=0.04	P(COND-OUT=17|solids)=0.04	P(COND-OUT=18|solids)=0.04	P(COND-OUT=20|solids)=0.04	P(COND-OUT=21|solids)=0.04	P(COND-OUT=22|solids)=0.04	P(COND-OUT=23|solids)=0.04	P(COND-OUT=24|solids)=0.04	P(COND-OUT=25|solids)=0.04	P(COND-OUT=26|solids)=0.04	P(COND-OUT=27|solids)=0.04	
+
+test origin
+   SS-IN  SED-IN  COND-IN  SS-OUT  SED-OUT  COND-OUT
+0    222     4.5     1518      74     0.25      1642
+
+test after classify
+   SS-IN  SED-IN  COND-IN  SS-OUT  SED-OUT  COND-OUT
+0      2     2.0        7       7      0.0        16
+
+settler: 3.41833653499e-07	ok: 1.46867342024e-07	solids: 9.53684039117e-08	
+
+Best fit: settler
