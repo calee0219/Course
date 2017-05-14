@@ -5,6 +5,7 @@ import numpy as np
 import re
 import fuckit
 from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import confusion_matrix
 
 target = dict()
 
@@ -25,7 +26,6 @@ def Classify():
             for dddd in tmp:
                 to = re.compile('^.*\ to\ .*')
                 if to.match(dddd):
-                    print(dddd)
                     temp = dddd.split(' ')
                     getTo = False
                     begin = ''
@@ -84,4 +84,26 @@ if __name__ == "__main__":
     # translate date to it's own class
     data.replace(target, inplace=True)
     test.replace(target, inplace=True)
-    print(data)
+    data = data[data[1] != '?']
+    data = data[data[2] != '?']
+    data = data[data[4] != '?']
+    data = data[data[5] != '?']
+    data = data[data[8] != '?']
+    data = data[data[11] != '?']
+    for i in range(2):
+        data = data[data[13+i] != '?']
+    for i in range(5):
+        data = data[data[17+i] != '?']
+    for i in range(9):
+        data = data[data[23+i] != '?']
+    for i in range(8):
+        data = data[data[30+i] != '?']
+    # print(data)
+    data_feature = data.iloc[:,1:]
+    data_target = np.ravel(data.iloc[:,0:1])
+    model = GaussianNB()
+    model.fit(data_feature, data_target)
+    pred = model.predict(data_feature)
+    # model.score(data_target, pred)
+    m = confusion_matrix(data_target, pred)
+    print(np.trace(m)/np.sum(m))
