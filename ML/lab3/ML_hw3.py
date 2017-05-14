@@ -5,6 +5,8 @@ import numpy as np
 import re
 import fuckit
 from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import confusion_matrix
 
 target = dict()
@@ -110,10 +112,14 @@ if __name__ == "__main__":
     data_feature = data.iloc[:,1:]
     data_target = np.ravel(data.iloc[:,0:1])
     test_feature = test.iloc[:,1:]
+    test_feature = test_feature.reset_index(drop = True)
     model = GaussianNB()
+    # model = BernoulliNB()
+    # model = MultinomialNB()
     model.fit(data_feature, data_target)
     pred = model.predict(data_feature)
-    # model.score(data_target, pred)
     m = confusion_matrix(data_target, pred)
     print(np.trace(m)/np.sum(m))
-    print(model.predict(test_feature))
+    md = model.predict(test_feature)
+    for i in range(len(md)):
+        print(str(test.iloc[i,0])+": "+str(md[i]))
