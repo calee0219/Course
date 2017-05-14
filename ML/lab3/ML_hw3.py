@@ -94,16 +94,26 @@ if __name__ == "__main__":
         data = data[data[13+i] != '?']
     for i in range(5):
         data = data[data[17+i] != '?']
-    for i in range(9):
+    for i in range(15):
         data = data[data[23+i] != '?']
-    for i in range(8):
-        data = data[data[30+i] != '?']
+    test = test[test[8] != '?']
+    test = test[test[14] != '?']
+    test = test[test[19] != '?']
+    test = test[test[20] != '?']
+    test = test[test[21] != '?']
+    test = test[test[26] != '?']
+    test = test[test[27] != '?']
+    test = test[test[30] != '?']
+    test = test[test[31] != '?']
+    test = test[test[38] != '?']
     # print(data)
     data_feature = data.iloc[:,1:]
     data_target = np.ravel(data.iloc[:,0:1])
+    test_feature = test.iloc[:,1:]
     model = GaussianNB()
     model.fit(data_feature, data_target)
     pred = model.predict(data_feature)
     # model.score(data_target, pred)
     m = confusion_matrix(data_target, pred)
     print(np.trace(m)/np.sum(m))
+    print(model.predict(test_feature))
