@@ -12,8 +12,8 @@ from sklearn.metrics import confusion_matrix
 target = dict()
 
 
-# function to read attr and assign each date to it's class
 def Classify():
+    """function to read attr and assign each date to it's class"""
     fattr = open('./ML_assignment_3_attr.txt', 'r')
     classify = re.compile('(^\ --*)|(^--*)')
     cando = re.compile('^.*D-.*')
