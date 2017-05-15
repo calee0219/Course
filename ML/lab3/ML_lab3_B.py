@@ -11,6 +11,8 @@ from sklearn.metrics import confusion_matrix
 
 target = dict()
 
+
+# function to read attr and assign each date to it's class
 def Classify():
     fattr = open('./ML_assignment_3_attr.txt', 'r')
     classify = re.compile('(^\ --*)|(^--*)')
@@ -29,14 +31,14 @@ def Classify():
                 to = re.compile('^.*\ to\ .*')
                 if to.match(dddd):
                     temp = dddd.split(' ')
-                    getTo = False
+                    get_to = False
                     begin = ''
                     end = ''
                     for dttt in temp:
                         cd = re.compile('^D-.*')
                         if dttt == "to":
-                            getTo = True
-                        elif cd.match(dttt) and (not getTo):
+                            get_to = True
+                        elif cd.match(dttt) and (not get_to):
                             tmmp = ''
                             if cd.match(begin):
                                 tmmp = begin
@@ -49,7 +51,7 @@ def Classify():
                                     begin = begin
                                 else:
                                     begin = tmmp
-                        elif cd.match(dttt) and getTo:
+                        elif cd.match(dttt) and get_to:
                             tmmp = ''
                             if cd.match(end):
                                 tmmp = end
