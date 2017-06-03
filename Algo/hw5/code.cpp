@@ -25,20 +25,21 @@ class BUFF {
 int build_circ(int node, double delay, double cost, double C)
 {
     if(node == 0) {
-        if(delay < max_delay && cost <= min_cost) {
+        if(delay <= max_delay && cost <= min_cost) {
             min_cost = cost;
             if(cost < min_cost) {
                 total_delay = delay;
                 ans = in_queue;
-            } else if(delay < total_delay) {
+                return 1;
+            } else if(delay <= total_delay) {
                 total_delay = delay;
                 ans = in_queue;
+                return 1;
             }
-            return 1;
         }
         return 0;
     }
-    if(cost > min_cost || delay > max_delay || delay > total_delay) return 0;
+    if(cost > min_cost || delay > max_delay || (cost == min_cost && delay > total_delay)) return 0;
     C += wire[node].c;
     for(int i = 0; i <= buff_num; ++i) {
         if(i == 0) {
