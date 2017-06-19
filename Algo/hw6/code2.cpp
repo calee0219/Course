@@ -18,7 +18,8 @@ bool dfs(int r, int c, int lr, int lc, int kind, int dep) {
     if(GRAPH[r][c] == kind && goThrough[r][c]) return true;
     if(GRAPH[r][c] != kind) return false;
     goThrough[r][c] = true;
-    if(dep > td) {
+    if(dep >= td) {
+        td = dep;
         tr = r;
         tc = c;
     }
@@ -105,6 +106,8 @@ int main()
             for(int c = 0; c < C; ++c) {
                 if(!goThrough[r][c] && GRAPH[r][c] != -1){
                     td = 0;
+                    tr = r;
+                    tc = c;
                     if(dfs(r, c, r, c, GRAPH[r][c], 0)) {
                         LP[GRAPH[r][c]] = -1;
                     } else {
