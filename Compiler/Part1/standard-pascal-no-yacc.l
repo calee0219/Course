@@ -84,7 +84,6 @@
 #define   NUM     68
 #define   INTEGER 69
 #define   REAL    70
-#define   PROCEDURE 71
 
 
 int line_no = 1;
@@ -122,7 +121,7 @@ NQUOTE [^']
 
 %%
 
-{P}{R}{O}{C}{E}{D}{U}{R}{E}  return(PROCEDURE)
+{P}{R}{O}{C}{E}{D}{U}{R}{E}  return(PROCEDURE);
 {R}{E}{A}{L}                 return(REAL);
 {N}{U}{M}                    return(NUM);
 {I}{N}{T}{E}{G}{E}{R}        return(INTEGER);
@@ -135,17 +134,16 @@ NQUOTE [^']
 {F}{U}{N}{C}{T}{I}{O}{N}     return(FUNCTION);
 {I}{F}                       return(IF);
 {N}{O}{T}                    return(NOT);
-{O}{F}                       return(OF); 
+{O}{F}                       return(OF);
 {B}{E}{G}{I}{N}              return(PBEGIN);
 {P}{R}{O}{G}{R}{A}{M}        return(PROGRAM);
 {T}{H}{E}{N}                 return(THEN);
 {V}{A}{R}                    return(VAR);
 {W}{H}{I}{L}{E}              return(WHILE);
-[a-zA-Z]([a-zA-Z0-9])+       return(IDENTIFIER);
-\/\/.*(?:\n|\r)              { return(COMMENT); line_no++; }
+[a-zA-Z]([a-zA-Z0-9])*       return(IDENTIFIER);
+\/\/.*[^\n|\r]               { return(COMMENT); line_no++; }
 
 ":="                         return(ASSIGNMENT);
-'({NQUOTE}|'')+'             return(CHARACTER_STRING);
 ":"                          return(COLON);
 ","                          return(COMMA);
 [0-9]+                       return(DIGSEQ);
@@ -160,7 +158,6 @@ NQUOTE [^']
 "("                          return(LPAREN);
 "<"                          return(LT);
 "-"                          return(MINUS);
-"<>"                         return(NOTEQUAL);
 "+"                          return(PLUS);
 "]"                          return(RBRAC);
 [0-9]+"."[0-9]+              return(REALNUMBER);
@@ -216,4 +213,3 @@ yywrap() {
   fclose(yyin);
   exit(1);
 }
-
