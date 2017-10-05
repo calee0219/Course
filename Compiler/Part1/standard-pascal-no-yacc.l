@@ -79,6 +79,13 @@
 
 #define   notEQUAL    65
 
+#define   COMMENT 66
+#define   ID      67
+#define   NUM     68
+#define   INTEGER 69
+#define   REAL    70
+#define   PROCEDURE 71
+
 
 int line_no = 1;
 
@@ -115,46 +122,27 @@ NQUOTE [^']
 
 %%
 
-{A}{N}{D}                    return(AND);
+{P}{R}{O}{C}{E}{D}{U}{R}{E}  return(PROCEDURE)
+{R}{E}{A}{L}                 return(REAL);
+{N}{U}{M}                    return(NUM);
+{I}{N}{T}{E}{G}{E}{R}        return(INTEGER);
+{I}{D}                       return(ID);
 {A}{R}{R}{A}{Y}              return(ARRAY);
-{C}{A}{S}{E}                 return(CASE);
-{C}{O}{N}{S}{T}              return(CONST);
-{D}{I}{V}                    return(DIV);
 {D}{O}                       return(DO);
-{D}{O}{W}{N}{T}{O}           return(DOWNTO);
 {E}{L}{S}{E}                 return(ELSE);
 {E}{N}{D}                    return(END);
-{E}{X}{T}{E}{R}{N} |
-{E}{X}{T}{E}{R}{N}{A}{L}     return(EXTERNAL);
 {F}{O}{R}                    return(FOR);
-{F}{O}{R}{W}{A}{R}{D}        return(FORWARD);
 {F}{U}{N}{C}{T}{I}{O}{N}     return(FUNCTION);
-{G}{O}{T}{O}                 return(GOTO);
 {I}{F}                       return(IF);
-{I}{N}                       return(IN);
-{L}{A}{B}{E}{L}              return(LABEL);
-{M}{O}{D}                    return(MOD);
-{N}{I}{L}                    return(NIL);
 {N}{O}{T}                    return(NOT);
 {O}{F}                       return(OF); 
-{O}{R}                       return(OR);
-{O}{T}{H}{E}{R}{W}{I}{S}{E}  return(OTHERWISE);
-{P}{A}{C}{K}{E}{D}           return(PACKED);
 {B}{E}{G}{I}{N}              return(PBEGIN);
-{F}{I}{L}{E}                 return(PFILE);
-{P}{R}{O}{C}{E}{D}{U}{R}{E}  return(PROCEDURE);
 {P}{R}{O}{G}{R}{A}{M}        return(PROGRAM);
-{R}{E}{C}{O}{R}{D}           return(RECORD);
-{R}{E}{P}{E}{A}{T}           return(REPEAT);
-{S}{E}{T}                    return(SET);
 {T}{H}{E}{N}                 return(THEN);
-{T}{O}                       return(TO);
-{T}{Y}{P}{E}                 return(TYPE);
-{U}{N}{T}{I}{L}              return(UNTIL);
 {V}{A}{R}                    return(VAR);
 {W}{H}{I}{L}{E}              return(WHILE);
-{W}{I}{T}{H}                 return(WITH);
 [a-zA-Z]([a-zA-Z0-9])+       return(IDENTIFIER);
+\/\/.*(?:\n|\r)              { return(COMMENT); line_no++; }
 
 ":="                         return(ASSIGNMENT);
 '({NQUOTE}|'')+'             return(CHARACTER_STRING);
@@ -209,6 +197,7 @@ NQUOTE [^']
 \r         ;
 \n    line_no++;
 
+[0-9]+[a-zA-Z]+ {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
 .    {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
 
 %%

@@ -11,4 +11,4 @@ lex.yy.c:	standard-pascal-no-yacc.l
 	flex standard-pascal-no-yacc.l
 
 clean:
-	rm a.out lex.yy.c
+	rm a.out lex.yy.c output
