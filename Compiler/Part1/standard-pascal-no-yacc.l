@@ -78,7 +78,6 @@
 
 
 #define   notEQUAL    65
-#define   COMMENT   66
 
 
 int line_no = 1;
@@ -155,14 +154,13 @@ NQUOTE [^']
 {V}{A}{R}                    return(VAR);
 {W}{H}{I}{L}{E}              return(WHILE);
 {W}{I}{T}{H}                 return(WITH);
-[a-zA-Z]([a-zA-Z0-9])*       return(IDENTIFIER);
-\/\/.*[^\n]                  return(COMMENT);
+[a-zA-Z]([a-zA-Z0-9])+       return(IDENTIFIER);
 
 ":="                         return(ASSIGNMENT);
 '({NQUOTE}|'')+'             return(CHARACTER_STRING);
 ":"                          return(COLON);
 ","                          return(COMMA);
-[0-9]+[^a-zA-Z]              return(DIGSEQ);
+[0-9]+                       return(DIGSEQ);
 "."                          return(DOT);
 ".."                         return(DOTDOT);
 "="                          return(EQUAL);
@@ -211,8 +209,8 @@ NQUOTE [^']
 \r         ;
 \n    line_no++;
 
-[0-9]+[a-zA-Z]+    {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
 .    {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
+
 %%
 
 int main(int argc, char** argv) {
