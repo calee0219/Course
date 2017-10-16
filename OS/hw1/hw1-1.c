@@ -10,7 +10,7 @@ int main(void)
     int status = 0;
     pid_t child = fork();
     if(child == 0) {
-        pid_t lv1 = getpid();
+        /*pid_t lv1 = getpid();*/
         pid_t lv2_1 = -1, lv2_2 = -1;
         pid_t lv3_1 = -1, lv3_2 = -1;
         printf("Fork 1. I'm the child %d, my parent is %d\n", getpid(), getppid());
