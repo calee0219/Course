@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    freopen ("Q1.txt", "r", stdin);
     int n;
     cin >> n;
     vector<int> bt, tt;
@@ -24,6 +25,7 @@ int main()
     for(int i = 0; i < n; ++i) {
         printf("P[%d]\t\t%d\t\t%d\n", i, tt[i] - bt[i], tt[i]);
     }
+    printf("\n");
     printf("Average waiting time : %f\n", awt);
     printf("Average turnaround time : %f\n", att);
     return 0;
