@@ -18,7 +18,7 @@ bool cmp (const ORD & a, const ORD & b) {
 
 int main()
 {
-    freopen ("Q2.txt", "r", stdin);
+    freopen ("Q3.txt", "r", stdin);
     int n;
     cin >> n;
     vector<ORD> ord;
@@ -43,28 +43,39 @@ int main()
     int now = 0;
     int index = 0;
     vector<int> ot;
-    vector<int> wt(n);
-    while(index < n || pq.size()) {
-        if(index < n && pq.size() == 0) {
-            now = ord[index].a_t;
-            pq.push(ord[index]);
-            index++;
+    vector<int> tt(n);
+    while(pq.size() || index < n) {
+        if(pq.size() == 0) {
+            pq.push(ord[index++]);
+            continue;
         }
-        ORD tag = pq.top();
-        pq.pop();
-        wt[tag.tag] = now - tag.a_t;
-        now += tag.b_t;
-        //cout << tag.tag << " " << tag.a_t << " " << tag.b_t << " " << now << endl;
-        while(index < n && ord[index].a_t <= now) {
-            pq.push(ord[index]);
-            index++;
+        //cout << now << " " << index << endl;
+        if(index < n) {
+            if(now + pq.top().b_t < ord[index].a_t) { // 現在的 process 先結束
+                now += pq.top().b_t;
+                tt[pq.top().tag] = now;
+                pq.pop();
+            } else { // 有新的 process 進來
+                if(ord[index].b_t < pq.top().b_t - (ord[index].a_t - now)) { // 舊的 process 要被換掉
+                    ORD tmp = pq.top();
+                    tmp.b_t -= ord[index].a_t - now;
+                    pq.pop();
+                    pq.push(tmp);
+                    now = ord[index].a_t;
+                }
+                pq.push(ord[index++]);
+            }
+        } else {
+            now += pq.top().b_t;
+            tt[pq.top().tag] = now;
+            pq.pop();
         }
     }
     double awt = 0, att = 0;
     printf("%s\t%20s\t%15s", "Process", "Waiting Time", "Turnaround Time\n");
     for(int i = 0; i < n; ++i) {
-        int wait = wt[i];
-        int turn = wt[i] + b_t[i];
+        int turn = tt[i] - a_t[i];
+        int wait = turn - b_t[i];
         awt += (double)wait / n;
         att += (double)turn / n;
         printf("P[%d]\t\t%d\t\t%d\n", i+1, wait, turn);
