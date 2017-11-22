@@ -1612,3 +1612,5 @@ yyreturn:
 #endif
   return yyresult;
 }
+#line 163 "standard-pascal.y" /* yacc.c:1906  */
+
