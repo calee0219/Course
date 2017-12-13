@@ -1,46 +1,62 @@
 %{
-/*
- * grammar.y
- *
- * Pascal grammar in Yacc format, based originally on BNF given
- * in "Standard Pascal -- User Reference Manual", by Doug Cooper.
- * This in turn is the BNF given by the ANSI and ISO Pascal standards,
- * and so, is PUBLIC DOMAIN. The grammar is for ISO Level 0 Pascal.
- * The grammar has been massaged somewhat to make it LALR, and added
- * the following extensions.
- *
- * constant expressions
- * otherwise statement in a case
- * productions to correctly match else's with if's
- * beginnings of a separate compilation facility
- */
+    /*
+    * grammar.y
+    *
+    * Pascal grammar in Yacc format, based originally on BNF given
+    * in "Standard Pascal -- User Reference Manual", by Doug Cooper.
+    * This in turn is the BNF given by the ANSI and ISO Pascal standards,
+    * and so, is PUBLIC DOMAIN. The grammar is for ISO Level 0 Pascal.
+    * The grammar has been massaged somewhat to make it LALR, and added
+    * the following extensions.
+    *
+    * constant expressions
+    * otherwise statement in a case
+    * productions to correctly match else's with if's
+    * beginnings of a separate compilation facility
+    */
     #include <stdio.h>
+    #include <stdlib.h>
     #include <string.h>
 
-    void yyerror(const char *str) {
-        fprintf(stderr,"error: %s\n",str);
-    }
-    int main() {
-        yyparse();
-    }
+    void yyerror(const char *str);
+    int yywrap();
+
+    struct nodeType *ASTROOT;
 
 %}
 
-%token PROGRAM
-%token ASSIGNMENT
-%token RPAREN LPAREN RBRAC LBRAC
-%token PBEGIN END
-%token INTEGER REAL ARRAY NUMBER STRING
-%token PLUS MINUS STAR DIV
-%token EQUAL NOTEQUAL LT GT LE GE NOT
-%token COLON SEMICOLON COMMA
-%token DOT DOTDOT
-%token FUNCTION IDENTIFIER PROCEDURE
-%token TYPE VAR
-%token WHILE DO IF ELSE THEN OF
+%union
+{
+    struct nodeType * node;
+    int number;
+    double dbnumber;
+    char * string;
+}
+
+%token <number> INTNUM
+%token <dbnumber> REALNUM
+%token <string> IDENTIFIER
+%token <node> PROGRAM
+%token <node> ASSIGNMENT
+%token <node> RPAREN LPAREN RBRAC LBRAC
+%token <node> PBEGIN END
+%token <node> INTEGER REAL ARRAY STRING
+%token <node> PLUS MINUS STAR DIV
+%token <node> EQUAL NOTEQUAL LT GT LE GE NOT
+%token <node> COLON SEMICOLON COMMA
+%token <node> DOT DOTDOT
+%token <node> FUNCTION PROCEDURE
+%token <node> TYPE VAR
+%token <node> WHILE DO IF ELSE THEN OF
+
+%type <node> file prog identifier_list standard_type subprogram_declarations subprogram_declaration subprogram_head arguments parameter_list optional_var compound_statement optional_statements statement_list statement variable tail procedure_statement expression_list expression simple_expression term factor addop mulop relop
 
 %%
-file : prog
+file: prog {
+            addChild($1);
+            $$ = $1;
+            printf("Reduction (file -> program)\n");
+        }
     ;
 prog : PROGRAM IDENTIFIER LPAREN identifier_list RPAREN SEMICOLON
     declarations
@@ -49,7 +65,7 @@ prog : PROGRAM IDENTIFIER LPAREN identifier_list RPAREN SEMICOLON
     DOT
     ;
 
-identifier_list : IDENTIFIER
+identifier_list : IDENTIFIER { $$ = $1 }
     | identifier_list COMMA IDENTIFIER
     ;
 
@@ -58,7 +74,7 @@ declarations : declarations VAR identifier_list COLON type SEMICOLON
     ;
 
 type : standard_type
-    | ARRAY LBRAC NUMBER DOTDOT NUMBER RBRAC OF type
+    | ARRAY LBRAC INTNUM DOTDOT INTNUM RBRAC OF type
     ;
 
 standard_type : INTEGER
@@ -68,7 +84,7 @@ standard_type : INTEGER
 
 subprogram_declarations :
     subprogram_declarations subprogram_declaration SEMICOLON
-    |
+    | { $$ = %empty }
     ;
 
 subprogram_declaration :
@@ -81,7 +97,7 @@ subprogram_head : FUNCTION IDENTIFIER arguments COLON standard_type SEMICOLON
     ;
 
 arguments : LPAREN parameter_list RPAREN
-    |
+    | { $$ = %empty }
     ;
 
 parameter_list : optional_var identifier_list COLON type
@@ -89,7 +105,7 @@ parameter_list : optional_var identifier_list COLON type
     ;
 
 optional_var : VAR
-    |
+    | { $$ = %empty }
     ;
 
 compound_statement : PBEGIN
@@ -109,17 +125,17 @@ statement : variable ASSIGNMENT expression
     | compound_statement
     | IF expression THEN statement ELSE statement
     | WHILE expression DO statement
-    |
+    | { $$ = %empty }
     ;
 
-variable : IDENTIFIER tail
+variable : IDENTIFIER tail { $$ = $1 $2 }
     ;
 tail : RBRAC expression LBRAC tail
-    |
+    | { $$ = %empty }
     ;
 
-procedure_statement : IDENTIFIER
-    | IDENTIFIER LPAREN expression_list RPAREN
+procedure_statement : IDENTIFIER { $$ = $1; }
+    | IDENTIFIER LPAREN expression_list RPAREN { $$ = $1 $2 $3 $4 }
     ;
 
 expression_list : expression
@@ -138,9 +154,10 @@ term : factor
     | term mulop factor
     ;
 
-factor : IDENTIFIER tail
-    | IDENTIFIER LPAREN expression_list RPAREN
-    | NUMBER
+factor : IDENTIFIER tail { $$ = $1 $2 }
+    | IDENTIFIER LPAREN expression_list RPAREN { $$ = $1 $2 $3 $4 }
+    | INTNUM { $$ = $1 }
+    | REALNUM { $$ = $1 }
     | LPAREN expression RPAREN
     | NOT factor
     ;
@@ -161,3 +178,22 @@ relop : LT
     ;
 
 %%
+
+void yyerror(const char *str)
+{
+    fprintf(stderr, "error: %s\n", str);
+    return;
+}
+
+int yywrap()
+{
+    return 1;
+}
+
+int main()
+{
+    yyparse();
+    printf("-----------------------------------------------\n");
+    printTree(ASTROOT, 0);
+    return 0;
+}

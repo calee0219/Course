@@ -435,9 +435,9 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "standard-pascal-no-yacc.l"
+#line 1 "standard-pascal-need-yacc.l"
 #define INITIAL 0
-#line 2 "standard-pascal-no-yacc.l"
+#line 2 "standard-pascal-need-yacc.l"
 /*
  * scan.l
  *
@@ -613,7 +613,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 45 "standard-pascal-no-yacc.l"
+#line 45 "standard-pascal-need-yacc.l"
 
 
 #line 620 "lex.yy.c"
@@ -701,209 +701,209 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 47 "standard-pascal-no-yacc.l"
+#line 47 "standard-pascal-need-yacc.l"
 return(PROGRAM);
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 48 "standard-pascal-no-yacc.l"
+#line 48 "standard-pascal-need-yacc.l"
 return(LPAREN);
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 49 "standard-pascal-no-yacc.l"
+#line 49 "standard-pascal-need-yacc.l"
 return(RPAREN);
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 50 "standard-pascal-no-yacc.l"
+#line 50 "standard-pascal-need-yacc.l"
 return(SEMICOLON);
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 51 "standard-pascal-no-yacc.l"
+#line 51 "standard-pascal-need-yacc.l"
 return(DOT);
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 52 "standard-pascal-no-yacc.l"
+#line 52 "standard-pascal-need-yacc.l"
 return(COMMA);
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 53 "standard-pascal-no-yacc.l"
+#line 53 "standard-pascal-need-yacc.l"
 return(VAR);
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 54 "standard-pascal-no-yacc.l"
+#line 54 "standard-pascal-need-yacc.l"
 return(COLON);
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 55 "standard-pascal-no-yacc.l"
+#line 55 "standard-pascal-need-yacc.l"
 return(ARRAY);
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 56 "standard-pascal-no-yacc.l"
-return(LBRAC);
+#line 56 "standard-pascal-need-yacc.l"
+{ printf("RB"); return(LBRAC); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 57 "standard-pascal-no-yacc.l"
-return(RBRAC);
+#line 57 "standard-pascal-need-yacc.l"
+{ printf("LB"); return(RBRAC); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 58 "standard-pascal-no-yacc.l"
+#line 58 "standard-pascal-need-yacc.l"
 return(OF);
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 59 "standard-pascal-no-yacc.l"
+#line 59 "standard-pascal-need-yacc.l"
 return(INTEGER);
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 60 "standard-pascal-no-yacc.l"
+#line 60 "standard-pascal-need-yacc.l"
 return(REAL);
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 61 "standard-pascal-no-yacc.l"
+#line 61 "standard-pascal-need-yacc.l"
 return(FUNCTION);
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 62 "standard-pascal-no-yacc.l"
+#line 62 "standard-pascal-need-yacc.l"
 return(PROCEDURE);
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 63 "standard-pascal-no-yacc.l"
+#line 63 "standard-pascal-need-yacc.l"
 return(PBEGIN);
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 64 "standard-pascal-no-yacc.l"
+#line 64 "standard-pascal-need-yacc.l"
 return(END);
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 65 "standard-pascal-no-yacc.l"
+#line 65 "standard-pascal-need-yacc.l"
 return(ASSIGNMENT);
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 66 "standard-pascal-no-yacc.l"
+#line 66 "standard-pascal-need-yacc.l"
 return(IF);
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 67 "standard-pascal-no-yacc.l"
+#line 67 "standard-pascal-need-yacc.l"
 return(THEN);
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 68 "standard-pascal-no-yacc.l"
+#line 68 "standard-pascal-need-yacc.l"
 return(ELSE);
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 69 "standard-pascal-no-yacc.l"
+#line 69 "standard-pascal-need-yacc.l"
 return(WHILE);
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 70 "standard-pascal-no-yacc.l"
+#line 70 "standard-pascal-need-yacc.l"
 return(DO);
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 71 "standard-pascal-no-yacc.l"
+#line 71 "standard-pascal-need-yacc.l"
 return(LT);
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 72 "standard-pascal-no-yacc.l"
+#line 72 "standard-pascal-need-yacc.l"
 return(GT);
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 73 "standard-pascal-no-yacc.l"
+#line 73 "standard-pascal-need-yacc.l"
 return(LE);
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 74 "standard-pascal-no-yacc.l"
+#line 74 "standard-pascal-need-yacc.l"
 return(GE);
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 75 "standard-pascal-no-yacc.l"
+#line 75 "standard-pascal-need-yacc.l"
 return(EQUAL);
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 76 "standard-pascal-no-yacc.l"
+#line 76 "standard-pascal-need-yacc.l"
 return(NOTEQUAL);
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 77 "standard-pascal-no-yacc.l"
+#line 77 "standard-pascal-need-yacc.l"
 return(PLUS);
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 78 "standard-pascal-no-yacc.l"
+#line 78 "standard-pascal-need-yacc.l"
 return(MINUS);
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 79 "standard-pascal-no-yacc.l"
+#line 79 "standard-pascal-need-yacc.l"
 return(STAR);
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 80 "standard-pascal-no-yacc.l"
+#line 80 "standard-pascal-need-yacc.l"
 return(DIV);
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 81 "standard-pascal-no-yacc.l"
+#line 81 "standard-pascal-need-yacc.l"
 return(NOT);
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 82 "standard-pascal-no-yacc.l"
+#line 82 "standard-pascal-need-yacc.l"
 return(DOTDOT);
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 84 "standard-pascal-no-yacc.l"
+#line 84 "standard-pascal-need-yacc.l"
 line_no++;
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 85 "standard-pascal-no-yacc.l"
+#line 85 "standard-pascal-need-yacc.l"
 return(IDENTIFIER);
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 86 "standard-pascal-no-yacc.l"
+#line 86 "standard-pascal-need-yacc.l"
 return(NUMBER);
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 87 "standard-pascal-no-yacc.l"
+#line 87 "standard-pascal-need-yacc.l"
 return(REAL);
 	YY_BREAK
 case 41:
-#line 90 "standard-pascal-no-yacc.l"
+#line 90 "standard-pascal-need-yacc.l"
 case 42:
 YY_RULE_SETUP
-#line 90 "standard-pascal-no-yacc.l"
+#line 90 "standard-pascal-need-yacc.l"
 { register int c;
      while ((c = input()))
      {
@@ -926,27 +926,27 @@ YY_RULE_SETUP
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 110 "standard-pascal-no-yacc.l"
+#line 110 "standard-pascal-need-yacc.l"
 ;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 112 "standard-pascal-no-yacc.l"
+#line 112 "standard-pascal-need-yacc.l"
 ;
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 113 "standard-pascal-no-yacc.l"
+#line 113 "standard-pascal-need-yacc.l"
 line_no++;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 115 "standard-pascal-no-yacc.l"
+#line 115 "standard-pascal-need-yacc.l"
 {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 117 "standard-pascal-no-yacc.l"
+#line 117 "standard-pascal-need-yacc.l"
 { fprintf (stderr,
         "'%c' (0%o): illegal charcter at line %d\n",
         yytext[0], yytext[0], line_no);
@@ -954,7 +954,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 122 "standard-pascal-no-yacc.l"
+#line 122 "standard-pascal-need-yacc.l"
 ECHO;
 	YY_BREAK
 #line 961 "lex.yy.c"
@@ -1847,7 +1847,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 122 "standard-pascal-no-yacc.l"
+#line 122 "standard-pascal-need-yacc.l"
 
 
 commentof()

@@ -1,5 +1,5 @@
 make:
-	lex standard-pascal-no-yacc.l
+	lex standard-pascal-need-yacc.l
 	yacc -d standard-pascal.y
 	icc lex.yy.c y.tab.c -o standard-pascal
 	./standard-pascal

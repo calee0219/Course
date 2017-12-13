@@ -45,93 +45,108 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    PROGRAM = 258,
-    ASSIGNMENT = 259,
-    RPAREN = 260,
-    LPAREN = 261,
-    RBRAC = 262,
-    LBRAC = 263,
-    PBEGIN = 264,
-    END = 265,
-    INTEGER = 266,
-    REAL = 267,
-    ARRAY = 268,
-    NUMBER = 269,
-    STRING = 270,
-    PLUS = 271,
-    MINUS = 272,
-    STAR = 273,
-    DIV = 274,
-    EQUAL = 275,
-    NOTEQUAL = 276,
-    LT = 277,
-    GT = 278,
-    LE = 279,
-    GE = 280,
-    NOT = 281,
-    COLON = 282,
-    SEMICOLON = 283,
-    COMMA = 284,
-    DOT = 285,
-    DOTDOT = 286,
-    FUNCTION = 287,
-    IDENTIFIER = 288,
-    PROCEDURE = 289,
-    TYPE = 290,
-    VAR = 291,
-    WHILE = 292,
-    DO = 293,
-    IF = 294,
-    ELSE = 295,
-    THEN = 296,
-    OF = 297
+    INTNUM = 258,
+    REALNUM = 259,
+    IDENTIFIER = 260,
+    PROGRAM = 261,
+    ASSIGNMENT = 262,
+    RPAREN = 263,
+    LPAREN = 264,
+    RBRAC = 265,
+    LBRAC = 266,
+    PBEGIN = 267,
+    END = 268,
+    INTEGER = 269,
+    REAL = 270,
+    ARRAY = 271,
+    STRING = 272,
+    PLUS = 273,
+    MINUS = 274,
+    STAR = 275,
+    DIV = 276,
+    EQUAL = 277,
+    NOTEQUAL = 278,
+    LT = 279,
+    GT = 280,
+    LE = 281,
+    GE = 282,
+    NOT = 283,
+    COLON = 284,
+    SEMICOLON = 285,
+    COMMA = 286,
+    DOT = 287,
+    DOTDOT = 288,
+    FUNCTION = 289,
+    PROCEDURE = 290,
+    TYPE = 291,
+    VAR = 292,
+    WHILE = 293,
+    DO = 294,
+    IF = 295,
+    ELSE = 296,
+    THEN = 297,
+    OF = 298
   };
 #endif
 /* Tokens.  */
-#define PROGRAM 258
-#define ASSIGNMENT 259
-#define RPAREN 260
-#define LPAREN 261
-#define RBRAC 262
-#define LBRAC 263
-#define PBEGIN 264
-#define END 265
-#define INTEGER 266
-#define REAL 267
-#define ARRAY 268
-#define NUMBER 269
-#define STRING 270
-#define PLUS 271
-#define MINUS 272
-#define STAR 273
-#define DIV 274
-#define EQUAL 275
-#define NOTEQUAL 276
-#define LT 277
-#define GT 278
-#define LE 279
-#define GE 280
-#define NOT 281
-#define COLON 282
-#define SEMICOLON 283
-#define COMMA 284
-#define DOT 285
-#define DOTDOT 286
-#define FUNCTION 287
-#define IDENTIFIER 288
-#define PROCEDURE 289
-#define TYPE 290
-#define VAR 291
-#define WHILE 292
-#define DO 293
-#define IF 294
-#define ELSE 295
-#define THEN 296
-#define OF 297
+#define INTNUM 258
+#define REALNUM 259
+#define IDENTIFIER 260
+#define PROGRAM 261
+#define ASSIGNMENT 262
+#define RPAREN 263
+#define LPAREN 264
+#define RBRAC 265
+#define LBRAC 266
+#define PBEGIN 267
+#define END 268
+#define INTEGER 269
+#define REAL 270
+#define ARRAY 271
+#define STRING 272
+#define PLUS 273
+#define MINUS 274
+#define STAR 275
+#define DIV 276
+#define EQUAL 277
+#define NOTEQUAL 278
+#define LT 279
+#define GT 280
+#define LE 281
+#define GE 282
+#define NOT 283
+#define COLON 284
+#define SEMICOLON 285
+#define COMMA 286
+#define DOT 287
+#define DOTDOT 288
+#define FUNCTION 289
+#define PROCEDURE 290
+#define TYPE 291
+#define VAR 292
+#define WHILE 293
+#define DO 294
+#define IF 295
+#define ELSE 296
+#define THEN 297
+#define OF 298
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+
+union YYSTYPE
+{
+#line 29 "standard-pascal.y" /* yacc.c:1909  */
+
+    struct nodeType * node;
+    int number;
+    double dbnumber;
+    char * string;
+
+#line 147 "y.tab.h" /* yacc.c:1909  */
+};
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
