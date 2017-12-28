@@ -8,7 +8,10 @@
  */
 
 #include <stdio.h>
+#include "node.h"
 #include "y.tab.h"
+
+struct nodeType* newTokenNode(int tokenType);
 
 int line_no = 1;
 void commentof();
@@ -45,47 +48,174 @@ NQUOTE [^']
 
 %%
 
-{P}{R}{O}{G}{R}{A}{M}        return(PROGRAM);
-"("                          return(LPAREN);
-")"                          return(RPAREN);
-";"                          return(SEMICOLON);
-"."                          return(DOT);
-","                          return(COMMA);
-{V}{A}{R}                    return(VAR);
-":"                          return(COLON);
-{A}{R}{R}{A}{Y}              return(ARRAY);
-"["                          return(LBRAC);
-"]"                          return(RBRAC);
-{O}{F}                       return(OF);
-{I}{N}{T}{E}{G}{E}{R}        return(INTEGER);
-{R}{E}{A}{L}                 return(REAL);
-{F}{U}{N}{C}{T}{I}{O}{N}     return(FUNCTION);
-{P}{R}{O}{C}{E}{D}{U}{R}{E}  return(PROCEDURE);
-{B}{E}{G}{I}{N}              return(PBEGIN);
-{E}{N}{D}                    return(END);
-":="                         return(ASSIGNMENT);
-{I}{F}                       return(IF);
-{T}{H}{E}{N}                 return(THEN);
-{E}{L}{S}{E}                 return(ELSE);
-{W}{H}{I}{L}{E}              return(WHILE);
-{D}{O}                       return(DO);
-"<"                          return(LT);
-">"                          return(GT);
-"<="                         return(LE);
-">="                         return(GE);
-"="                          return(EQUAL);
-"!="                         return(NOTEQUAL);
-"+"                          return(PLUS);
-"-"                          return(MINUS);
-"*"                          return(STAR);
-"/"                          return(DIV);
-{N}{O}{T}                    return(NOT);
-".."                         return(DOTDOT);
-
-\/\/.*[^\n|\r]               line_no++;
-[a-zA-Z]([a-zA-Z0-9])*       return(IDENTIFIER);
-[0-9]+                       return(INTNUM);
-[0-9]+"."[0-9]+              return(REALNUM);
+{P}{R}{O}{G}{R}{A}{M}        {
+    yylval.node = newTokenNode(PROGRAM);
+    return(PROGRAM);
+}
+"("                          {
+    yylval.node = newTokenNode(LPAREN);
+    return(LPAREN);
+}
+")"                          {
+    yylval.node = newTokenNode(RPAREN);
+    return(RPAREN);
+}
+";"                          {
+    yylval.node = newTokenNode(SEMICOLON);
+    return(SEMICOLON);
+}
+"."                          {
+    yylval.node = newTokenNode(DOT);
+    return(DOT);
+}
+","                          {
+    yylval.node = newTokenNode(COMMA);
+    return(COMMA);
+}
+{V}{A}{R}                    {
+    yylval.node = newTokenNode(VAR);
+    return(VAR);
+}
+":"                          {
+    yylval.node = newTokenNode(COLON);
+    return(COLON);
+}
+{A}{R}{R}{A}{Y}              {
+    yylval.node = newTokenNode(ARRAY);
+    return(ARRAY);
+}
+"["                          {
+    yylval.node = newTokenNode(LBRAC);
+    return(LBRAC);
+}
+"]"                          {
+    yylval.node = newTokenNode(RBRAC);
+    return(RBRAC);
+}
+{O}{F}                       {
+    yylval.node = newTokenNode(OF);
+    return(OF);
+}
+{I}{N}{T}{E}{G}{E}{R}        {
+    yylval.node = newTokenNode(INTEGER);
+    return(INTEGER);
+}
+{R}{E}{A}{L}                 {
+    yylval.node = newTokenNode(REAL);
+    return(REAL);
+}
+{F}{U}{N}{C}{T}{I}{O}{N}     {
+    yylval.node = newTokenNode(FUNCTION);
+    return(FUNCTION);
+}
+{P}{R}{O}{C}{E}{D}{U}{R}{E}  {
+    yylval.node = newTokenNode(PROCEDURE);
+    return(PROCEDURE);
+}
+{B}{E}{G}{I}{N}              {
+    yylval.node = newTokenNode(PBEGIN);
+    return(PBEGIN);
+}
+{E}{N}{D}                    {
+    yylval.node = newTokenNode(END);
+    return(END);
+}
+":="                         {
+    yylval.node = newTokenNode(ASSIGNMENT);
+    return(ASSIGNMENT);
+}
+{I}{F}                       {
+    yylval.node = newTokenNode(IF);
+    return(IF);
+}
+{T}{H}{E}{N}                 {
+    yylval.node = newTokenNode(THEN);
+    return(THEN);
+}
+{E}{L}{S}{E}                 {
+    yylval.node = newTokenNode(ELSE);
+    return(ELSE);
+}
+{W}{H}{I}{L}{E}              {
+    yylval.node = newTokenNode(WHILE);
+    return(WHILE);
+}
+{D}{O}                       {
+    yylval.node = newTokenNode(DO);
+    return(DO);
+}
+"<"                          {
+    yylval.node = newTokenNode(LT);
+    return(LT);
+}
+">"                          {
+    yylval.node = newTokenNode(GT);
+    return(GT);
+}
+"<="                         {
+    yylval.node = newTokenNode(LE);
+    return(LE);
+}
+">="                         {
+    yylval.node = newTokenNode(GE);
+    return(GE);
+}
+"="                          {
+    yylval.node = newTokenNode(EQUAL);
+    return(EQUAL);
+}
+"!="                         {
+    yylval.node = newTokenNode(NOTEQUAL);
+    return(NOTEQUAL);
+}
+"+"                          {
+    yylval.node = newTokenNode(PLUS);
+    return(PLUS);
+}
+"-"                          {
+    yylval.node = newTokenNode(MINUS);
+    return(MINUS);
+}
+"*"                          {
+    yylval.node = newTokenNode(STAR);
+    return(STAR);
+}
+"/"                          {
+    yylval.node = newTokenNode(DIV);
+    return(DIV);
+}
+{N}{O}{T}                    {
+    yylval.node = newTokenNode(NOT);
+    return(NOT);
+}
+".."                         {
+    yylval.node = newTokenNode(DOTDOT);
+    return(DOTDOT);
+}
+[a-zA-Z]([a-zA-Z0-9])*       {
+    yylval.node = newTokenNode(IDENTIFIER);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(IDENTIFIER);
+}
+[0-9]+                       {
+    yylval.node = newTokenNode(NUM_INT);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(NUM_INT);
+}
+[0-9]+"."[0-9]+              {
+    yylval.node = newTokenNode(NUM_REAL);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(NUM_REAL);
+}
+\/\/.*[^\n|\r]               {
+    line_no++;
+}
 
 "(*"    |
 "{"     { register int c;
@@ -110,7 +240,9 @@ NQUOTE [^']
 \r         ;
 \n    line_no++;
 
-[0-9]+[a-zA-Z]+ {fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
+[0-9]+[a-zA-Z]+ {
+        fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);
+    }
 
 .    { fprintf (stderr,
         "'%c' (0%o): illegal charcter at line %d\n",
@@ -118,6 +250,13 @@ NQUOTE [^']
     }
 
 %%
+
+struct nodeType* newTokenNode(int tokenType) {
+    struct nodeType *node = newNode(NODE_TOKEN);
+    node->type = tokenType;
+
+    return node;
+}
 
 void commentof()
 {

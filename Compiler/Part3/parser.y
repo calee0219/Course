@@ -22,7 +22,7 @@
     void yyerror(const char *str);
     int yywrap();
 
-    struct nodeType *ASTROOT;
+    extern struct nodeType* ASTRoot;
 
 %}
 
@@ -34,9 +34,9 @@
     char * string;
 }
 
-%token <number> INTNUM
-%token <dbnumber> REALNUM
-%token <string> IDENTIFIER
+%token <number> NUM_INT
+%token <dbnumber> NUM_REAL
+%token <node> IDENTIFIER
 %token <node> PROGRAM
 %token <node> ASSIGNMENT
 %token <node> RPAREN LPAREN RBRAC LBRAC
@@ -53,28 +53,35 @@
 %type <node> prog identifier_list standard_type subprogram_declarations subprogram_declaration subprogram_head arguments parameter_list optional_var compound_statement optional_statements statement_list statement variable tail procedure_statement expression_list expression simple_expression term factor addop mulop relop lambda
 
 %%
-/*file: prog {*/
-            /*addChild($1);*/
-            /*$$ = $1;*/
-            /*printf("Reduction (file -> program)\n");*/
-        /*}*/
-    /*;*/
+file: prog
+        { ASTRoot = $1; }
+    ;
 prog : PROGRAM IDENTIFIER LPAREN identifier_list RPAREN SEMICOLON
     declarations
     subprogram_declarations
     compound_statement
     DOT
         {
-            $$ = newNode("prog", $1);
-            $1 = newNode("id", $2);
+            deleteNode($1);
+            $$ = $2;            // program name
+            deleteNode($3);     // (
+            deleteNode($4);     // para
+            deleteNode($5);     // )
+            deleteNode($6);     // ;
+            addChild($$, $7);   // declarations
+            addChild($$, $8);   // subprogram_declaration
+            addChild($$, $9);   // compound_statement
+            deleteNode($10);    // .
         }
     ;
 
 identifier_list : IDENTIFIER
         {
-            struct nodeType* tmp = newNode("ID", $1);
+            struct nodeType* tmp = newNode(NODE_IDENTIFER);
         }
     | identifier_list COMMA IDENTIFIER
+        {
+        }
     ;
 
 declarations : declarations VAR identifier_list COLON type SEMICOLON
@@ -82,7 +89,7 @@ declarations : declarations VAR identifier_list COLON type SEMICOLON
     ;
 
 type : standard_type
-    | ARRAY LBRAC INTNUM DOTDOT INTNUM RBRAC OF type
+    | ARRAY LBRAC NUM_INT DOTDOT NUM_INT RBRAC OF type
     ;
 
 standard_type : INTEGER
@@ -136,14 +143,14 @@ statement : variable ASSIGNMENT expression
     | lambda
     ;
 
-variable : IDENTIFIER tail { $$ = $1 $2; }
+variable : IDENTIFIER tail
     ;
 tail : RBRAC expression LBRAC tail
     | lambda
     ;
 
-procedure_statement : IDENTIFIER { $$ = $1; }
-    | IDENTIFIER LPAREN expression_list RPAREN { $$ = $1 $2 $3 $4; }
+procedure_statement : IDENTIFIER
+    | IDENTIFIER LPAREN expression_list RPAREN
     ;
 
 expression_list : expression
@@ -162,10 +169,10 @@ term : factor
     | term mulop factor
     ;
 
-factor : IDENTIFIER tail { $$ = $1 $2; }
-    | IDENTIFIER LPAREN expression_list RPAREN { $$ = $1 $2 $3 $4; }
-    | INTNUM { $$ = $1; }
-    | REALNUM { $$ = $1; }
+factor : IDENTIFIER tail
+    | IDENTIFIER LPAREN expression_list RPAREN
+    | NUM_INT
+    | NUM_REAL
     | LPAREN expression RPAREN
     | NOT factor
     ;
@@ -185,9 +192,11 @@ relop : LT
     | NOTEQUAL
     ;
 
-lambda : { $$ = %empty; } ;
+lambda : ;
 
 %%
+
+struct nodeType *ASTRoot;
 
 void yyerror(const char *str)
 {
@@ -202,12 +211,19 @@ int yywrap()
 
 int main()
 {
-    result = yyparse();
-    if(result == 0) {
-        printf("-----------------------------------------------\n");
-        printTree(ASTROOT, 0);
-    } else {
-        printf("parse error");
-    }
+    int result = yyparse();
+    if(result) return 0;
+    printf("********************************\n"
+           "*       No syntax error!       *\n"
+           "********************************\n");
+
+    printTree(ASTRoot, 0);
+
+    //SymbolTable.size = 0;
+    //semanticCheck(ASTRoot);
+    printf("********************************\n"
+           "*      No semantic error!      *\n"
+           "********************************\n");
+
     return 0;
 }

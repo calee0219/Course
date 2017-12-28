@@ -87,7 +87,7 @@
     void yyerror(const char *str);
     int yywrap();
 
-    struct nodeType *ASTROOT;
+    extern struct nodeType* ASTRoot;
 
 
 #line 94 "y.tab.c" /* yacc.c:339  */
@@ -125,8 +125,8 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    INTNUM = 258,
-    REALNUM = 259,
+    NUM_INT = 258,
+    NUM_REAL = 259,
     IDENTIFIER = 260,
     PROGRAM = 261,
     ASSIGNMENT = 262,
@@ -169,8 +169,8 @@ extern int yydebug;
   };
 #endif
 /* Tokens.  */
-#define INTNUM 258
-#define REALNUM 259
+#define NUM_INT 258
+#define NUM_REAL 259
 #define IDENTIFIER 260
 #define PROGRAM 261
 #define ASSIGNMENT 262
@@ -541,13 +541,13 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    56,    56,    62,    69,    70,    73,    74,    77,    78,
-      81,    82,    83,    87,    88,    92,    96,    97,   100,   101,
-     104,   105,   108,   109,   112,   117,   120,   121,   124,   125,
-     126,   127,   128,   129,   132,   134,   135,   138,   139,   142,
-     143,   146,   147,   150,   151,   154,   155,   158,   159,   160,
-     161,   162,   163,   166,   166,   169,   169,   173,   174,   175,
-     176,   177,   178,   181
+       0,    56,    56,    59,    74,    78,    81,    82,    85,    86,
+      89,    90,    91,    95,    96,   100,   104,   105,   108,   109,
+     112,   113,   116,   117,   120,   125,   128,   129,   132,   133,
+     134,   135,   136,   137,   140,   142,   143,   146,   147,   150,
+     151,   154,   155,   158,   159,   162,   163,   166,   167,   168,
+     169,   170,   171,   174,   174,   177,   177,   181,   182,   183,
+     184,   185,   186,   189
 };
 #endif
 
@@ -556,7 +556,7 @@ static const yytype_uint8 yyrline[] =
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
 {
-  "$end", "error", "$undefined", "INTNUM", "REALNUM", "IDENTIFIER",
+  "$end", "error", "$undefined", "NUM_INT", "NUM_REAL", "IDENTIFIER",
   "PROGRAM", "ASSIGNMENT", "RPAREN", "LPAREN", "RBRAC", "LBRAC", "PBEGIN",
   "END", "INTEGER", "REAL", "ARRAY", "STRING", "PLUS", "MINUS", "STAR",
   "DIV", "EQUAL", "NOTEQUAL", "LT", "GT", "LE", "GE", "NOT", "COLON",
@@ -1404,71 +1404,34 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 56 "parser.y" /* yacc.c:1646  */
+#line 57 "parser.y" /* yacc.c:1646  */
+    { ASTRoot = (yyvsp[0].node); }
+#line 1410 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 3:
+#line 64 "parser.y" /* yacc.c:1646  */
     {
-            addChild((yyvsp[0].node));
-            (yyval.node) = (yyvsp[0].node);
-            printf("Reduction (file -> program)\n");
+            (yyval.node) = newNode(NODE_PROGRAM);
+            addChild((yyval.node), (yyvsp[-9].node));
+            addChild((yyval.node), (yyvsp[-8].node));
+            addChild((yyval.node), (yyvsp[-7].node));
+            addChild((yyval.node), (yyvsp[-5].node));
+            addChild((yyval.node), (yyvsp[-4].node));
         }
-#line 1414 "y.tab.c" /* yacc.c:1646  */
+#line 1423 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 69 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[0].string); }
-#line 1420 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 34:
-#line 132 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[-1].string) (yyvsp[0].node); }
-#line 1426 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 37:
-#line 138 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[0].string); }
-#line 1432 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 38:
-#line 139 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[-3].string) (yyvsp[-2].node) (yyvsp[-1].node) (yyvsp[0].node); }
-#line 1438 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 47:
-#line 158 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[-1].string) (yyvsp[0].node); }
-#line 1444 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 48:
-#line 159 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[-3].string) (yyvsp[-2].node) (yyvsp[-1].node) (yyvsp[0].node); }
-#line 1450 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 49:
-#line 160 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[0].number); }
-#line 1456 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 50:
-#line 161 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = (yyvsp[0].dbnumber); }
-#line 1462 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 63:
-#line 181 "parser.y" /* yacc.c:1646  */
-    { (yyval.node) = %empty; }
-#line 1468 "y.tab.c" /* yacc.c:1646  */
+#line 75 "parser.y" /* yacc.c:1646  */
+    {
+            struct nodeType* tmp = newNode(NODE_IDENTIFER);
+        }
+#line 1431 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1472 "y.tab.c" /* yacc.c:1646  */
+#line 1435 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1696,8 +1659,10 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 183 "parser.y" /* yacc.c:1906  */
+#line 191 "parser.y" /* yacc.c:1906  */
 
+
+struct nodeType *ASTRoot;
 
 void yyerror(const char *str)
 {
@@ -1712,12 +1677,19 @@ int yywrap()
 
 int main()
 {
-    result = yyparse();
-    if(result == 0) {
-        printf("-----------------------------------------------\n");
-        printTree(ASTROOT, 0);
-    } else {
-        printf("parse error");
-    }
+    int result = yyparse();
+    if(result) return 0;
+    printf("********************************\n"
+           "*       No syntax error!       *\n"
+           "********************************\n");
+
+    printTree(ASTRoot, 0);
+
+    //SymbolTable.size = 0;
+    //semanticCheck(ASTRoot);
+    printf("********************************\n"
+           "*      No semantic error!      *\n"
+           "********************************\n");
+
     return 0;
 }

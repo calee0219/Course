@@ -387,17 +387,17 @@ struct yy_trans_info
 static yyconst flex_int16_t yy_accept[110] =
     {   0,
         0,    0,   49,   47,   43,   45,   44,   47,    2,    3,
-       33,   31,    6,   32,    5,   34,   39,    8,    4,   25,
-       29,   26,   38,   38,   38,   38,   38,   38,   38,   38,
-       38,   38,   38,   38,   38,   38,   10,   11,   42,   30,
-       41,   36,    0,    0,   39,   46,   19,   27,   28,   38,
-       38,   38,   24,   38,   38,   38,   20,   38,   38,   12,
-       38,   38,   38,   38,   38,   37,    0,   40,   38,   38,
-       38,   18,   38,   38,   35,   38,   38,   38,    7,   38,
-       38,   38,   22,   38,   38,   38,   38,   14,   21,   38,
-        9,   17,   38,   38,   38,   38,   23,   38,   38,   38,
+       33,   31,    6,   32,    5,   34,   38,    8,    4,   25,
+       29,   26,   37,   37,   37,   37,   37,   37,   37,   37,
+       37,   37,   37,   37,   37,   37,   10,   11,   42,   30,
+       41,   36,    0,    0,   38,   46,   19,   27,   28,   37,
+       37,   37,   24,   37,   37,   37,   20,   37,   37,   12,
+       37,   37,   37,   37,   37,   40,    0,   39,   37,   37,
+       37,   18,   37,   37,   35,   37,   37,   37,    7,   37,
+       37,   37,   22,   37,   37,   37,   37,   14,   21,   37,
+        9,   17,   37,   37,   37,   37,   23,   37,   37,   37,
 
-       38,   38,   13,   38,    1,   15,   38,   16,    0
+       37,   37,   13,   37,    1,   15,   37,   16,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -546,12 +546,15 @@ char *yytext;
  */
 
 #include <stdio.h>
+#include "node.h"
 #include "y.tab.h"
+
+struct nodeType* newTokenNode(int tokenType);
 
 int line_no = 1;
 void commentof();
 
-#line 555 "lex.yy.c"
+#line 558 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -769,10 +772,10 @@ YY_DECL
 		}
 
 	{
-#line 46 "scanner.l"
+#line 49 "scanner.l"
 
 
-#line 776 "lex.yy.c"
+#line 779 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -831,209 +834,337 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 48 "scanner.l"
-return(PROGRAM);
+#line 51 "scanner.l"
+{
+    yylval.node = newTokenNode(PROGRAM);
+    return(PROGRAM);
+}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 49 "scanner.l"
-return(LPAREN);
+#line 55 "scanner.l"
+{
+    yylval.node = newTokenNode(LPAREN);
+    return(LPAREN);
+}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 50 "scanner.l"
-return(RPAREN);
+#line 59 "scanner.l"
+{
+    yylval.node = newTokenNode(RPAREN);
+    return(RPAREN);
+}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 51 "scanner.l"
-return(SEMICOLON);
+#line 63 "scanner.l"
+{
+    yylval.node = newTokenNode(SEMICOLON);
+    return(SEMICOLON);
+}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 52 "scanner.l"
-return(DOT);
+#line 67 "scanner.l"
+{
+    yylval.node = newTokenNode(DOT);
+    return(DOT);
+}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 53 "scanner.l"
-return(COMMA);
+#line 71 "scanner.l"
+{
+    yylval.node = newTokenNode(COMMA);
+    return(COMMA);
+}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 54 "scanner.l"
-return(VAR);
+#line 75 "scanner.l"
+{
+    yylval.node = newTokenNode(VAR);
+    return(VAR);
+}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 55 "scanner.l"
-return(COLON);
+#line 79 "scanner.l"
+{
+    yylval.node = newTokenNode(COLON);
+    return(COLON);
+}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 56 "scanner.l"
-return(ARRAY);
+#line 83 "scanner.l"
+{
+    yylval.node = newTokenNode(ARRAY);
+    return(ARRAY);
+}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 57 "scanner.l"
-return(LBRAC);
+#line 87 "scanner.l"
+{
+    yylval.node = newTokenNode(LBRAC);
+    return(LBRAC);
+}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 58 "scanner.l"
-return(RBRAC);
+#line 91 "scanner.l"
+{
+    yylval.node = newTokenNode(RBRAC);
+    return(RBRAC);
+}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 59 "scanner.l"
-return(OF);
+#line 95 "scanner.l"
+{
+    yylval.node = newTokenNode(OF);
+    return(OF);
+}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 60 "scanner.l"
-return(INTEGER);
+#line 99 "scanner.l"
+{
+    yylval.node = newTokenNode(INTEGER);
+    return(INTEGER);
+}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 61 "scanner.l"
-return(REAL);
+#line 103 "scanner.l"
+{
+    yylval.node = newTokenNode(REAL);
+    return(REAL);
+}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 62 "scanner.l"
-return(FUNCTION);
+#line 107 "scanner.l"
+{
+    yylval.node = newTokenNode(FUNCTION);
+    return(FUNCTION);
+}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 63 "scanner.l"
-return(PROCEDURE);
+#line 111 "scanner.l"
+{
+    yylval.node = newTokenNode(PROCEDURE);
+    return(PROCEDURE);
+}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 64 "scanner.l"
-return(PBEGIN);
+#line 115 "scanner.l"
+{
+    yylval.node = newTokenNode(PBEGIN);
+    return(PBEGIN);
+}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 65 "scanner.l"
-return(END);
+#line 119 "scanner.l"
+{
+    yylval.node = newTokenNode(END);
+    return(END);
+}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 66 "scanner.l"
-return(ASSIGNMENT);
+#line 123 "scanner.l"
+{
+    yylval.node = newTokenNode(ASSIGNMENT);
+    return(ASSIGNMENT);
+}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 67 "scanner.l"
-return(IF);
+#line 127 "scanner.l"
+{
+    yylval.node = newTokenNode(IF);
+    return(IF);
+}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 68 "scanner.l"
-return(THEN);
+#line 131 "scanner.l"
+{
+    yylval.node = newTokenNode(THEN);
+    return(THEN);
+}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 69 "scanner.l"
-return(ELSE);
+#line 135 "scanner.l"
+{
+    yylval.node = newTokenNode(ELSE);
+    return(ELSE);
+}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 70 "scanner.l"
-return(WHILE);
+#line 139 "scanner.l"
+{
+    yylval.node = newTokenNode(WHILE);
+    return(WHILE);
+}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 71 "scanner.l"
-return(DO);
+#line 143 "scanner.l"
+{
+    yylval.node = newTokenNode(DO);
+    return(DO);
+}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 72 "scanner.l"
-return(LT);
+#line 147 "scanner.l"
+{
+    yylval.node = newTokenNode(LT);
+    return(LT);
+}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 73 "scanner.l"
-return(GT);
+#line 151 "scanner.l"
+{
+    yylval.node = newTokenNode(GT);
+    return(GT);
+}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 74 "scanner.l"
-return(LE);
+#line 155 "scanner.l"
+{
+    yylval.node = newTokenNode(LE);
+    return(LE);
+}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 75 "scanner.l"
-return(GE);
+#line 159 "scanner.l"
+{
+    yylval.node = newTokenNode(GE);
+    return(GE);
+}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 76 "scanner.l"
-return(EQUAL);
+#line 163 "scanner.l"
+{
+    yylval.node = newTokenNode(EQUAL);
+    return(EQUAL);
+}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 77 "scanner.l"
-return(NOTEQUAL);
+#line 167 "scanner.l"
+{
+    yylval.node = newTokenNode(NOTEQUAL);
+    return(NOTEQUAL);
+}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 78 "scanner.l"
-return(PLUS);
+#line 171 "scanner.l"
+{
+    yylval.node = newTokenNode(PLUS);
+    return(PLUS);
+}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 79 "scanner.l"
-return(MINUS);
+#line 175 "scanner.l"
+{
+    yylval.node = newTokenNode(MINUS);
+    return(MINUS);
+}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 80 "scanner.l"
-return(STAR);
+#line 179 "scanner.l"
+{
+    yylval.node = newTokenNode(STAR);
+    return(STAR);
+}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 81 "scanner.l"
-return(DIV);
+#line 183 "scanner.l"
+{
+    yylval.node = newTokenNode(DIV);
+    return(DIV);
+}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 82 "scanner.l"
-return(NOT);
+#line 187 "scanner.l"
+{
+    yylval.node = newTokenNode(NOT);
+    return(NOT);
+}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 83 "scanner.l"
-return(DOTDOT);
+#line 191 "scanner.l"
+{
+    yylval.node = newTokenNode(DOTDOT);
+    return(DOTDOT);
+}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 85 "scanner.l"
-line_no++;
+#line 195 "scanner.l"
+{
+    yylval.node = newTokenNode(IDENTIFIER);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(IDENTIFIER);
+}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 86 "scanner.l"
-return(IDENTIFIER);
+#line 202 "scanner.l"
+{
+    yylval.node = newTokenNode(NUM_INT);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(NUM_INT);
+}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 87 "scanner.l"
-return(INTNUM);
+#line 209 "scanner.l"
+{
+    yylval.node = newTokenNode(NUM_REAL);
+    yylval.node->value_valid = VALUE_VALID;
+    yylval.node->value = (char*)malloc(yyleng+1);
+    strcpy(yylval.node->value, yytext);
+    return(NUM_REAL);
+}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 88 "scanner.l"
-return(REALNUM);
+#line 216 "scanner.l"
+{
+    line_no++;
+}
 	YY_BREAK
 case 41:
-#line 91 "scanner.l"
+#line 221 "scanner.l"
 case 42:
 YY_RULE_SETUP
-#line 91 "scanner.l"
+#line 221 "scanner.l"
 { register int c;
         while ((c = input())) {
             if (c == '}') {
@@ -1053,28 +1184,30 @@ YY_RULE_SETUP
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 108 "scanner.l"
+#line 238 "scanner.l"
 ;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 110 "scanner.l"
+#line 240 "scanner.l"
 ;
 	YY_BREAK
 case 45:
 /* rule 45 can match eol */
 YY_RULE_SETUP
-#line 111 "scanner.l"
+#line 241 "scanner.l"
 line_no++;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 113 "scanner.l"
-{fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);}
+#line 243 "scanner.l"
+{
+        fprintf(stderr,"Lexical analyzer error at line %d : %s\n",line_no,yytext);
+    }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 115 "scanner.l"
+#line 247 "scanner.l"
 { fprintf (stderr,
         "'%c' (0%o): illegal charcter at line %d\n",
         yytext[0], yytext[0], line_no);
@@ -1082,10 +1215,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 120 "scanner.l"
+#line 252 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 1089 "lex.yy.c"
+#line 1222 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2086,9 +2219,16 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 120 "scanner.l"
+#line 252 "scanner.l"
 
 
+
+struct nodeType* newTokenNode(int tokenType) {
+    struct nodeType *node = newNode(NODE_TOKEN);
+    node->type = tokenType;
+
+    return node;
+}
 
 void commentof()
 {

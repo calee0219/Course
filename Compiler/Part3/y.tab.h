@@ -45,8 +45,8 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    INTNUM = 258,
-    REALNUM = 259,
+    NUM_INT = 258,
+    NUM_REAL = 259,
     IDENTIFIER = 260,
     PROGRAM = 261,
     ASSIGNMENT = 262,
@@ -89,8 +89,8 @@ extern int yydebug;
   };
 #endif
 /* Tokens.  */
-#define INTNUM 258
-#define REALNUM 259
+#define NUM_INT 258
+#define NUM_REAL 259
 #define IDENTIFIER 260
 #define PROGRAM 261
 #define ASSIGNMENT 262
