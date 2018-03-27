@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from FatTreeTopo import FatTreeTopo
+from FatTreeTopoHardCode import FatTreeTopoHardCode
 
 from mininet.topo import Topo
 from mininet.net import Mininet
@@ -12,14 +12,14 @@ from mininet.cli import CLI
 # from mininet.node import CPULimitedHost
 
 def perfTest():
-    topo = FatTreeTopo()
+    topo = FatTreeTopoHardCode()
     net = Mininet(topo=topo, link=TCLink, controller=None)
     net.addController('myController', \
                       controller=RemoteController, \
-                      ip='10.0.2.15', port=6653)
+                      ip='140.113.88.203', port=6653)
     # net = Mininet(topo=topo, host=CPULimitedHost, link=TCLink)
     net.start()
-    #net.waitConnected()
+    net.waitConnected()
     print('Dumping host connections')
     dumpNodeConnections(net.hosts)
     print('Testing network connections')
