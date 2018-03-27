@@ -5,7 +5,7 @@ from mininet.net import Mininet
 
 POD_NUM = 4
 
-class FatTree(Topo):
+class FatTreeTopo(Topo):
     """
     A Simple FatTree Topo
     """
@@ -63,4 +63,4 @@ class FatTree(Topo):
                                  'p{}a2'.format(agg_pod_ord), \
                                  bw=1000, loss=2)
 
-topos = {'fattree': (lambda: FatTree())}
+topos = {'fattree': (lambda: FatTreeTopo())}
