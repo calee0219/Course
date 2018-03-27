@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from FatTreeTopoHardCodeOrder import FatTreeTopoHardCodeOrder
+from FatTreeTopoHardCodeOrderName import FatTreeTopoHardCodeOrderName
 
 from mininet.topo import Topo
 from mininet.net import Mininet
@@ -12,7 +12,7 @@ from mininet.cli import CLI
 # from mininet.node import CPULimitedHost
 
 def perfTest():
-    topo = FatTreeTopoHardCodeOrder()
+    topo = FatTreeTopoHardCodeOrderName()
     net = Mininet(topo=topo, link=TCLink, controller=None)
     net.addController('myController', \
                       controller=RemoteController, \
@@ -27,9 +27,9 @@ def perfTest():
     # net.pingAll(timeout=1)
     print('Testing bandwidth')
     # get host
-    p0h1 = net.get('p0h1')
-    p0h3 = net.get('p0h3')
-    p3h1 = net.get('p3h1')
+    p0h1 = net.get('h001')
+    p0h3 = net.get('h003')
+    p3h1 = net.get('h301')
     # start iperf server
     p0h1.popen('iperf -s -u -i 1', shell=True)
     p3h1.popen('iperf -s -u -i 1', shell=True)
