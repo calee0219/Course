@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from FatTreeTopoHardCode import FatTreeTopoHardCode
+from FatTreeTopoHardCodeOrder import FatTreeTopoHardCodeOrder
 
 from mininet.topo import Topo
 from mininet.net import Mininet
@@ -12,7 +12,7 @@ from mininet.cli import CLI
 # from mininet.node import CPULimitedHost
 
 def perfTest():
-    topo = FatTreeTopoHardCode()
+    topo = FatTreeTopoHardCodeOrder()
     net = Mininet(topo=topo, link=TCLink, controller=None)
     net.addController('myController', \
                       controller=RemoteController, \
